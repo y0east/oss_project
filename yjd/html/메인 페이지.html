@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정보통신공학과</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─────────── Reset & Global ─────────── */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:"Nanum Gothic","Segoe UI",sans-serif;background:#f0f4f8;}
+
+    /* ─────────── Header (2-layer) ─────────── */
+    header{width:100%;}
+    .top-bar{background:#fff;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:4px solid #002d56;}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.3rem;color:#8d7150;}
+    .brand img{height:40px;}
+    .actions{display:flex;align-items:center;gap:1.5rem;font-size:.8rem;}
+    .actions a{text-decoration:none;color:#8d7150;display:flex;flex-direction:column;align-items:center;transition:opacity .3s;}
+    .actions a:hover{opacity:.7;}
+    .actions a img{height:24px;margin-bottom:4px;}
+    .nav-bar{background:#002d56;width:100%;}
+    .nav-bar ul{display:flex;justify-content:center;gap:3rem;list-style:none;padding:.8rem 5%;}
+    .nav-bar a{color:#fff;text-decoration:none;font-weight:500;transition:opacity .3s;}
+    .nav-bar a:hover{opacity:.7;}
+
+    /* ─────────── Hero ─────────── */
+    .hero{position:relative;width:100%;height:60vh;background:url("https://source.unsplash.com/1600x900?technology") center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;}
+    .hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.4);} 
+    .hero-text{position:relative;color:#fff;}
+    .hero-text h1{font-size:2.5rem;margin-bottom:1rem;}
+    .hero-text p{font-size:1.1rem;}
+
+    /* ─────────── Combined Info Section ─────────── */
+    .info-wrap{display:grid;grid-template-columns:1fr 300px;gap:40px;max-width:1200px;margin:40px auto 120px auto;align-items:start;}
+    @media(max-width:900px){.info-wrap{grid-template-columns:1fr;} .menu-cards{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;gap:16px;width:100%;}}
+
+    /* ─────────── Notice Area ─────────── */
+    .notice-area{background:#fff;padding:24px 32px 24px 56px;border-radius:32px;box-shadow:0 6px 18px rgba(0,0,0,.06);width:100%;position:relative;}
+    .notice-area::before{content:"";position:absolute;top:0;left:0;bottom:0;width:14px;background:#002d56;border-radius:32px 0 0 32px;}
+    .tabs{display:flex;align-items:center;gap:40px;padding:0 32px;position:relative;}
+    .tab{background:none;border:none;font-size:24px;font-weight:700;cursor:pointer;color:#999;transition:color .3s;}
+    .tab.active{color:#000;}
+    .tab.active::after{content:"";position:absolute;left:0;bottom:-10px;width:100%;height:4px;background:#000;}
+    .tab.active::before{content:"";position:absolute;left:calc(50% - 8px);bottom:-10px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #c8bb84;}
+    .tabs .tab{position:relative;}
+    .tab-add{margin-left:auto;margin-right:32px;width:40px;height:40px;border-radius:50%;border:2px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:28px;color:#666;transition:background .3s,border .3s;}
+    .tab-add:hover{background:#f7f7f7;border-color:#bbb;}
+    .tab-content{display:none;padding:24px 32px;}
+    .tab-content.active{display:block;}
+    .tab-content ul{list-style:none;padding:0;}
+    .tab-content li{margin-bottom:14px;font-size:16px;color:#333;line-height:1.5;}
+    .tab-content strong{display:block;margin-bottom:4px;color:#000;}
+    .tab-content p{color:#555;font-size:14px;margin:0 0 8px 0;}
+
+    /* ─────────── Menu Cards ─────────── */
+    .menu-cards{display:grid;grid-template-columns:1fr;gap:24px;width:100%;}
+    .card{border-radius:12px;padding:24px;text-align:center;font-size:16px;font-weight:600;text-decoration:none;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;align-items:center;gap:12px;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,.1);} 
+    .card img{width:48px;height:48px;}
+    .card-dept,.card-professor{background:#002d56;}
+    .card-curriculum,.card-facebook{background:#8d7150;}
+
+    /* ─────────── Footer Multi-Bar ─────────── */
+    footer{width:100%;margin-top:60px;}
+    .footer-primary{background:#002d56;display:flex;justify-content:center;gap:48px;padding:20px 5%;flex-wrap:wrap;}
+    .footer-primary a{color:#fff;text-decoration:none;font-size:17px;white-space:nowrap;transition:opacity .3s;}
+    .footer-primary a:hover{opacity:.7;}
+    .footer-primary .divider{color:rgba(255,255,255,.4);}
+    .footer-secondary{background:#3e3e3e;}
+    .footer-secondary-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 5%;gap:24px;flex-wrap:wrap;}
+    .footer-secondary .social img{width:36px;height:36px;border-radius:50%;}
+    .goto{display:flex;align-items:center;}
+    .goto select{padding:10px 16px;font-size:14px;border:0;border-radius:4px 0 0 4px;background:#fff;}
+    .goto button{padding:10px 20px;border:0;border-radius:0 4px 4px 0;background:#666;color:#fff;font-weight:600;cursor:pointer;transition:opacity .3s;}
+    .goto button:hover{opacity:.8;}
+    .footer-bottom{background:#2f2f2f;color:#8d7150;text-align:center;padding:40px 5%;font-size:18px;font-weight:700;letter-spacing:.5px;}
+
+    /* ─────────── Responsive Footer ─────────── */
+    @media(max-width:600px){
+      .hero-text h1{font-size:1.8rem;}
+      .footer-primary{gap:24px;}
+      .footer-primary .divider{display:none;}
+      .goto select{font-size:13px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- ─────────── Header ─────────── -->
+  <header>
+    <div class="top-bar">
+      <div class="brand"><img src="https://source.unsplash.com/120x40?university" alt="Hankuk University Logo" /><span>정보통신공학과</span></div>
+      <div class="actions">
+        <a href="#"><img src="https://source.unsplash.com/24x24?user" alt="My Page" /><span>메인화면</span></a>
+        <a href="#"><img src="https://source.unsplash.com/24x24?lock" alt="Login" /><span>로그인</span></a>
+      </div>
+    </div>
+    <nav class="nav-bar"><ul><li><a href="#about">학과소개</a></li><li><a href="#study">학사·장학</a></li><li><a href="#curriculum">교과과정</a></li><li><a href="#grad">대학원</a></li><li><a href="#facility">학회·시설</a></li></ul></nav>
+  </header>
+
+  <!-- ─────────── Hero ─────────── -->
+  <section class="hero"><div class="hero-text"><h1>공과대학 <strong style="color:#00e6ff;">정보통신공학과</strong></h1><p>Department of Information Communications Engineering</p></div></section>
+
+  <!-- ─────────── Combined Info Section ─────────── -->
+  <section class="info-wrap">
+    <!-- Notice -->
+    <div class="notice-area">
+      <div class="tabs">
+        <button class="tab active" data-target="notice">공지사항</button>
+        <button class="tab" data-target="board">자유게시판</button>
+        <button class="tab" data-target="data">자료실</button>
+        <div class="tab-add">+</div>
+      </div>
+
+      <div class="tab-content active" id="notice">
+        <ul>
+          <li><strong>[공지] 학과사무실 휴무안내 (25.04.25_금)</strong><p>2025년 04월 25일(금) 학과사무실을 운영하지 않습니다.</p></li>
+          <li>[공지] 대학생 공모전 배리어프리 앱개발 콘텐츠 참여 안내</li>
+          <li>SK쉴더스 채용 연계 설명회 (4월 28일 공학관 301호)</li>
+          <li>2025-1학기 졸업시험 신청접수 (5월 20일까지)</li>
+          <li>5월 KPX 교육연구원 전력산업 교육 수강신청 안내</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="board"><ul><li>등록된 글이 없습니다. 첫 번째 게시글을 작성해보세요!</li></ul></div>
+      <div class="tab-content" id="data"><ul><li>자료실이 곧 업데이트될 예정입니다. 조금만 기다려주세요!</li></ul></div>
+    </div>
+
+    <!-- Menu Cards -->
+    <div class="menu-cards">
+      <a href="#" class="card card-dept"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="학과 소개" />학과 소개</a>
+      <a href="#" class="card card-professor"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="교수 소개" />교수 소개</a>
+      <a href="#" class="card card-curriculum"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="교과과정" />교과과정</a>
+      <a href="#" class="card card-facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="학과 페이스북" />학과 페이스북</a>
+    </div>
+  </section>
+
+  <!-- ─────────── Footer Multi-Bar ─────────── -->
+  <footer>
+    <div class="footer-primary"><a href="#">e-Class</a><span class="divider">|</span><a href="#">종합정보시스템</a><span class="divider">|</span><a href="#">도서관</a><span class="divider">|</span><a href="#">입학안내</a></div>
+    <div class="footer-secondary"><div class="footer-secondary-inner"><div class="social"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></div><div class="goto"><select><option selected>주요 홈페이지</option><option value="https://www.hufs.ac.kr">학교 메인</option><option value="#">대학원</option><option value="#">취업지원센터</option></select><button onclick="window.open(document.querySelector('.goto select').value,'_blank')">GO</button></div></div></div>
+    <div class="footer-bottom">HANKUK UNIVERSITY OF FOREIGN STUDIES</div>
+  </footer>
+
+  <script>
+    // Tab switching logic
+    document.querySelectorAll('.tab').forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
