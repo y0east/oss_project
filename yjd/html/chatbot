@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hufs Chat</title>
+<style>
+:root {
+ --color-primary:#002D56;
+ --color-accent:#8D7150;
+ --color-secondary:#146E7A;
+}
+
+body {
+ margin:0;
+ font-family:'Segoe UI', sans-serif;
+ background-color:var(--color-primary);
+ color:white;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ height:100vh;
+}
+
+.chat-wrapper {
+ width:960px;
+ height:700px;
+ background-color:#fff;
+ border-radius:16px;
+ overflow:hidden;
+ display:flex;
+ flex-direction:column;
+ box-shadow:0 8px 24px rgba(0,0,0,0.3);
+}
+
+.chat-header {
+ background-color:var(--color-secondary);
+ padding:20px;
+ color:#fff;
+ font-size:1.5rem;
+ font-weight:bold;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ position:relative;
+}
+
+.faq-menu {
+ position:relative;
+ cursor:pointer;
+ font-size:1rem;
+ background:rgba(255,255,255,0.15);
+ padding:8px 12px;
+ border-radius:8px;
+ transition:background 0.2s ease;
+}
+
+.faq-dropdown {
+ display:none;
+ position:absolute;
+ top:60px;
+ right:20px;
+ background:white;
+ color:#333;
+ border-radius:8px;
+ box-shadow:0 4px 16px rgba(0,0,0,0.2);
+ z-index:100;
+ min-width:200px;
+ overflow:hidden;
+}
+
+.faq-dropdown.show {
+ display:block;
+}
+
+.faq-dropdown div {
+ padding:12px 16px;
+ border-bottom:1px solid #eee;
+ cursor:pointer;
+ transition:background 0.2s ease;
+}
+
+.faq-dropdown div:hover {
+ background:#f5f5f5;
+}
+
+.chat-body {
+ flex:1;
+ padding:24px;
+ overflow-y:auto;
+ background-color:#f1f1f1;
+}
+
+.message {
+ margin-bottom:16px;
+ display:flex;
+}
+
+.message.user .bubble {
+ margin-left:auto;
+ background-color:var(--color-primary);
+ color:white;
+}
+
+.message.bot .bubble {
+ margin-right:auto;
+ background-color:var(--color-accent);
+ color:white;
+}
+
+.bubble {
+ padding:14px 20px;
+ border-radius:20px;
+ max-width:60%;
+ font-size:1rem;
+ line-height:1.5;
+ word-wrap:break-word;
+}
+
+.chat-input {
+ display:flex;
+ border-top:1px solid #ccc;
+ background-color:#f9f9f9;
+ padding:16px;
+}
+
+.chat-input input {
+ flex:1;
+ border:1px solid #ccc;
+ padding:12px 16px;
+ font-size:1rem;
+ border-radius:8px;
+ outline:none;
+}
+
+.chat-input button {
+ margin-left:12px;
+ background-color:var(--color-secondary);
+ border:none;
+ color:white;
+ padding:12px 24px;
+ font-size:1rem;
+ border-radius:8px;
+ cursor:pointer;
+ transition:background-color 0.2s ease;
+}
+
+.chat-input button:hover {
+ background-color:#0f5c67;
+}
+</style>
+</head>
+<body>
+ <div class="chat-wrapper">
+  <div class="chat-header">
+   <span>한국외국어대학교 HUBOT</span>
+   <div class="faq-menu" id="faq-toggle">
+    자주 묻는 질문 ▾
+    <div class="faq-dropdown" id="faq-dropdown">
+     <div>졸업학점은 몇 학점인가요?</div>
+     <div>학년별 이수 과정은 어떻게 되나요?</div>
+     <div>어떤 언어를 배우게 되나요?</div>
+    </div>
+   </div>
+  </div>
+  <div class="chat-body" id="chat-body">
+   <div class="message bot">
+    <div class="bubble">안녕! 무엇을 도와줄까?</div>
+   </div>
+  </div>
+  <form class="chat-input" id="chat-form">
+   <input type="text" id="chat-input" placeholder="메시지를 입력하세요…" autocomplete="off">
+   <button type="submit">보내기</button>
+  </form>
+ </div>
+
+<script>
+const form = document.getElementById('chat-form');
+const input = document.getElementById('chat-input');
+const body = document.getElementById('chat-body');
+const faqToggle = document.getElementById('faq-toggle');
+const faqDropdown = document.getElementById('faq-dropdown');
+
+function appendMessage(content, sender) {
+ const msg = document.createElement('div');
+ msg.className = 'message ' + sender;
+ const bubble = document.createElement('div');
+ bubble.className = 'bubble';
+ bubble.textContent = content;
+ msg.appendChild(bubble);
+ body.appendChild(msg);
+ body.scrollTop = body.scrollHeight;
+}
+
+function botReply(text) {
+ const reply = '네! "' + text + '" 라는 말을 들었다';
+ appendMessage(reply, 'bot');
+}
+
+form.addEventListener('submit', e => {
+ e.preventDefault();
+ const text = input.value.trim();
+ if (!text) return;
+ appendMessage(text, 'user');
+ input.value = '';
+ botReply(text);
+});
+
+// FAQ 메뉴 클릭 시 드롭다운 토글
+faqToggle.addEventListener('click', () => {
+ faqDropdown.classList.toggle('show');
+});
+
+// FAQ 질문 클릭 시 입력창에 자동 입력 후 전송
+[...faqDropdown.querySelectorAll('div')].forEach(item => {
+ item.addEventListener('click', e => {
+  const text = e.target.textContent;
+  input.value = text;
+  faqDropdown.classList.remove('show');
+  form.dispatchEvent(new Event('submit'));
+ });
+});
+</script>
+</body>
+</html>
+
+
