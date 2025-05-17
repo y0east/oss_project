@@ -15,17 +15,7 @@
         font-family: 'Nanum Gothic', sans-serif;
       }
 
-      /* ✨ 문장 이동 애니메이션 (왼쪽 ➜ 오른쪽, 무한 반복) */
-      @keyframes slide-left-to-right {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(100vw);
-        }
-      }
-
-      /* 그라데이션 텍스트 스타일 */
+      /* 🔹 그라데이션 텍스트 공용 스타일 */
       .gradient-text {
         display: inline-block;
         background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
@@ -34,20 +24,11 @@
         background-clip: text;
         color: transparent;
       }
-
-      .animate-chatline {
-        position: absolute;
-        left: 0;
-        animation: slide-left-to-right 8s linear infinite;
-        white-space: nowrap;
-        pointer-events: none;
-        will-change: transform;
-      }
     </style>
   </head>
 
   <body class="bg-gray-100">
-    <!-- Top Mini Bar -->
+    <!-- ▣ Top Mini Bar -->
     <div class="w-full bg-white border-b border-gray-200 text-xs">
       <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         <div class="flex items-center gap-3">
@@ -56,12 +37,12 @@
         </div>
         <div class="flex items-center gap-6 text-sm md:text-base">
           <a href="#" class="hover:underline">이메일</a>
-          <a href="#" class="hover:opacity-80"><img src="./icon=w-5 h-5" /></a>
+          <a href="#" class="hover:opacity-80"><img src="./icon/lock.png" alt="로그인" class="w-5 h-5" /></a>
         </div>
       </div>
     </div>
 
-    <!-- Main Nav -->
+    <!-- ▣ Main Nav -->
     <nav class="w-full bg-[#002D56] text-white">
       <div class="max-w-7xl mx-auto flex items-center justify-center gap-24 py-3 text-base md:text-lg font-bold">
         <a class="hover:text-sky-300" href="#">학과소개</a>
@@ -72,7 +53,7 @@
       </div>
     </nav>
 
-    <!-- Quick Access Bar -->
+    <!-- ▣ Quick Access Bar -->
     <div class="w-full bg-gray-200">
       <div class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide">
         <a href="#" class="hover:text-sky-600">e-Class</a>
@@ -82,19 +63,19 @@
       </div>
     </div>
 
-    <!-- Hero (배너) -->
+    <!-- ▣ Hero (배너) -->
     <section class="relative w-full h-96 flex flex-col items-center justify-center text-center overflow-hidden" style="background: url('./img/hufs_main.png') center/cover no-repeat">
       <div class="absolute inset-0 bg-black/50"></div>
       <h2 class="relative text-white text-2xl md:text-4xl font-bold mb-3">공과대학 <span class="text-teal-300">정보통신공학과</span></h2>
       <p class="relative text-base md:text-lg text-gray-200">Department of Information Communication Engineering</p>
     </section>
 
-    <!-- News Section -->
+    <!-- ▣ News Section -->
     <section class="max-w-7xl mx-auto px-4 py-16">
       <div class="flex flex-col md:flex-row gap-10">
         <div class="md:w-1/4">
           <h3 class="text-2xl font-bold leading-snug mb-4">한국외대<br />정보통신공학과<br />소식</h3>
-          <a href="page2.html" class="text-sm underline hover:text-blue-600">소식 더보기 ></a>
+          <a href="page2.html" class="text-sm underline hover:text-blue-600">소식 더보기 &gt;</a>
         </div>
 
         <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -122,53 +103,22 @@
       </div>
     </section>
 
-    <!-- Quick Links Section + AI 챗봇 아이콘 & 애니메이션 -->
-    <section id="quick-links-container" class="relative bg-[#0b2958] py-16">
-      <!-- 문장 레이어 -->
-      <div id="chat-lines-layer" class="absolute inset-0 overflow-hidden"></div>
+    <!-- ▣ HUBOT CTA Section (디자인 개편) -->
+    <section class="relative bg-[#0b2958] py-24 text-white overflow-hidden">
+      <div class="max-w-7xl mx-auto relative flex flex-col items-center text-center">
+        <!-- 중심 HUBOT 아이콘 -->
+        <img src="./icon/ai_chatbot_icon.png" alt="HUBOT" class="w-32 h-auto select-none" />
+        <h3 class="mt-6 text-2xl md:text-3xl font-bold">HUBOT에게 물어보기</h3>
 
-      <!-- AI Chatbot Icon -->
-      <img src="./icon/ai_chatbot_icon.png" alt="AI Chatbot" class="absolute right-10 top-1/2 -translate-y-1/2 w-20 h-auto z-10 select-none pointer-events-none" />
-
-      <!-- (빈) 카드 영역 -->
-      <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-10"></div>
+        <!-- 질문 문구들 (절대 배치) -->
+        <span class="absolute left-6 md:left-16 top-6 md:top-12 text-lg md:text-xl font-semibold gradient-text">졸업학점?</span>
+        <span class="absolute left-6 md:left-16 top-32 md:top-40 text-lg md:text-xl font-semibold gradient-text">이수체계?</span>
+        <span class="absolute right-6 md:right-16 top-6 md:top-12 text-lg md:text-xl font-semibold gradient-text">수업내용?</span>
+        <span class="absolute right-6 md:right-16 top-32 md:top-40 text-lg md:text-xl font-semibold gradient-text">궁금한게 많다면?</span>
+      </div>
     </section>
 
-    <!-- ✨ 애니메이션 스크립트 -->
-    <script>
-      const phrases = ['교과 과정이 어떻게 되나요?', '졸업 학점이 몇이에요?', '궁금한게 있으신가요?'];
-
-      const layer = document.getElementById('chat-lines-layer');
-      const activeYPos = [];
-
-      function getUniqueTop(minGap = 20) {
-        let y,
-          tries = 0;
-        do {
-          y = 10 + Math.random() * 80;
-          tries++;
-        } while (activeYPos.some((t) => Math.abs(t - y) < minGap) && tries < 30);
-        activeYPos.push(y);
-        if (activeYPos.length > 4) activeYPos.shift();
-        return y;
-      }
-
-      function spawnLine() {
-        const span = document.createElement('span');
-        span.textContent = phrases[Math.floor(Math.random() * phrases.length)];
-        span.className = 'animate-chatline gradient-text text-xs md:text-sm lg:text-base font-medium';
-        span.style.top = getUniqueTop() + '%';
-        layer.appendChild(span);
-
-        span.addEventListener('animationend', () => {
-          span.remove();
-          const index = activeYPos.indexOf(parseFloat(span.style.top));
-          if (index > -1) activeYPos.splice(index, 1);
-        });
-      }
-
-      spawnLine();
-      setInterval(spawnLine, 3000);
-    </script>
+    <!-- ▣ Footer Placeholder -->
+    <footer class="py-10 text-center text-sm text-gray-500">© 2025 HUFS ICE. All rights reserved.</footer>
   </body>
 </html>
