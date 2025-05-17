@@ -1,106 +1,174 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HUFS · 정보통신공학과</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body{font-family:"Nanum Gothic",sans-serif;}
-  </style>
-</head>
-<body class="bg-gray-100">
-  <!-- Top Mini Bar -->
-  <div class="w-full bg-white border-b border-gray-200 text-xs">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-1">
-      <div class="flex items-center gap-1">
-        <img src="https://via.placeholder.com/18x18" alt="logo" class="w-4 h-4">
-        <span class="font-semibold">정보통신공학과</span>
-      </div>
-      <div class="flex gap-4">
-        <a href="#" class="hover:underline">이메일</a>
-        <a href="#" class="hover:underline">로그인</a>
-      </div>
-    </div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS · 정보통신공학과</title>
 
-  <!-- Main Nav -->
-  <nav class="w-full bg-[#002D56] text-white">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-10 py-3 text-sm font-semibold">
-      <a class="hover:text-sky-300" href="#">학과소개</a>
-      <a class="hover:text-sky-300" href="#">학사·장학</a>
-      <a class="hover:text-sky-300" href="#">교과과정</a>
-      <a class="hover:text-sky-300" href="#">대학원</a>
-      <a class="hover:text-sky-300" href="#">학회시설</a>
-    </div>
-  </nav>
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+      body {
+        font-family: 'Nanum Gothic', sans-serif;
+      }
 
+      /* ✨ 문장 이동 애니메이션 (왼쪽 ➜ 오른쪽, 무한 반복) */
+      @keyframes slide-left-to-right {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100vw);
+        }
+      }
 
-  <!-- Hero (배너) -->
-  <section class="relative w-full h-64 flex flex-col items-center justify-center text-center overflow-hidden" style="background:url('./image/qosj.jpg') center/cover no-repeat;">
-    <div class="absolute inset-0 bg-black/40"></div>
-    <span class="relative uppercase text-sm tracking-wider text-gray-100 bg-black/50 px-3 py-1 rounded-full mb-4">index</span>
-    <h2 class="relative text-white text-xl md:text-3xl font-bold mb-2">공과대학 <span class="text-teal-300">정보통신공학과</span></h2>
-    <p class="relative text-sm md:text-base text-gray-200">Department of Information Communication Engineering</p>
-  </section>
+      /* 그라데이션 텍스트 스타일 */
+      .gradient-text {
+        display: inline-block;
+        background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
 
-  <!-- News Section -->
-  <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="flex flex-col md:flex-row gap-10">
-      <!-- Left Column -->
-      <div class="md:w-1/4">
-        <h3 class="text-2xl font-bold leading-snug mb-4">
-          한국외대<br>정보통신공학과<br>소식
-        </h3>
-        <a href="page2.html" class="text-sm underline hover:text-blue-600">소식 더보기 &gt;</a>
-      </div>
+      .animate-chatline {
+        position: absolute;
+        left: 0;
+        animation: slide-left-to-right 8s linear infinite;
+        white-space: nowrap;
+        pointer-events: none;
+        will-change: transform;
+      }
+    </style>
+  </head>
 
-      <!-- News Cards -->
-      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
-          <h4 class="text-xs font-semibold mb-1">홍보 / 수상</h4>
-          <p class="text-sm line-clamp-2">[M·Experience 김모연 교수팀] 2025 3대창업...</p>
-          <time class="block mt-3 text-xs opacity-80">2025.04.28</time>
-        </article>
-        <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
-          <h4 class="text-xs font-semibold mb-1">학과 소식</h4>
-          <p class="text-sm line-clamp-2">[2025학년도 후기 신입생 모집 안내] 입학금, 장학제도 등...</p>
-          <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
-        </article>
-        <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
-          <h4 class="text-xs font-semibold mb-1">특허 실적</h4>
-          <p class="text-sm line-clamp-2">[M·Experience 김모연 교수팀] IMMERSIVE VIRTUAL GOLF SERVICE WITH XR DEVICE, US 2024</p>
-          <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
-        </article>
-        <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
-          <h4 class="text-xs font-semibold mb-1">학술 행사</h4>
-          <p class="text-sm line-clamp-2">KMF2024 장소: NTP...</p>
-          <time class="block mt-3 text-xs opacity-80">2024.10.17</time>
-        </article>
+  <body class="bg-gray-100">
+    <!-- Top Mini Bar -->
+    <div class="w-full bg-white border-b border-gray-200 text-xs">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <img src="./icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
+          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]">정보통신공학과</span>
+        </div>
+        <div class="flex items-center gap-6 text-sm md:text-base">
+          <a href="#" class="hover:underline">이메일</a>
+          <a href="#" class="hover:opacity-80"><img src="./icon=w-5 h-5" /></a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Quick Links Section -->
-  <section class="bg-[#0b2958] py-16">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-10">
-      <a href="#" class="w-40 aspect-square bg-[#99815c] rounded-2xl flex flex-col items-center justify-center gap-3 text-white shadow hover:-translate-y-1 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8m-7-4h7M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        <span class="font-semibold">학과소개</span>
-      </a>
-      <a href="#" class="w-40 aspect-square bg-[#99815c] rounded-2xl flex flex-col items-center justify-center gap-3 text-white shadow hover:-translate-y-1 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" viewBox="0 0 24 24" fill="currentColor"><path d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87M12 5a4 4 0 110 8 4 4 0 010-8zM12 13a8 8 0 018 8H4a8 8 0 018-8z"/></svg>
-        <span class="font-semibold">교수소개</span>
-      </a>
-      <a href="#" class="w-40 aspect-square bg-[#99815c] rounded-2xl flex flex-col items-center justify-center gap-3 text-white shadow hover:-translate-y-1 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.194 2.238.194v2.46h-1.261c-1.243 0-1.63.772-1.63 1.562v 1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
-        <span class="font-semibold">페이스북</span>
-      </a>
-      <a href="#" class="w-40 aspect-square bg-[#99815c] rounded-2xl flex flex-col items-center justify-center gap-3 text-white shadow hover:-translate-y-1 transition">
-        <svg xmlns="http://www.w3.org/2000
+    <!-- Main Nav -->
+    <nav class="w-full bg-[#002D56] text-white">
+      <div class="max-w-7xl mx-auto flex items-center justify-center gap-24 py-3 text-base md:text-lg font-bold">
+        <a class="hover:text-sky-300" href="#">학과소개</a>
+        <a class="hover:text-sky-300" href="#">학사·장학</a>
+        <a class="hover:text-sky-300" href="#">교과과정</a>
+        <a class="hover:text-sky-300" href="#">대학원</a>
+        <a class="hover:text-sky-300" href="#">학회시설</a>
+      </div>
+    </nav>
 
-        </body>
+    <!-- Quick Access Bar -->
+    <div class="w-full bg-gray-200">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide">
+        <a href="#" class="hover:text-sky-600">e-Class</a>
+        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
+        <a href="#" class="hover:text-sky-600">도서관</a>
+        <a href="#" class="hover:text-sky-600">입학안내</a>
+      </div>
+    </div>
+
+    <!-- Hero (배너) -->
+    <section class="relative w-full h-96 flex flex-col items-center justify-center text-center overflow-hidden" style="background: url('./img/hufs_main.png') center/cover no-repeat">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h2 class="relative text-white text-2xl md:text-4xl font-bold mb-3">공과대학 <span class="text-teal-300">정보통신공학과</span></h2>
+      <p class="relative text-base md:text-lg text-gray-200">Department of Information Communication Engineering</p>
+    </section>
+
+    <!-- News Section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <div class="flex flex-col md:flex-row gap-10">
+        <div class="md:w-1/4">
+          <h3 class="text-2xl font-bold leading-snug mb-4">한국외대<br />정보통신공학과<br />소식</h3>
+          <a href="page2.html" class="text-sm underline hover:text-blue-600">소식 더보기 ></a>
+        </div>
+
+        <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
+            <h4 class="text-xs font-semibold mb-1">홍보 / 수상</h4>
+            <p class="text-sm line-clamp-2">[M·Experience 김모연 교수팀] 2025 3대창업...</p>
+            <time class="block mt-3 text-xs opacity-80">2025.04.28</time>
+          </article>
+          <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
+            <h4 class="text-xs font-semibold mb-1">학과 소식</h4>
+            <p class="text-sm line-clamp-2">[2025학년도 후기 신입생 모집 안내] 입학금, 장학제도 등...</p>
+            <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
+          </article>
+          <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
+            <h4 class="text-xs font-semibold mb-1">특허 실적</h4>
+            <p class="text-sm line-clamp-2">[M·Experience 김모연 교수팀] IMMERSIVE VIRTUAL GOLF SERVICE WITH XR DEVICE, US 2024</p>
+            <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
+          </article>
+          <article class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition">
+            <h4 class="text-xs font-semibold mb-1">학술 행사</h4>
+            <p class="text-sm line-clamp-2">KMF2024 장소: NTP...</p>
+            <time class="block mt-3 text-xs opacity-80">2024.10.17</time>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links Section + AI 챗봇 아이콘 & 애니메이션 -->
+    <section id="quick-links-container" class="relative bg-[#0b2958] py-16">
+      <!-- 문장 레이어 -->
+      <div id="chat-lines-layer" class="absolute inset-0 overflow-hidden"></div>
+
+      <!-- AI Chatbot Icon -->
+      <img src="./icon/ai_chatbot_icon.png" alt="AI Chatbot" class="absolute right-10 top-1/2 -translate-y-1/2 w-20 h-auto z-10 select-none pointer-events-none" />
+
+      <!-- (빈) 카드 영역 -->
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-10"></div>
+    </section>
+
+    <!-- ✨ 애니메이션 스크립트 -->
+    <script>
+      const phrases = ['교과 과정이 어떻게 되나요?', '졸업 학점이 몇이에요?', '궁금한게 있으신가요?'];
+
+      const layer = document.getElementById('chat-lines-layer');
+      const activeYPos = [];
+
+      function getUniqueTop(minGap = 20) {
+        let y,
+          tries = 0;
+        do {
+          y = 10 + Math.random() * 80;
+          tries++;
+        } while (activeYPos.some((t) => Math.abs(t - y) < minGap) && tries < 30);
+        activeYPos.push(y);
+        if (activeYPos.length > 4) activeYPos.shift();
+        return y;
+      }
+
+      function spawnLine() {
+        const span = document.createElement('span');
+        span.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+        span.className = 'animate-chatline gradient-text text-xs md:text-sm lg:text-base font-medium';
+        span.style.top = getUniqueTop() + '%';
+        layer.appendChild(span);
+
+        span.addEventListener('animationend', () => {
+          span.remove();
+          const index = activeYPos.indexOf(parseFloat(span.style.top));
+          if (index > -1) activeYPos.splice(index, 1);
+        });
+      }
+
+      spawnLine();
+      setInterval(spawnLine, 3000);
+    </script>
+  </body>
 </html>
