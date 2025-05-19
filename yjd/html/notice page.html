@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS · 정보통신공학과</title>
+
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Nanum Gothic", sans-serif;
+      }
+
+      /* 🔹 공통 그라데이션 텍스트 */
+      .gradient-text {
+        display: inline-block;
+        background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용 */
+      #mega-menu {
+        background: rgba(2, 49, 90, 0.85);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        height: 16rem;
+        overflow-y: auto;
+      }
+
+      /* 🔸 하이라이트 열 */
+      .highlight {
+        background: rgba(6, 66, 118, 0.85) !important;
+      }
+
+      /* 🔸 네비게이션 글자 자간 */
+      .nav-item button {
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- ▣ Top Mini Bar -->
+    <div class="w-full bg-white border-b border-gray-200 text-xs">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <div class="flex items-center gap-3">
+          <img src="./icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
+          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]"
+            >정보통신공학과</span
+          >
+        </div>
+        <div class="flex items-center gap-6 text-sm md:text-base">
+          <a href="#" class="hover:underline">이메일</a>
+          <a href="#" class="hover:opacity-80">
+            <img src="./icon/lock.png" alt="로그인" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▣ Main Navigation -->
+    <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
+      <ul
+        class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold"
+      >
+        <li class="nav-item" data-col="about">
+          <button class="hover:text-sky-300">학과소개</button>
+        </li>
+        <li class="nav-item" data-col="bursary">
+          <button class="hover:text-sky-300">학사·장학</button>
+        </li>
+        <li class="nav-item" data-col="curriculum">
+          <button class="hover:text-sky-300">교과과정</button>
+        </li>
+        <li class="nav-item" data-col="grad">
+          <button class="hover:text-sky-300">대학원</button>
+        </li>
+        <li class="nav-item" data-col="facility">
+          <button class="hover:text-sky-300">학회·시설</button>
+        </li>
+      </ul>
+
+      <!-- 🔸 Mega Menu -->
+      <div id="mega-menu" class="absolute top-full left-0 w-screen hidden">
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 py-10 text-sm leading-relaxed"
+        >
+          <!-- 학과소개 -->
+          <div class="mega-col flex flex-col gap-2" data-col="about">
+            <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
+            <a href="#" class="hover:text-sky-300">구성원</a>
+            <a href="#" class="hover:text-sky-300">교육목표</a>
+            <a href="#" class="hover:text-sky-300">개관 및 연혁</a>
+            <a href="#" class="hover:text-sky-300">졸업후 취업동향</a>
+            <a href="#" class="hover:text-sky-300">학과행사</a>
+            <a href="#" class="hover:text-sky-300">오시는 길</a>
+          </div>
+
+          <!-- 학사·장학 -->
+          <div class="mega-col flex flex-col gap-2" data-col="bursary">
+            <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
+            <a href="#" class="hover:text-sky-300">학사</a>
+            <a href="#" class="hover:text-sky-300">장학</a>
+            <a href="#" class="hover:text-sky-300">전공로드맵</a>
+          </div>
+
+          <!-- 교과과정 -->
+          <div class="mega-col flex flex-col gap-2" data-col="curriculum">
+            <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
+            <a href="#" class="hover:text-sky-300">이수체계</a>
+            <a href="#" class="hover:text-sky-300">개설과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
+            <a href="#" class="hover:text-sky-300">신입생세미나</a>
+            <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
+          </div>
+
+          <!-- 대학원 -->
+          <div class="mega-col flex flex-col gap-2" data-col="grad">
+            <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
+            <a href="#" class="hover:text-sky-300">대학원 학과소개</a>
+            <a href="#" class="hover:text-sky-300">교수진 소개</a>
+            <a href="#" class="hover:text-sky-300">전공별 교과과정</a>
+            <a href="#" class="hover:text-sky-300">종합시험과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 게시판</a>
+          </div>
+
+          <!-- 학회·시설 -->
+          <div class="mega-col flex flex-col gap-2" data-col="facility">
+            <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
+            <a href="#" class="hover:text-sky-300">AdvICE</a>
+            <a href="#" class="hover:text-sky-300">자유게시판</a>
+            <a href="#" class="hover:text-sky-300">FICS</a>
+            <a href="#" class="hover:text-sky-300">시설안내</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ▣ Quick Access Bar -->
+    <div class="w-full bg-gray-200">
+      <div
+        class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide"
+      >
+        <a href="#" class="hover:text-sky-600">e-Class</a>
+        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
+        <a href="#" class="hover:text-sky-600">도서관</a>
+        <a href="#" class="hover:text-sky-600">입학안내</a>
+      </div>
+    </div>
+
+    <!-- ▣ Hero Banner -->
+    <section
+      class="relative w-full h-96 flex flex-col items-center justify-center text-center overflow-hidden"
+      style="background: url('./img/hufs_main.png') center/cover no-repeat"
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h2 class="relative text-white text-2xl md:text-4xl font-bold mb-3">
+        공과대학 <span class="text-teal-300">정보통신공학과</span>
+      </h2>
+      <p class="relative text-base md:text-lg text-gray-200">
+        Department of Information Communication Engineering
+      </p>
+    </section>
+
+    <!-- ▣ Notice List Section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <!-- 헤더 -->
+      <div class="flex items-center gap-2 mb-8">
+        <img src="./icon/megaphone.svg" alt="공지" class="w-6 h-6" />
+        <h3 class="text-2xl font-bold text-gray-800">정보통신공학과 공지사항</h3>
+      </div>
+
+      <!-- 공지 카드 리스트 -->
+      <div class="space-y-6">
+        <!-- 카드 템플릿 (X5) -->
+        <!-- 카드 1 -->
+        <article
+          class="bg-[linear-gradient(135deg,#002D56_0%,#003B70_100%)] rounded-lg shadow-md p-6 flex justify-between items-start text-white"
+        >
+          <div>
+            <h4 class="font-semibold mb-4">[공지] 예시 공지사항 1번 제목입니다</h4>
+            <p class="flex items-center gap-2 text-sm opacity-90">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  d="M19.5 3h-1V1.5a.75.75 0 10-1.5 0V3h-9V1.5a.75.75 0 10-1.5 0V3h-1A2.25 2.25 0 003.75 5.25v13.5A2.25 2.25 0 006 21h13.5a2.25 2.25 0 002.25-2.25V5.25A2.25 2.25 0 0019.5 3zM20.25 9.75h-16.5V6h16.5v3.75z"
+                />
+              </svg>
+              2025.04.01
+            </p>
+          </div>
+          <div class="flex flex-col items-end gap-2 text-sm font-medium">
+            <span class="flex items-center gap-1 opacity-90">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"
+                />
+              </svg>
+              101
+            </span>
+            <span class="flex items-center gap-1 opacity-90">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4 text-pink-300"
+              >
+                <path
+                  d="M6 2C4.9 2 4 2.9 4 4v16l8-3 8 3V4c0-1.1-.9-2-2-2H6z"
+                />
+              </svg>
+              224901
+            </span>
+          </div>
+        </article>
+
+        <!-- 카드 2 -->
+        <article
+          class="bg-[linear-gradient(135deg,#002D56_0%,#003B70_100%)] rounded-lg shadow-md p-6 flex justify-between items-start text-white"
+        >
+          <div>
+            <h4 class("font-semibold mb-4">[공지] 예시 공지사항 2번 제목입니다</h4>
+            <p class="flex items-center gap-2 text-sm opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M19.5 3h-1V1.5a.75.75 0 10-1.5 0V3h-9V1.5a.75.75 0 10-1.5 0V3h-1A2.25 2.25 0 003.75 5.25v13.5A2.25 2.25 0 006 21h13.5a2.25 2.25 0 002.25-2.25V5.25A2.25 2.25 0 0019.5 3zM20.25 9.75h-16.5V6h16.5v3.75z"/></svg>
+              2025.04.02
+            </p>
+          </div>
+          <div class="flex flex-col items-end gap-2 text-sm font-medium">
+            <span class="flex items-center gap-1 opacity-90"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>102</span>
+            <span class="flex items-center gap-1 opacity-90"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-pink-300"><path d="M6 2C4.9 2 4 2.9 4 4v16l8-3 8 3V4c0-1.1-.9-2-2-2H6z"/></svg>224902</span>
+          </div>
+        </article>
+
+        <!-- 카드 3 -->
+        <article
+          class="bg-[linear-gradient(135deg,#002D56_0%,#003B70_100%)] rounded-lg shadow-md p-6 flex justify-between items-start text-white"
+        >
+          <div>
+            <h4 class="font-semibold mb-4">[공지] 예시 공지사항 3번 제목입니다</h4>
+            <p class="flex items-center gap-2 text-sm opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M19.5 3h-1V1.5a.75.75 0 10-1.5 0V3h-9V1.5a.75.75 0 10-1.5 0V3h-1A2.25 2.25 0 003.75 5.25v13.5A2.25 2.25 0 006 21h13.5a2.25 2.25 0 002.25-2.25V5.25A2.25 2.25 0 0019.5 3zM20.25 9.75h-16.5V6h16.5v3.75z"/></svg> 2025.04.03
+            </p>
+          </div>
+          <div class="flex flex-col items-end gap-2 text-sm font-medium">
+            <span class="flex items-center gap-1 opacity-90"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>103</span>
+            <span class="flex items-center gap-1 opacity-90"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-pink-300"><path d="M6 2C4.9 2 4 2.9 4 4v16l8-3 8 3V4c0-1.1-.9-2-2-2H6z"/></svg>224903</span>
+          </div>
+        </article>
+
+        <!-- 카드 4 -->
+        <article
+          class="bg-[linear-gradient(135deg,#002D56_0%,#003B70_100%)] rounded-lg shadow-md p-6 flex justify-between items-start text-white"
+        >
+          <div>
+            <h4 class="font-semibold mb-4">[공지] 예시 공지사항 4번 제목입니다</h4>
+            <p class="flex items-center gap-2 text-sm opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M19.5 3h-1V1.5a.75.75 0 10-1.5 0V3h-9V1.5a.75.75 0 10-1.5 0V3h-1A2.25 2.25 0 003.75 5.25v13.5A2.25 2.25 0 006 21h13.5a2.25 2.25 0 002.25-2.25V5.25A2.25 2.25 0 0019.5 3zM20.25 9.75h-16.5V6h16.5v3.75z"/></svg> 2025.04.04
+            </p>
+          </div>
+          <div class="flex flex-col items-end gap-2 text-sm font-medium">
+            <span class="flex items-center gap-1 opacity-90"><svg xmlns="http://
