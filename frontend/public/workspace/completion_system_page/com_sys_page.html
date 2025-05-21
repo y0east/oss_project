@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS · 정보통신공학과</title>
+
+    <!-- Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+
+      /* ── 공통 그라데이션 텍스트 ───────────────────────── */
+      .gradient-text {
+        display: inline-block;
+        background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* ── 메가 메뉴 ───────────────────────────────────── */
+      #mega-menu {
+        background: rgba(2, 49, 90, 0.85);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        height: calc(16rem + 5px);
+        overflow-y: auto;
+      }
+      .highlight {
+        background: rgba(6, 66, 118, 0.85) !important;
+      }
+      .nav-item button {
+        letter-spacing: 0.02em;
+      }
+
+      /* ── 과목표 공통 ─────────────────────────────────── */
+      .curriculum-grid {
+        width: 95%;
+        max-width: 1200px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px 20px;
+        align-items: center; /* 🎯 학기 블럭과 과목 블럭 세로 가운데 정렬 */
+      }
+      .curriculum-grid .semester {
+        font-weight: bold;
+        background: #f4f4f4;
+        border-radius: 6px;
+        padding: 15px 10px;
+
+        /* 🎯 학기 텍스트 정확히 가운데 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .course-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .course {
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .major {
+        background: rgb(0, 45, 86);
+        color: #fff;
+      }
+      .basic {
+        background: rgb(141, 113, 80);
+        color: #fff;
+      }
+      .liberal {
+        background: rgb(20, 110, 122);
+        color: #fff;
+      }
+      .default {
+        background: rgb(218, 218, 211);
+        color: #000;
+      }
+
+      /* 범례 */
+      .legend-menu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .legend-box {
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+      }
+      .legend-box.major {
+        background: rgb(0, 45, 86);
+      }
+      .legend-box.basic {
+        background: rgb(141, 113, 80);
+      }
+      .legend-box.liberal {
+        background: rgb(20, 110, 122);
+      }
+      .legend-box.default-box {
+        background: rgb(218, 218, 211);
+        color: #000;
+      }
+
+      /* ── 흐름도 ─────────────────────────────────────── */
+      .flow-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin: 0 auto;
+      }
+      .flow-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* 수평 가운데 정렬 */
+        align-items: center; /* 수직 가운데 정렬 */
+        gap: 60px; /* 한 줄에 최대 두 묶음 */
+      }
+      .flow-step {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .arrow {
+        font-weight: bold;
+        color: #999;
+        font-size: 20px;
+      }
+
+      /* 과목표+순서도 큰 구역 */
+      .curriculum-section {
+        border: 2px solid #d1d5db;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2.5rem 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- ▣ Top Mini Bar -->
+    <div class="w-full bg-white border-b border-gray-200 text-xs">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <div class="flex items-center gap-3">
+          <!-- 🔗 경로: main_page/icon/ (스크린샷 기준) -->
+          <img
+            src="../icon/hufs_logo.gif"
+            alt="HUFS Logo"
+            class="w-32 h-auto"
+          />
+          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]">
+            정보통신공학과
+          </span>
+        </div>
+        <div class="flex items-center gap-6 text-sm md:text-base">
+          <a href="#" class="hover:underline">이메일</a>
+          <a href="#" class="hover:opacity-80">
+            <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▣ Main Nav + Mega Menu -->
+    <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
+      <ul
+        class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold"
+      >
+        <li class="nav-item" data-col="about">
+          <button class="hover:text-sky-300">학과소개</button>
+        </li>
+        <li class="nav-item" data-col="bursary">
+          <button class="hover:text-sky-300">학사·장학</button>
+        </li>
+        <li class="nav-item" data-col="curriculum">
+          <button class="hover:text-sky-300">교과과정</button>
+        </li>
+        <li class="nav-item" data-col="grad">
+          <button class="hover:text-sky-300">대학원</button>
+        </li>
+        <li class="nav-item" data-col="facility">
+          <button class="hover:text-sky-300">학회·시설</button>
+        </li>
+      </ul>
+
+      <div
+        id="mega-backdrop"
+        class="absolute top-full left-0 w-full"
+        style="height: calc(16rem + 5px); background: #e7f4ff; display: none"
+      ></div>
+      <!-- 🔸 Mega Menu -->
+      <div id="mega-menu" class="absolute top-full left-0 w-screen hidden">
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 py-10 text-sm leading-relaxed"
+        >
+          <!-- 학과소개 -->
+          <div class="mega-col flex flex-col gap-2" data-col="about">
+            <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
+            <a href="#" class="hover:text-sky-300">구성원</a>
+            <a href="#" class="hover:text-sky-300">교육목표</a>
+            <a href="#" class="hover:text-sky-300">개관 및 연혁</a>
+            <a href="#" class="hover:text-sky-300">졸업후 취업동향</a>
+            <a href="#" class="hover:text-sky-300">학과행사</a>
+            <a href="#" class="hover:text-sky-300">오시는 길</a>
+          </div>
+
+          <!-- 학사·장학 -->
+          <div class="mega-col flex flex-col gap-2" data-col="bursary">
+            <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
+            <a href="#" class="hover:text-sky-300">학사</a>
+            <a href="#" class="hover:text-sky-300">장학</a>
+            <a href="#" class="hover:text-sky-300">전공로드맵</a>
+          </div>
+
+          <!-- 교과과정 -->
+          <div class="mega-col flex flex-col gap-2" data-col="curriculum">
+            <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
+            <a href="#" class="hover:text-sky-300">이수체계</a>
+            <a href="#" class="hover:text-sky-300">개설과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
+            <a href="#" class="hover:text-sky-300">신입생세미나</a>
+            <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
+          </div>
+
+          <!-- 대학원 -->
+          <div class="mega-col flex flex-col gap-2" data-col="grad">
+            <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
+            <a href="#" class="hover:text-sky-300">대학원 학과소개</a>
+            <a href="#" class="hover:text-sky-300">교수진 소개</a>
+            <a href="#" class="hover:text-sky-300">전공별 교과과정</a>
+            <a href="#" class="hover:text-sky-300">종합시험과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 게시판</a>
+          </div>
+
+          <!-- 학회·시설 -->
+          <div class="mega-col flex flex-col gap-2" data-col="facility">
+            <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
+            <a href="#" class="hover:text-sky-300">AdvICE</a>
+            <a href="#" class="hover:text-sky-300">자유게시판</a>
+            <a href="#" class="hover:text-sky-300">FICS</a>
+            <a href="#" class="hover:text-sky-300">시설안내</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ▣ Hero (배너) -->
+    <section
+      class="relative w-full h-48 flex items-center justify-center text-center overflow-hidden bg-[#003366]"
+    >
+      <!-- 배경 이미지 : 프로젝트 최상위 ./img/subpage_pic.gif -->
+      <img
+        src="../img/subpage_pic.gif"
+        alt="subpage banner"
+        class="absolute inset-0 w-full h-full object-cover opacity-70"
+      />
+
+      <!-- 배너 타이틀 -->
+      <h2 class="relative text-white text-2xl md:text-4xl font-bold">
+        교육과정
+      </h2>
+    </section>
+
+    <!-- ▣ 이수체계 구역 (과목표 + 순서도) -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <div class="curriculum-section">
+        <!-- 범례 -->
+        <div class="legend-menu">
+          <span class="legend-box major">전공필수</span>
+          <span class="legend-box basic">공통 기초</span>
+          <span class="legend-box liberal">교양필수</span>
+          <span class="legend-box default-box">전공 선택</span>
+        </div>
+
+        <!-- ▣ 학년별 과목표 -->
+        <div class="curriculum-grid">
+          <!-- 1-1 -->
+          <div class="semester">1학년 1학기</div>
+          <div class="course-container">
+            <span class="course default">이산수학</span>
+            <span class="course liberal">컴퓨터 프로그래밍</span>
+            <span class="course liberal">컴퓨팅 사고</span>
+            <span class="course basic">AI공학개론</span>
+            <span class="course liberal">마이크로영어</span>
+            <span class="course liberal">대학영어 1</span>
+            <span class="course liberal">신입생 세미나</span>
+          </div>
+
+          <!-- 1-2 -->
+          <div class="semester">1학년 2학기</div>
+          <div class="course-container">
+            <span class="course basic">컴퓨터프로그래밍 및 실습</span>
+            <span class="course default">논리회로 및 실험</span>
+            <span class="course default">선형대수</span>
+            <span class="course basic">확률과 통계</span>
+            <span class="course liberal">대학영어 2</span>
+          </div>
+
+          <!-- 2-1 -->
+          <div class="semester">2학년 1학기</div>
+          <div class="course-container">
+            <span class="course major">자료구조</span>
+            <span class="course default">오픈소스 소프트웨어</span>
+            <span class="course default">AI정보이론</span>
+            <span class="course default">회로 이론의 이해</span>
+            <span class="course basic">공업수학 1</span>
+            <span class="course liberal">HUFS 커리어</span>
+          </div>
+
+          <!-- 2-2 -->
+          <div class="semester">2학년 2학기</div>
+          <div class="course-container">
+            <span class="course default">알고리즘 설계와 해석</span>
+            <span class="course default">컴퓨터 구조</span>
+            <span class="course major">신호 및 시스템</span>
+            <span class="course basic">공업수학 2</span>
+          </div>
+
+          <!-- 3-1 -->
+          <div class="semester">3학년 1학기</div>
+          <div class="course-container">
+            <span class="course default">머신러닝</span>
+            <span class="course default">운영체제</span>
+            <span class="course major">데이터 통신</span>
+            <span class="course default">통신공학</span>
+            <span class="course default">IoT시스템</span>
+            <span class="course default">인턴프로그램 1</span>
+          </div>
+
+          <!-- 3-2 -->
+          <div class="semester">3학년 2학기</div>
+          <div class="course-container">
+            <span class="course default">데이터베이스</span>
+            <span class="course default">이산신호처리</span>
+            <span class="course major">컴퓨터 네트워크</span>
+            <span class="course default">AI알고리즘</span>
+            <span class="course default">정보통신기초 종합 설계</span>
+            <span class="course default">인턴프로그램</span>
+          </div>
+
+          <!-- 4-1 -->
+          <div class="semester">4학년 1학기</div>
+          <div class="course-container">
+            <span class="course default">딥러닝</span>
+            <span class="course default">네트워크 보안</span>
+            <span class="course default">통신네트워크 설계</span>
+            <span class="course default">정보통신종합 설계 및 실습</span>
+          </div>
+
+          <!-- 4-2 -->
+          <div class="semester">4학년 2학기</div>
+          <div class="course-container">
+            <span class="course default">소프트웨어 공학</span>
+            <span class="course default">이동통신</span>
+            <span class="course default">멀티미디어 통신</span>
+            <span class="course default">데이터 사이언스</span>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-center mt-14 mb-8">
+          과목 순서도
+        </h3>
+
+        <div class="flow-grid">
+          <!-- 1 -->
+          <div class="flow-row">
+            <span class="course basic">컴퓨터프로그래밍 및 실습</span>
+            <span class="arrow">→</span>
+            <span class="course major">자료구조</span>
+            <span class="arrow">→</span>
+            <span class="course default">알고리즘 설계와 해석</span>
+          </div>
+
+          <!-- 2 -->
+          <div class="flow-row">
+            <span class="course basic">확률과 통계</span>
+            <span class="arrow">→</span>
+            <span class="course default">AI정보이론</span>
+            <span class="arrow">→</span>
+            <span class="course default">데이터 사이언스</span>
+          </div>
+
+          <!-- 3 -->
+          <div class="flow-row">
+            <span class="course default">AI알고리즘</span>
+            <span class="arrow">→</span>
+            <span class="course default">데이터 사이언스</span>
+          </div>
+
+          <!-- 4 -->
+          <div class="flow-row">
+            <span class="course default">머신러닝</span>
+            <span class="arrow">→</span>
+            <span class="course default">딥러닝</span>
+          </div>
+
+          <!-- 5 -->
+          <div class="flow-row">
+            <span class="course default">컴퓨터 구조</span>
+            <span class="arrow">→</span>
+            <span class="course default">운영체제</span>
+          </div>
+
+          <!-- 6 : 분기 → 이산신호처리 -->
+          <div class="flow-row">
+            <span class="course major">신호 및 시스템</span>
+            <span class="arrow">→</span>
+            <span class="course default">이산신호처리</span>
+          </div>
+
+          <!-- 7 : 분기 → 통신공학 -->
+          <div class="flow-row">
+            <span class="course major">신호 및 시스템</span>
+            <span class="arrow">→</span>
+            <span class="course default">통신공학</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▣ 교과과정 변경 안내 -->
+    <section class="text-center mt-14 mb-6">
+      <h2 class="text-2xl font-bold">교과과정 변경 안내</h2>
+    </section>
+    <div class="max-w-2xl mx-auto mb-20 text-[15px] leading-7 px-5 md:px-0">
+      <p><strong>■ 교과과정 변경 내용</strong></p>
+      <ol class="list-decimal list-inside space-y-1">
+        <li>
+          <strong>정보통신망설계(4학년 1학기)</strong> →
+          <strong>통신네트워크설계(4학년 1학기)</strong> : SDN 실험 실습 포함
+        </li>
+        <li><strong>AI정보이론(2학년 1학기)</strong> : 과목 신설</li>
+        <li><strong>AI알고리즘(3학년 2학기)</strong> : 과목 신설</li>
+        <li><strong>공업수학</strong> : 기초(공대) 교과목으로 재편</li>
+        <li><strong>AI공학개론</strong> : 기초(공대) 교과목 신설</li>
+      </ol>
+
+      <p class="mt-4"><strong>■ 2020학번 이후</strong></p>
+      <ol class="list-decimal list-inside space-y-1">
+        <li>
+          <strong>컴퓨터프로그래밍및실습</strong>을 반드시 수강해야 합니다.
+        </li>
+        <li>
+          교양 <strong>컴퓨터프로그래밍</strong>, <strong>컴퓨팅사고</strong>는
+          2학기에 공대생 수강 불가입니다.
+        </li>
+      </ol>
+
+      <p class="mt-4"><strong>■ 2019학번 이전</strong></p>
+      <ol class="list-decimal list-inside space-y-1">
+        <li><strong>컴퓨터통신개론</strong> 폐지 → 대체 과목 수강</li>
+        <li>
+          <strong>디지털통신</strong>은 <strong>디지털통신및실습</strong>과 동일
+          과목
+        </li>
+      </ol>
+    </div>
+
+    <!-- ▣ Footer -->
+    <footer class="bg-[#2f2f2f] py-10 text-center text-gray-300">
+      <div class="max-w-4xl mx-auto space-y-2 text-sm leading-relaxed">
+        <p class="text-gray-400 text-base font-semibold">
+          Hankuk University of Foreign Studies
+        </p>
+
+        <p>
+          <span class="text-[#c9aa71] font-semibold">글로벌캠퍼스</span>
+          17035 경기도 용인시 처인구 모현읍 외대로 81<br />
+          한국외국어대학교 공과대학 정보통신공학과
+        </p>
+
+        <p><span class="text-[#c9aa71]">Tel.</span> 031-330-4255</p>
+        <p><span class="text-[#c9aa71]">e-mail.</span> ice@hufs.ac.kr</p>
+
+        <p class="pt-2 text-xs text-gray-500">
+          Copyright © Hankuk University of Foreign Studies. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ▣ Script : Mega-menu 제어 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const megaMenu = document.getElementById('mega-menu');
+        const nav = document.getElementById('mainNav');
+        const navItems = document.querySelectorAll('.nav-item');
+        const cols = document.querySelectorAll('.mega-col');
+
+        function highlight(colName) {
+          cols.forEach((c) =>
+            c.classList.toggle('highlight', c.dataset.col === colName)
+          );
+        }
+        function showMega() {
+          megaMenu.classList.remove('hidden');
+        }
+        function hideMega() {
+          megaMenu.classList.add('hidden');
+          cols.forEach((c) => c.classList.remove('highlight'));
+        }
+
+        navItems.forEach((item) =>
+          item.addEventListener('mouseenter', () => {
+            showMega();
+            highlight(item.dataset.col);
+          })
+        );
+        nav.addEventListener('mouseleave', hideMega);
+        megaMenu.addEventListener('mouseenter', showMega);
+        megaMenu.addEventListener('mouseleave', hideMega);
+      });
+
+      navItems.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+          showMega();
+          highlight(item.dataset.col);
+          document.getElementById('mega-backdrop').style.display = 'block';
+        });
+      });
+      megaMenu.addEventListener('mouseleave', () => {
+        hideMega();
+        document.getElementById('mega-backdrop').style.display = 'none';
+      });
+      nav.addEventListener('mouseleave', () => {
+        hideMega();
+        document.getElementById('mega-backdrop').style.display = 'none';
+      });
+    </script>
+  </body>
+</html>
