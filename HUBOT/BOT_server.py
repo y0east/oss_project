@@ -6,7 +6,6 @@ app = Flask(__name__)
 CORS(app)  # 이 줄이 반드시 필요합니다!
 
 chatbot = HubotChatbot()
-
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
