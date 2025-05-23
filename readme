@@ -1,1 +1,41 @@
-정보통신공학과 사이트 리뉴얼
+Information and Communication Engineering Department Homepage Renewal
+
+Our team's project goal is to renew the design of the department's homepage and add a chatbot function to reorganize it to make it easier to obtain user experience and information
+
+
+# Information and Communication Engineering Department Homepage Renewal
+
+## 📌 Project Overview
+
+This project aims to **renew the official homepage** of the Department of Information and Communication Engineering. Our primary goal is to enhance the **user experience (UX)** and **information accessibility** by modernizing the overall design and integrating a **smart chatbot feature**.
+
+Through this project, we intend to transform the existing site into a more **user-friendly**, **visually engaging**, and **functional** platform for students, faculty, and visitors.
+
+## 🎯 Project Objectives
+
+- Redesign the homepage with a modern and responsive layout.
+- Improve accessibility and navigation structure for better usability.
+- Add a chatbot assistant to help users:
+  - Easily obtain academic information
+  - Get answers to FAQs
+  - Navigate the website through natural interaction
+- Optimize the website for both desktop and mobile users.
+- Improve overall load speed and performance.
+
+## ✨ Key Features
+
+- **Responsive Web Design**: Supports both desktop and mobile browsers.
+- **Chatbot Integration**: Powered by a simple NLP-based assistant (RAG, or custom model).
+- **User-Centered Navigation**: Clear and intuitive UI for quick access to content like curriculum, faculty info, and announcements.
+- **Admin-Friendly Update System**: Structure for easier content management in the future.
+- **Multilingual Support** *(optional)*: English/Korean toggle to accommodate diverse users.
+
+## 🛠 Technologies & Tools
+
+- **Frontend**: HTML5, CSS3, JavaScript, React.js, TailwindCSS
+- **Backend**: Node.js / Express (or Python Flask)
+- **Chatbot**: Python (RAG-based local model)
+- **Version Control**: Git, GitHub
+- **Design**: Adobe
+
+
