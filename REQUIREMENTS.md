@@ -1,3 +1,4 @@
+
 # Chatbot  
 ## Short Description  
 A simple chatbot that uses the KoSimCSE model for embedding.
@@ -46,3 +47,13 @@ A simple chatbot that uses the KoSimCSE model for embedding.
    - The dataset and system components should be easy to update.
 7. **Logging**  
    - Interactions should be recorded for monitoring and troubleshooting.
+
+
+
+front - YU JAE DONG / Seo sung douk
+Back - EuihyunLee
+Chatbot - Kim Kyu Min
+
+
+
+My role is design, front end html, css development.
