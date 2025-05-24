@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS · 정보통신공학과 · 게시글 작성</title>
+
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+      /* 🔹 공통 그라데이션 텍스트 */
+      .gradient-text {
+        display: inline-block;
+        background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+      /* 🔸 메가 메뉴: 넉넉한 고정 높이(16rem) + 스크롤 허용 */
+      #mega-menu {
+        background: rgba(2, 49, 90, 0.85);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        height: 16rem; /* 256px */
+        overflow-y: auto;
+      }
+      /* 🔸 하이라이트 열 */
+      .highlight {
+        background: rgba(6, 66, 118, 0.85) !important;
+      }
+      /* 🔸 네비게이션 글자 자간 살짝 넓힘 */
+      .nav-item button {
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- ▣ Top Mini Bar -->
+    <div class="w-full bg-white border-b border-gray-200 text-xs">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <img src="./icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
+          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]">정보통신공학과</span>
+        </div>
+        <div class="flex items-center gap-6 text-sm md:text-base">
+          <a href="#" class="hover:underline">이메일</a>
+          <a href="#" class="hover:opacity-80">
+            <img src="./icon/lock.png" alt="로그인" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▣ Main Nav + Mega Menu -->
+    <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
+      <ul class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold">
+        <li class="nav-item" data-col="about"><button class="hover:text-sky-300">학과소개</button></li>
+        <li class="nav-item" data-col="bursary"><button class="hover:text-sky-300">학사·장학</button></li>
+        <li class="nav-item" data-col="curriculum"><button class="hover:text-sky-300">교과과정</button></li>
+        <li class="nav-item" data-col="grad"><button class="hover:text-sky-300">대학원</button></li>
+        <li class="nav-item" data-col="facility"><button class="hover:text-sky-300">학회·시설</button></li>
+      </ul>
+
+      <!-- 🔸 Mega Menu -->
+      <div id="mega-menu" class="absolute top-full left-0 w-screen hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 py-10 text-sm leading-relaxed">
+          <!-- 학과소개 -->
+          <div class="mega-col flex flex-col gap-2" data-col="about">
+            <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
+            <a href="#" class="hover:text-sky-300">구성원</a>
+            <a href="#" class="hover:text-sky-300">교육목표</a>
+            <a href="#" class="hover:text-sky-300">개관 및 연혁</a>
+            <a href="#" class="hover:text-sky-300">졸업후 취업동향</a>
+            <a href="#" class="hover:text-sky-300">학과행사</a>
+            <a href="#" class="hover:text-sky-300">오시는 길</a>
+          </div>
+          <!-- 학사·장학 -->
+          <div class="mega-col flex flex-col gap-2" data-col="bursary">
+            <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
+            <a href="#" class="hover:text-sky-300">학사</a>
+            <a href="#" class="hover:text-sky-300">장학</a>
+            <a href="#" class="hover:text-sky-300">전공로드맵</a>
+          </div>
+          <!-- 교과과정 -->
+          <div class="mega-col flex flex-col gap-2" data-col="curriculum">
+            <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
+            <a href="#" class="hover:text-sky-300">이수체계</a>
+            <a href="#" class="hover:text-sky-300">개설과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
+            <a href="#" class="hover:text-sky-300">신입생세미나</a>
+            <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
+          </div>
+          <!-- 대학원 -->
+          <div class="mega-col flex flex-col gap-2" data-col="grad">
+            <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
+            <a href="#" class="hover:text-sky-300">대학원 학과소개</a>
+            <a href="#" class="hover:text-sky-300">교수진 소개</a>
+            <a href="#" class="hover:text-sky-300">전공별 교과과정</a>
+            <a href="#" class="hover:text-sky-300">종합시험과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 게시판</a>
+          </div>
+          <!-- 학회·시설 -->
+          <div class="mega-col flex flex-col gap-2" data-col="facility">
+            <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
+            <a href="#" class="hover:text-sky-300">AdvICE</a>
+            <a href="#" class="hover:text-sky-300">자유게시판</a>
+            <a href="#" class="hover:text-sky-300">FICS</a>
+            <a href="#" class="hover:text-sky-300">시설안내</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ▣ Quick Access Bar -->
+    <div class="w-full bg-gray-200">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide">
+        <a href="#" class="hover:text-sky-600">e-Class</a>
+        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
+        <a href="#" class="hover:text-sky-600">도서관</a>
+        <a href="#" class="hover:text-sky-600">입학안내</a>
+      </div>
+    </div>
+
+    <!-- ▣ 게시글 작성 폼 -->
+    <section class="max-w-4xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">게시글 작성</h2>
+      <form id="postForm" class="space-y-8 bg-white p-8 rounded-lg shadow">
+        <!-- 제목 -->
+        <div>
+          <label for="title" class="block text-sm font-semibold mb-1">제목</label>
+          <input type="text" id="title" name="title" required class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#002D56]" />
+        </div>
+
+        <!-- 카테고리 -->
+        <div>
+          <label for="category" class="block text-sm font-semibold mb-1">카테고리</label>
+          <select id="category" name="category" class="w-full border border-gray-300 rounded-md p-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#002D56]">
+            <option value="news">학과 소식</option>
+            <option value="award">홍보 / 수상</option>
+            <option value="patent">특허 실적</option>
+            <option value="event">학술 행사</option>
+            <option value="etc">기타</option>
+          </select>
+        </div>
+
+        <!-- 요약 -->
+        <div>
+          <label for="summary" class="block text-sm font-semibold mb-1">요약 (선택)</label>
+          <textarea id="summary" name="summary" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#002D56]"></textarea>
+        </div>
+
+        <!-- 본문 -->
+        <div>
+          <label for="content" class="block text-sm font-semibold mb-1">본문</label>
+          <textarea id="content" name="content" rows="10" required class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#002D56]"></textarea>
+        </div>
+
+        <!-- 첨부 이미지 -->
+        <div>
+          <label for="image" class="block text-sm font-semibold mb-1">대표 이미지 (선택)</label>
+          <input type="file" id="image" name="image" accept="image/*" class="w-full" />
+        </div>
+
+        <!-- 버튼 -->
+        <div class="flex justify-end gap-4">
+          <a href="page2.html" class="px-6 py-2 border border-gray-400 rounded-md text-gray-700 hover:bg-gray-100">취소</a>
+          <button type="submit" class="px-6 py-2 bg-[#002D56] text-white rounded-md hover:bg-[#0b3f7a]">작성 완료</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ▣ Footer (선택) -->
+    <footer class="bg-[#002D56] text-gray-200 text-sm text-center py-6">
+      © 2025 HUFS Department of Information Communication Engineering
+    </footer>
+
+    <!-- ▣ 스크립트 : Mega-menu 제어 + 폼 예시 처리 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Mega menu control
+        const megaMenu = document.getElementById('mega-menu');
+        const nav = document.getElementById('mainNav');
+        const navItems = document.querySelectorAll('.nav-item');
+        const cols = document.querySelectorAll('.mega-col');
+
+        function highlight(colName) {
+          cols.forEach((c) => {
+            c.classList.toggle('highlight', c.dataset.col === colName);
+          });
+        }
+        function showMega() {
+          megaMenu.classList.remove('hidden');
+        }
+        function hideMega() {
+          megaMenu.classList.add('hidden');
+          cols.forEach((c) => c.classList.remove('highlight'));
+        }
+        navItems.forEach((item) => {
+          item.addEventListener('mouseenter', () => {
+            showMega();
+            highlight(item.dataset.col);
+          });
+        });
+        nav.addEventListener('mouseleave', hideMega);
+        megaMenu.addEventListener('mouseenter', showMega);
+        megaMenu.addEventListener('mouseleave', hideMega);
+
+        // Post form demo submit
+        const form = document.getElementById('postForm');
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('게시글이 임시로 저장되었습니다! 실제 저장 로직을 구현하세요.');
+          form.reset();
+        });
+      });
+    </script>
+  </body>
+</html>
