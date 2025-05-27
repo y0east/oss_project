@@ -28,12 +28,11 @@
         color: transparent;
       }
 
-      /* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용
-         ⬇ 아래쪽 여유 공간 5px 증가  */
+      /* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용 */
       #mega-menu {
         background: rgba(2, 49, 90, 0.85);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-        height: calc(16rem + 5px); /* 16rem(256px) + 5px */
+        height: 16rem;
         overflow-y: auto;
       }
 
@@ -42,7 +41,7 @@
         background: rgba(6, 66, 118, 0.85) !important;
       }
 
-      /* 🔸 네비게이션 글자 자간 살짝 넓힘 */
+      /* 🔸 네비게이션 글자 자간 */
       .nav-item button {
         letter-spacing: 0.02em;
       }
@@ -56,23 +55,25 @@
         class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
       >
         <div class="flex items-center gap-3">
-          <!-- ⬇ 경로 수정 -->
           <img src="../icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
-          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]">
-            정보통신공학과
-          </span>
+          <a
+            href="http://localhost:3000/main_page/main_page.html"
+            style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
+            >정보통신공학과</a
+          >
         </div>
         <div class="flex items-center gap-6 text-sm md:text-base">
-          <a href="#" class="hover:underline">이메일</a>
-          <a href="#" class="hover:opacity-80">
-            <!-- ⬇ 경로 수정 -->
+          <a
+            href="http://localhost:3000/login_page/login_page.html"
+            class="hover:opacity-80"
+          >
             <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
           </a>
         </div>
       </div>
     </div>
 
-    <!-- ▣ Main Nav + Mega Menu -->
+    <!-- ▣ Main Navigation -->
     <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
       <ul
         class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold"
@@ -99,7 +100,6 @@
         <div
           class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 py-10 text-sm leading-relaxed"
         >
-          <!-- (생략: 각 열의 링크는 기존과 동일) -->
           <!-- 학과소개 -->
           <div class="mega-col flex flex-col gap-2" data-col="about">
             <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
@@ -122,13 +122,16 @@
           <!-- 교과과정 -->
           <div class="mega-col flex flex-col gap-2" data-col="curriculum">
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
-            <a href="#" class="hover:text-sky-300">이수체계</a>
+            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
+            <a
+              href="http://localhost:3000/completion_system_page/com_sys_page.html"
+              class="hover:text-sky-300"
+              >이수체계</a
+            >
             <a href="#" class="hover:text-sky-300">개설과목</a>
             <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
             <a href="#" class="hover:text-sky-300">신입생세미나</a>
-            <a href="#" class="hover:text-sky-300"
-              >정보통신종합설계 및 실습</a
-            >
+            <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
           </div>
 
           <!-- 대학원 -->
@@ -153,144 +156,76 @@
       </div>
     </nav>
 
-    <!-- ▣ Quick Access Bar -->
-    <div class="w-full bg-gray-200">
-      <div
-        class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide"
-      >
-        <a href="#" class="hover:text-sky-600">e-Class</a>
-        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
-        <a href="#" class="hover:text-sky-600">도서관</a>
-        <a href="#" class="hover:text-sky-600">입학안내</a>
-      </div>
-    </div>
-
-    <!-- ▣ Hero (배너) -->
+    <!-- ▣ Hero Banner (LOGIN) -->
     <section
-      class="relative w-full h-96 flex flex-col items-center justify-center text-center overflow-hidden"
-      /* ⬇ 경로 수정 */
-      style="background: url('../img/hufs_main.png') center/cover no-repeat"
+      class="relative w-full h-48 flex items-center justify-center text-center overflow-hidden bg-[#003366]"
     >
-      <div class="absolute inset-0 bg-black/50"></div>
-      <h2 class="relative text-white text-2xl md:text-4xl font-bold mb-3">
-        공과대학 <span class="text-teal-300">정보통신공학과</span>
+      <img
+        src="../img/subpage_pic.gif"
+        alt="subpage banner"
+        class="absolute inset-0 w-full h-full object-cover opacity-70"
+      />
+      <h2 class="relative text-white text-2xl md:text-4xl font-bold">
+        sub page
       </h2>
-      <p class="relative text-base md:text-lg text-gray-200">
-        Department of Information Communication Engineering
-      </p>
     </section>
 
-    <!-- ▣ News Section -->
-    <section class="max-w-7xl mx-auto px-4 py-16">
-      <!-- (생략: 카드 내용 동일) -->
-      <div class="flex flex-col md:flex-row gap-10">
-        <div class="md:w-1/4">
-          <h3 class="text-2xl font-bold leading-snug mb-4">
-            한국외대<br />정보통신공학과<br />소식
-          </h3>
-          <a href="page2.html" class="text-sm underline hover:text-blue-600"
-            >소식 더보기 &gt;</a
-          >
-        </div>
-
-        <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- 카드 1 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">홍보 / 수상</h4>
-            <p class="text-sm line-clamp-2">
-              [M·Experience 김모연 교수팀] 2025 3대창업...
-            </p>
-            <time class="block mt-3 text-xs opacity-80">2025.04.28</time>
-          </article>
-
-          <!-- 카드 2 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">학과 소식</h4>
-            <p class="text-sm line-clamp-2">
-              [2025학년도 후기 신입생 모집 안내] 입학금, 장학제도 등...
-            </p>
-            <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
-          </article>
-
-          <!-- 카드 3 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">특허 실적</h4>
-            <p class="text-sm line-clamp-2">
-              [M·Experience 김모연 교수팀] IMMERSIVE VIRTUAL GOLF SERVICE WITH
-              XR DEVICE, US 2024
-            </p>
-            <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
-          </article>
-
-          <!-- 카드 4 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">학술 행사</h4>
-            <p class="text-sm line-clamp-2">KMF2024 장소: NTP...</p>
-            <time class="block mt-3 text-xs opacity-80">2024.10.17</time>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ▣ HUBOT CTA Section -->
-    <!-- ⬇ padding(위/아래) 절반으로: py-24 → py-12 -->
-    <section class="relative bg-[#0b2958] py-12 text-white overflow-hidden">
-      <div
-        class="max-w-7xl mx-auto relative flex flex-col items-center text-center"
+    <!-- ▣ About & Goal Section -->
+    <section class="max-w-5xl mx-auto px-4 py-16 text-center">
+      <!-- 학과소개 배지 -->
+      <span
+        class="inline-block bg-gray-400 text-white text-lg md:text-xl font-bold py-2 px-8 rounded-lg shadow"
+        >학과소개</span
       >
-        <!-- ⬇ 경로 수정 -->
-        <img
-          src="../icon/ai_chatbot_icon.png"
-          alt="HUBOT"
-          class="w-32 h-auto select-none"
-        />
-        <h3 class="mt-6 text-2xl md:text-3xl font-bold">HUBOT에게 물어보기</h3>
 
-        <!-- 고정 문구 -->
-        <span
-          class="absolute left-6 md:left-16 top-6 md:top-12 text-lg md:text-xl font-semibold gradient-text"
-          >졸업학점?</span
-        >
-        <span
-          class="absolute left-6 md:left-16 top-32 md:top-40 text-lg md:text-xl font-semibold gradient-text"
-          >이수체계?</span
-        >
-        <span
-          class="absolute right-6 md:right-16 top-6 md:top-12 text-lg md:text-xl font-semibold gradient-text"
-          >수업내용?</span
-        >
-        <span
-          class="absolute right-6 md:right-16 top-32 md:top-40 text-lg md:text-xl font-semibold gradient-text"
-          >궁금한게 많다면?</span
-        >
+      <!-- 교육목표 제목 -->
+      <h3 class="mt-12 text-2xl md:text-3xl font-bold text-gray-800">
+        교육목표
+      </h3>
 
-        <!-- 새 질문들 -->
+      <!-- 파란 라인 -->
+      <div class="mt-3 w-24 h-0.5 bg-[#002D56] mx-auto"></div>
+
+      <!-- 본문 (📌 가독성 & 디자인 개선) -->
+      <div class="mt-10 text-left space-y-6">
+        <!-- 카드 1 -->
         <div
-          class="mt-24 md:mt-32 flex flex-wrap justify-center gap-x-10 gap-y-4 max-w-4xl"
+          class="bg-gray-50/80 border-l-4 border-[#002D56] p-6 rounded-md shadow-sm leading-relaxed text-gray-700 text-base md:text-lg"
         >
-          <span class="gradient-text text-lg md:text-xl font-semibold"
-            >정보통신공학과?</span
-          >
-          <span class="gradient-text text-lg md:text-xl font-semibold"
-            >졸업하려면 총 몇 학점?</span
-          >
-          <span class="gradient-text text-lg md:text-xl font-semibold"
-            >필수 과목 몇 개?</span
-          >
-          <span class="gradient-text text-lg md:text-xl font-semibold"
-            >자료구조는 어떤 내용?</span
-          >
-          <span class="gradient-text text-lg md:text-xl font-semibold"
-            >정보통신공학과 졸업 후 진로?</span
-          >
+          <p>
+            <span class="font-semibold text-[#002D56]">정보통신공학</span>은 4차
+            산업혁명의 핵심 기술인 지능정보·정보보안·통신·네트워크 기술이 융합된
+            종합 학문입니다. 본 학과의 커리큘럼은 하드웨어와 소프트웨어 전
+            영역을 아우르며
+            <strong
+              >지능형 시스템 구축 · 정보보안 확보 · 멀티미디어 정보 처리</strong
+            >
+            역량을 체계적으로 길러 줍니다.
+          </p>
+        </div>
+
+        <!-- 카드 2 -->
+        <div
+          class="bg-gray-50/80 border-l-4 border-[#002D56] p-6 rounded-md shadow-sm leading-relaxed text-gray-700 text-base md:text-lg"
+        >
+          <p>
+            <span class="font-semibold text-[#002D56]">ICT+외국어</span> 국제화
+            모델을 기반으로, 콘텐츠·플랫폼·네트워크·디바이스 네 영역의 지식을
+            <em>융합</em>하여 국제 경쟁력을 갖춘 창의적 글로벌 ICT 전문가를
+            양성합니다.
+          </p>
+        </div>
+
+        <!-- 카드 3 -->
+        <div
+          class="bg-gray-50/80 border-l-4 border-[#002D56] p-6 rounded-md shadow-sm leading-relaxed text-gray-700 text-base md:text-lg"
+        >
+          <p>
+            초고속 인터넷 강국 대한민국의 위상을 바탕으로, 본 학과는
+            <strong>실무 역량 · 윤리 의식 · 글로벌 협업 능력</strong>을 갖춘
+            엔지니어를 배출합니다. 부전공·이중전공 선택 및 해외 프로젝트 참여를
+            통해 다학제적 시야와 실전 경험을 동시에 확보할 수 있습니다.
+          </p>
         </div>
       </div>
     </section>
@@ -298,7 +233,7 @@
     <!-- ▣ Footer -->
     <footer class="bg-[#2f2f2f] py-10 text-center text-gray-300">
       <div class="max-w-4xl mx-auto space-y-2 text-sm leading-relaxed">
-        <!-- HUFS 영문 로고 (원한다면 이미지로 교체) -->
+        <!-- HUFS 영문 로고 -->
         <p class="text-gray-400 text-base font-semibold">
           Hankuk University of Foreign Studies
         </p>
@@ -321,7 +256,7 @@
       </div>
     </footer>
 
-    <!-- ▣ 스크립트 : Mega-menu 제어 -->
+    <!-- ▣ 메가메뉴 스크립트 -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const megaMenu = document.getElementById('mega-menu');
@@ -329,13 +264,11 @@
         const navItems = document.querySelectorAll('.nav-item');
         const cols = document.querySelectorAll('.mega-col');
 
-        // 열 강조
         function highlight(colName) {
-          cols.forEach((c) => {
-            c.classList.toggle('highlight', c.dataset.col === colName);
-          });
+          cols.forEach((c) =>
+            c.classList.toggle('highlight', c.dataset.col === colName)
+          );
         }
-
         function showMega() {
           megaMenu.classList.remove('hidden');
         }
