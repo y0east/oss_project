@@ -56,13 +56,17 @@
       >
         <div class="flex items-center gap-3">
           <img src="../icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
-          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]"
-            >정보통신공학과</span
+          <a
+            href="http://localhost:3000/main_page/main_page.html"
+            style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
+            >정보통신공학과</a
           >
         </div>
         <div class="flex items-center gap-6 text-sm md:text-base">
-          <a href="#" class="hover:underline">이메일</a>
-          <a href="#" class="hover:opacity-80">
+          <a
+            href="http://localhost:3000/login_page/login_page.html"
+            class="hover:opacity-80"
+          >
             <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
           </a>
         </div>
@@ -118,7 +122,12 @@
           <!-- 교과과정 -->
           <div class="mega-col flex flex-col gap-2" data-col="curriculum">
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
-            <a href="#" class="hover:text-sky-300">이수체계</a>
+            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
+            <a
+              href="http://localhost:3000/completion_system_page/com_sys_page.html"
+              class="hover:text-sky-300"
+              >이수체계</a
+            >
             <a href="#" class="hover:text-sky-300">개설과목</a>
             <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
             <a href="#" class="hover:text-sky-300">신입생세미나</a>

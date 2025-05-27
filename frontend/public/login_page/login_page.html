@@ -27,13 +27,17 @@
             alt="HUFS Logo"
             class="w-28 h-auto"
           />
-          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]"
-            >정보통신공학과</span
+          <a
+            href="http://localhost:3000/main_page/main_page.html"
+            style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
+            >정보통신공학과</a
           >
         </div>
         <div class="flex items-center gap-6 text-sm md:text-base">
-          <a href="#" class="hover:underline">이메일</a>
-          <a href="#" class="hover:opacity-80">
+          <a
+            href="http://localhost:3000/login_page/login_page.html"
+            class="hover:opacity-80"
+          >
             <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
           </a>
         </div>
@@ -62,10 +66,12 @@
         </li>
       </ul>
 
+      <!-- 🔸 Mega Menu -->
       <div id="mega-menu" class="absolute top-full left-0 w-screen hidden">
         <div
-          class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 pt-5 pb-10 text-sm leading-relaxed"
+          class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 py-10 text-sm leading-relaxed"
         >
+          <!-- 학과소개 -->
           <div class="mega-col flex flex-col gap-2" data-col="about">
             <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
             <a href="#" class="hover:text-sky-300">구성원</a>
@@ -75,20 +81,31 @@
             <a href="#" class="hover:text-sky-300">학과행사</a>
             <a href="#" class="hover:text-sky-300">오시는 길</a>
           </div>
+
+          <!-- 학사·장학 -->
           <div class="mega-col flex flex-col gap-2" data-col="bursary">
             <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
             <a href="#" class="hover:text-sky-300">학사</a>
             <a href="#" class="hover:text-sky-300">장학</a>
             <a href="#" class="hover:text-sky-300">전공로드맵</a>
           </div>
+
+          <!-- 교과과정 -->
           <div class="mega-col flex flex-col gap-2" data-col="curriculum">
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
-            <a href="#" class="hover:text-sky-300">이수체계</a>
+            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
+            <a
+              href="http://localhost:3000/completion_system_page/com_sys_page.html"
+              class="hover:text-sky-300"
+              >이수체계</a
+            >
             <a href="#" class="hover:text-sky-300">개설과목</a>
             <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
             <a href="#" class="hover:text-sky-300">신입생세미나</a>
             <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
           </div>
+
+          <!-- 대학원 -->
           <div class="mega-col flex flex-col gap-2" data-col="grad">
             <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
             <a href="#" class="hover:text-sky-300">대학원 학과소개</a>
@@ -97,6 +114,8 @@
             <a href="#" class="hover:text-sky-300">종합시험과목</a>
             <a href="#" class="hover:text-sky-300">대학원 게시판</a>
           </div>
+
+          <!-- 학회·시설 -->
           <div class="mega-col flex flex-col gap-2" data-col="facility">
             <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
             <a href="#" class="hover:text-sky-300">AdvICE</a>
