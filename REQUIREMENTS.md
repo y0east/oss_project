@@ -1,5 +1,5 @@
 
-# backend
+# Backend
 ## Short-description
 This backend provides RESTful APIs for a bulletin board system, primarily designed to manage department announcements and related posts. It supports user login, session-based authentication, and features for viewing and managing posts. Built with Spring Boot and MySQL, it enables seamless data handling and frontend integration via JSON responses.
 ## Component
@@ -128,9 +128,12 @@ IntelliJ IDEA Ultimate Edition: Integrated Development Environment (IDE) for bac
   Development must follow Object-Oriented Programming (OOP) principles, with particular emphasis on the **Open-Closed Principle (OCP)**.
   The system should be designed to allow extension without modifying existing code.
   Code readability and modularity should be ensured to facilitate easy maintenance and updates.
-=======
 
-# frontend
+#
+#
+#
+
+# Frontend
 ## short-description
 A web-based academic management interface designed for the Department of Information and Communication Engineering at Hankuk University of Foreign Studies. It includes features such as login, department introduction, curriculum structure, and announcements.The UI is built with HTML, Tailwind CSS, and JavaScript (some parts with React).
 
@@ -216,7 +219,10 @@ Shows announcements with metadata like date and views.
 Responsive UI
 
 Supports screen sizes from mobile to desktop.
-=======
+
+#
+#
+#
 
 # Chatbot  
 ## Short Description  
