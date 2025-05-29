@@ -1,0 +1,127 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* 공통 그라데이션 텍스트 */
+.gradient-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ─────────── Mega‑menu */
+#mega-menu {
+  background: rgba(2, 49, 90, 0.85);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  height: calc(17.25rem + 5px); /* 16rem + 1.25rem(20px) + 5px */
+  overflow-y: auto;
+  z-index: 30;
+}
+.highlight {
+  background: rgba(6, 66, 118, 0.85) !important;
+}
+.nav-item button {
+  letter-spacing: 0.02em;
+}
+
+/* ─────────── Curriculum Styles (원본 유지) */
+.curriculum-grid {
+  width: 95%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px 20px;
+  align-items: center;
+}
+.curriculum-grid .semester {
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 6px;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.course {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.major {
+  background: rgb(0, 45, 86);
+  color: #fff;
+}
+.basic {
+  background: rgb(141, 113, 80);
+  color: #fff;
+}
+.liberal {
+  background: rgb(20, 110, 122);
+  color: #fff;
+}
+.default {
+  background: rgb(218, 218, 211);
+  color: #000;
+}
+
+.legend-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.legend-box {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.legend-box.major {
+  background: rgb(0, 45, 86);
+}
+.legend-box.basic {
+  background: rgb(141, 113, 80);
+}
+.legend-box.liberal {
+  background: rgb(20, 110, 122);
+}
+.legend-box.default-box {
+  background: rgb(218, 218, 211);
+  color: #000;
+}
+
+.flow-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 auto;
+}
+.flow-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.arrow {
+  font-weight: bold;
+  color: #999;
+  font-size: 20px;
+}
+.curriculum-section {
+  border: 2px solid #d1d5db;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+}
