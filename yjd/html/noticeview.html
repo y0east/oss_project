@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS · 정보통신공학과</title>
+
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      /* 🔹 공통 그라데이션 텍스트 */
+      .gradient-text {
+        display: inline-block;
+        background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* 🔸 메가 메뉴: 넉넉한 고정 높이(16rem) + 스크롤 허용 */
+      #mega-menu {
+        background: rgba(2, 49, 90, 0.85);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        height: 16rem; /* 256px */
+        overflow-y: auto;
+      }
+
+      /* 🔸 하이라이트 열 */
+      .highlight {
+        background: rgba(6, 66, 118, 0.85) !important;
+      }
+
+      /* 🔸 네비게이션 글자 자간 살짝 넓힘 */
+      .nav-item button {
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- ▣ Top Mini Bar (변경 금지) -->
+    <div class="w-full bg-white border-b border-gray-200 text-xs">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <img src="./icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
+          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]"
+            >정보통신공학과</span
+          >
+        </div>
+        <div class="flex items-center gap-6 text-sm md:text-base">
+          <a href="#" class="hover:underline">이메일</a>
+          <a href="#" class="hover:opacity-80">
+            <img src="./icon/lock.png" alt="로그인" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▣ Main Navigation (변경 금지) -->
+    <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
+      <ul
+        class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold"
+      >
+        <li class="nav-item" data-col="about">
+          <button class="hover:text-sky-300">학과소개</button>
+        </li>
+        <li class="nav-item" data-col="bursary">
+          <button class="hover:text-sky-300">학사·장학</button>
+        </li>
+        <li class="nav-item" data-col="curriculum">
+          <button class="hover:text-sky-300">교과과정</button>
+        </li>
+        <li class="nav-item" data-col="grad">
+          <button class="hover:text-sky-300">대학원</button>
+        </li>
+        <li class="nav-item" data-col="facility">
+          <button class="hover:text-sky-300">학회·시설</button>
+        </li>
+      </ul>
+
+      <!-- 🔸 Mega Menu -->
+      <div id="mega-menu" class="absolute top-full left-0 w-screen hidden">
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 py-10 text-sm leading-relaxed"
+        >
+          <!-- 학과소개 -->
+          <div class="mega-col flex flex-col gap-2" data-col="about">
+            <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
+            <a href="#" class="hover:text-sky-300">구성원</a>
+            <a href="#" class="hover:text-sky-300">교육목표</a>
+            <a href="#" class="hover:text-sky-300">개관 및 연혁</a>
+            <a href="#" class="hover:text-sky-300">졸업후 취업동향</a>
+            <a href="#" class="hover:text-sky-300">학과행사</a>
+            <a href="#" class="hover:text-sky-300">오시는 길</a>
+          </div>
+
+          <!-- 학사·장학 -->
+          <div class="mega-col flex flex-col gap-2" data-col="bursary">
+            <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
+            <a href="#" class="hover:text-sky-300">학사</a>
+            <a href="#" class="hover:text-sky-300">장학</a>
+            <a href="#" class="hover:text-sky-300">전공로드맵</a>
+          </div>
+
+          <!-- 교과과정 -->
+          <div class="mega-col flex flex-col gap-2" data-col="curriculum">
+            <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
+            <a href="#" class="hover:text-sky-300">이수체계</a>
+            <a href="#" class="hover:text-sky-300">개설과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
+            <a href="#" class="hover:text-sky-300">신입생세미나</a>
+            <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
+          </div>
+
+          <!-- 대학원 -->
+          <div class="mega-col flex flex-col gap-2" data-col="grad">
+            <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
+            <a href="#" class="hover:text-sky-300">대학원 학과소개</a>
+            <a href="#" class="hover:text-sky-300">교수진 소개</a>
+            <a href="#" class="hover:text-sky-300">전공별 교과과정</a>
+            <a href="#" class="hover:text-sky-300">종합시험과목</a>
+            <a href="#" class="hover:text-sky-300">대학원 게시판</a>
+          </div>
+
+          <!-- 학회·시설 -->
+          <div class="mega-col flex flex-col gap-2" data-col="facility">
+            <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
+            <a href="#" class="hover:text-sky-300">AdvICE</a>
+            <a href="#" class="hover:text-sky-300">자유게시판</a>
+            <a href="#" class="hover:text-sky-300">FICS</a>
+            <a href="#" class="hover:text-sky-300">시설안내</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ▣ Quick Access Bar (변경 금지) -->
+    <div class="w-full bg-gray-200">
+      <div
+        class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide"
+      >
+        <a href="#" class="hover:text-sky-600">e-Class</a>
+        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
+        <a href="#" class="hover:text-sky-600">도서관</a>
+        <a href="#" class="hover:text-sky-600">입학안내</a>
+      </div>
+    </div>
+
+    <!-- ▣ Hero Banner (변경 금지) -->
+    <section
+      class="relative w-full h-96 flex flex-col items-center justify-center text-center overflow-hidden"
+      style="background: url('./img/hufs_main.png') center/cover no-repeat"
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h2 class="relative text-white text-2xl md:text-4xl font-bold mb-3">
+        공과대학 <span class="text-teal-300">정보통신공학과</span>
+      </h2>
+      <p class="relative text-base md:text-lg text-gray-200">
+        Department of Information Communication Engineering
+      </p>
+    </section>
+
+    <!-- ▣ Notice Detail Page -->
+    <main class="max-w-4xl mx-auto px-4 py-16">
+      <!-- 페이지 타이틀 -->
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-10">공지사항</h1>
+
+      <!-- 공지 제목 -->
+      <article class="bg-white rounded-2xl shadow-lg p-10">
+        <header class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 leading-snug">
+            정보통신공학과 학과 명 변경 안내
+          </h2>
+          <time class="text-sm text-gray-500">2025. 05. 21</time>
+        </header>
+
+        <hr class="border-gray-200 mb-8" />
+
+        <!-- 본문 -->
+        <div class="space-y-6 text-gray-800 leading-relaxed">
+          <p>안녕하세요. 외대 총장입니다.</p>
+          <p>
+            2025년 5월 30일부로 정보통신공학과의 학과명이 서울캠퍼스 이전에 따라 AI&CT로 변경되었습니다.
+          </p>
+          <p>
+            주요 변경사항은 아래와 같으며, 변경 내용은 아래의 링크에서 확인할 수
+            있습니다.
+          </p>
+
+          <!-- 1. 주요 변경사항 -->
+          <section>
+            <h3 class="font-semibold text-lg mb-2">
+              1. 주요 변경사항 및 개정 사유
+            </h3>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>캠퍼스 이전</li>
+              <li>
+                아 모현 진짜 너무 좋아요 서울캠은 더 좋을 듯
+              </li>
+            </ul>
+          </section>
+
+          <!-- 2. 변경 전후 비교표 -->
+          <section>
+            <h3 class="font-semibold text-lg mb-2">2. 변경 전, 후 비교표</h3>
+            <a href="#" class="text-sky-600 underline font-medium"
+              >[개정 비교표 보기]</a
+            >
+          </section>
+
+          <!-- 3. 개정일자 -->
+          <section>
+            <h3 class="font-semibold text-lg mb-2">3. 개정일자</h3>
+            <p>약관 시행일 : 2025년 05월 30일</p>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <!-- ▣ Footer (선택적으로 추가) -->
+</main>
+
+    <!-- ▣ Footer (선택적으로 추가) -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const megaMenu = document.getElementById('mega-menu');
+        const nav = document.getElementById('mainNav');
+        const navItems = document.querySelectorAll('.nav-item');
+        const cols = document.querySelectorAll('.mega-col');
+
+        // 열 강조
+        function highlight(colName) {
+          cols.forEach((c) => {
+            c.classList.toggle('highlight', c.dataset.col === colName);
+          });
+        }
+
+        function showMega() {
+          megaMenu.classList.remove('hidden');
+        }
+        function hideMega() {
+          megaMenu.classList.add('hidden');
+          cols.forEach((c) => c.classList.remove('highlight'));
+        }
+
+        navItems.forEach((item) => {
+          item.addEventListener('mouseenter', () => {
+            showMega();
+            highlight(item.dataset.col);
+          });
+        });
+        nav.addEventListener('mouseleave', hideMega);
+        megaMenu.addEventListener('mouseenter', showMega);
+        megaMenu.addEventListener('mouseleave', hideMega);
+      });
+    </script>
+  </body>
+</html>
