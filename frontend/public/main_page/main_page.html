@@ -191,7 +191,7 @@
           <h3 class="text-2xl font-bold leading-snug mb-4">
             한국외대<br />정보통신공학과<br />소식
           </h3>
-          <a href="page2.html" class="text-sm underline hover:text-blue-600"
+          <a href="http://localhost:3000/notice_page/notice_page.html" class="text-sm underline hover:text-blue-600"
             >소식 더보기 &gt;</a
           >
         </div>
@@ -201,7 +201,6 @@
           id="newsGrid"
           class="w-full max-w-7xl mx-auto flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6"
         ></div>
-
     </section>
 
     <!-- ▣ HUBOT 홍보 섹션 -->
@@ -287,14 +286,13 @@
     </footer>
 
     <!-- ▣ 스크립트 -->
-    <script>
+ <script>
       document.addEventListener('DOMContentLoaded', () => {
         /* ───────── Mega-menu 제어 ───────── */
         const megaMenu = document.getElementById('mega-menu');
         const nav = document.getElementById('mainNav');
         const navItems = document.querySelectorAll('.nav-item');
         const cols = document.querySelectorAll('.mega-col');
-
         function highlight(colName) {
           cols.forEach((c) =>
             c.classList.toggle('highlight', c.dataset.col === colName)
@@ -307,7 +305,6 @@
           megaMenu.classList.add('hidden');
           cols.forEach((c) => c.classList.remove('highlight'));
         }
-
         navItems.forEach((item) =>
           item.addEventListener('mouseenter', () => {
             showMega();
@@ -330,41 +327,47 @@
         }
 
         function createCard(post) {
+          // 1) 전체 카드를 감싸는 링크 생성
+          const link = document.createElement('a');
+          // 클릭 시 post_page.html로 id 파라미터와 함께 이동
+          link.href = `http://localhost:3000/post_page/post_page.html?id=${post.id}`;
+          link.className = 'block';
+
+          // 2) 카드(article) 요소 생성
           const art = document.createElement('article');
           art.className =
             'bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition';
 
+          // 제목
           const h4 = document.createElement('h4');
           h4.className = 'text-xs font-semibold mb-1';
-          h4.textContent = post.title; // ⬅︎ 제목
+          h4.textContent = post.title;
 
+          // 내용
           const p = document.createElement('p');
           p.className = 'text-sm line-clamp-2';
-          p.textContent = post.content; // ⬅︎ 내용
+          p.textContent = post.content;
 
+          // 날짜
           const time = document.createElement('time');
           time.className = 'block mt-3 text-xs opacity-80';
           time.textContent = formatDate(post.createdAt);
 
           art.append(h4, p, time);
-          return art;
+          link.appendChild(art);
+          return link;
         }
 
         async function loadPosts() {
           try {
             const res = await fetch('http://localhost:8080/api/posts', {
               method: 'GET',
-              credentials: 'include', // ⬅️ 추가
+              credentials: 'include',
               headers: { Accept: 'application/json' },
             });
-
-            console.log('fetch status', res.status); // ✅ 200 확인
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
             const posts = await res.json();
-            console.log('posts data', posts); // ✅ 구조 확인
-
-            newsGrid.innerHTML = ''; // 중복 방지
+            newsGrid.innerHTML = '';
             posts
               .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
               .slice(0, 4)
@@ -376,7 +379,7 @@
           }
         }
 
-        loadPosts(); // 페이지 로드 직후 실행
+        loadPosts();
       });
     </script>
   </body>
