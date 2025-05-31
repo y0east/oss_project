@@ -28,8 +28,7 @@
         color: transparent;
       }
 
-      /* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용
-         ⬇ 아래쪽 여유 공간 5px 증가  */
+      /* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용 (⬇ 아래쪽 여유 공간 5px 증가) */
       #mega-menu {
         background: rgba(2, 49, 90, 0.85);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
@@ -58,10 +57,17 @@
         <div class="flex items-center gap-3">
           <!-- ⬇ 경로 수정 -->
           <img src="../icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
-        <a href="http://localhost:3000/main_page/main_page.html" style="font-size:1rem;font-weight:600;color:#8B5E3C;">정보통신공학과</a>
+          <a
+            href="http://localhost:3000/main_page/main_page.html"
+            style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
+            >정보통신공학과</a
+          >
         </div>
         <div class="flex items-center gap-6 text-sm md:text-base">
-          <a href="http://localhost:3000/login_page/login_page.html" class="hover:opacity-80">
+          <a
+            href="http://localhost:3000/login_page/login_page.html"
+            class="hover:opacity-80"
+          >
             <!-- ⬇ 경로 수정 -->
             <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
           </a>
@@ -69,8 +75,8 @@
       </div>
     </div>
 
-<!-- ▣ Main Nav + Mega Menu -->
-    <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
+    <!-- ▣ Main Nav + Mega Menu -->
+    <nav id="mainNav" class="w-full bg-[#002d56] text-white relative z-20">
       <ul
         class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold"
       >
@@ -127,9 +133,7 @@
             <a href="#" class="hover:text-sky-300">개설과목</a>
             <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
             <a href="#" class="hover:text-sky-300">신입생세미나</a>
-            <a href="#" class="hover:text-sky-300"
-              >정보통신종합설계 및 실습</a
-            >
+            <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
           </div>
 
           <!-- 대학원 -->
@@ -169,7 +173,6 @@
     <!-- ▣ Hero (배너) -->
     <section
       class="relative w-full h-96 flex flex-col items-center justify-center text-center overflow-hidden"
-      /* ⬇ 경로 수정 */
       style="background: url('../img/hufs_main.png') center/cover no-repeat"
     >
       <div class="absolute inset-0 bg-black/50"></div>
@@ -181,68 +184,25 @@
       </p>
     </section>
 
-    <!-- ▣ News Section -->
+    <!-- ▣ News Section (동적 로딩) -->
     <section class="max-w-7xl mx-auto px-4 py-16">
-      <!-- (생략: 카드 내용 동일) -->
       <div class="flex flex-col md:flex-row gap-10">
         <div class="md:w-1/4">
           <h3 class="text-2xl font-bold leading-snug mb-4">
             한국외대<br />정보통신공학과<br />소식
           </h3>
-          <a href="page2.html" class="text-sm underline hover:text-blue-600"
+          <a href="http://localhost:3000/notice_page/notice_page.html" class="text-sm underline hover:text-blue-600"
             >소식 더보기 &gt;</a
           >
         </div>
 
-        <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- 카드 1 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">홍보 / 수상</h4>
-            <p class="text-sm line-clamp-2">
-              [M·Experience 김모연 교수팀] 2025 3대창업...
-            </p>
-            <time class="block mt-3 text-xs opacity-80">2025.04.28</time>
-          </article>
-
-          <!-- 카드 2 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">학과 소식</h4>
-            <p class="text-sm line-clamp-2">
-              [2025학년도 후기 신입생 모집 안내] 입학금, 장학제도 등...
-            </p>
-            <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
-          </article>
-
-          <!-- 카드 3 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">특허 실적</h4>
-            <p class="text-sm line-clamp-2">
-              [M·Experience 김모연 교수팀] IMMERSIVE VIRTUAL GOLF SERVICE WITH
-              XR DEVICE, US 2024
-            </p>
-            <time class="block mt-3 text-xs opacity-80">2025.02.13</time>
-          </article>
-
-          <!-- 카드 4 -->
-          <article
-            class="bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition"
-          >
-            <h4 class="text-xs font-semibold mb-1">학술 행사</h4>
-            <p class="text-sm line-clamp-2">KMF2024 장소: NTP...</p>
-            <time class="block mt-3 text-xs opacity-80">2024.10.17</time>
-          </article>
-        </div>
-      </div>
+        <!-- 🔸 서버에서 받아온 게시글이 들어갈 영역 -->
+        <div
+          id="newsGrid"
+          class="w-full max-w-7xl mx-auto flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6"
+        ></div>
     </section>
 
-    <!-- ▣ HUBOT CTA Section -->
-    <!-- ⬇ padding(위/아래) 절반으로: py-24 → py-12 -->
     <!-- ▣ HUBOT 홍보 섹션 -->
     <section class="relative bg-[#0b2958] py-12 text-white overflow-hidden">
       <div
@@ -256,9 +216,7 @@
             class="w-32 h-auto select-none cursor-pointer"
           />
         </a>
-        <h3 class="mt-6 text-2xl md:text-3xl font-bold">
-          HUBOT에게 물어보기
-        </h3>
+        <h3 class="mt-6 text-2xl md:text-3xl font-bold">HUBOT에게 물어보기</h3>
 
         <!-- 고정 문구 -->
         <span
@@ -327,21 +285,19 @@
       </div>
     </footer>
 
-    <!-- ▣ 스크립트 : Mega-menu 제어 -->
-    <script>
+    <!-- ▣ 스크립트 -->
+ <script>
       document.addEventListener('DOMContentLoaded', () => {
+        /* ───────── Mega-menu 제어 ───────── */
         const megaMenu = document.getElementById('mega-menu');
         const nav = document.getElementById('mainNav');
         const navItems = document.querySelectorAll('.nav-item');
         const cols = document.querySelectorAll('.mega-col');
-
-        // 열 강조
         function highlight(colName) {
-          cols.forEach((c) => {
-            c.classList.toggle('highlight', c.dataset.col === colName);
-          });
+          cols.forEach((c) =>
+            c.classList.toggle('highlight', c.dataset.col === colName)
+          );
         }
-
         function showMega() {
           megaMenu.classList.remove('hidden');
         }
@@ -349,16 +305,81 @@
           megaMenu.classList.add('hidden');
           cols.forEach((c) => c.classList.remove('highlight'));
         }
-
-        navItems.forEach((item) => {
+        navItems.forEach((item) =>
           item.addEventListener('mouseenter', () => {
             showMega();
             highlight(item.dataset.col);
-          });
-        });
+          })
+        );
         nav.addEventListener('mouseleave', hideMega);
         megaMenu.addEventListener('mouseenter', showMega);
         megaMenu.addEventListener('mouseleave', hideMega);
+
+        /* ───────── 게시글 동적 로딩 ───────── */
+        const newsGrid = document.getElementById('newsGrid');
+
+        function formatDate(isoStr) {
+          const d = new Date(isoStr);
+          return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(
+            2,
+            '0'
+          )}.${String(d.getDate()).padStart(2, '0')}`;
+        }
+
+        function createCard(post) {
+          // 1) 전체 카드를 감싸는 링크 생성
+          const link = document.createElement('a');
+          // 클릭 시 post_page.html로 id 파라미터와 함께 이동
+          link.href = `http://localhost:3000/post_page/post_page.html?id=${post.id}`;
+          link.className = 'block';
+
+          // 2) 카드(article) 요소 생성
+          const art = document.createElement('article');
+          art.className =
+            'bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition';
+
+          // 제목
+          const h4 = document.createElement('h4');
+          h4.className = 'text-xs font-semibold mb-1';
+          h4.textContent = post.title;
+
+          // 내용
+          const p = document.createElement('p');
+          p.className = 'text-sm line-clamp-2';
+          p.textContent = post.content;
+
+          // 날짜
+          const time = document.createElement('time');
+          time.className = 'block mt-3 text-xs opacity-80';
+          time.textContent = formatDate(post.createdAt);
+
+          art.append(h4, p, time);
+          link.appendChild(art);
+          return link;
+        }
+
+        async function loadPosts() {
+          try {
+            const res = await fetch('http://localhost:8080/api/posts', {
+              method: 'GET',
+              credentials: 'include',
+              headers: { Accept: 'application/json' },
+            });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const posts = await res.json();
+            newsGrid.innerHTML = '';
+            posts
+              .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+              .slice(0, 4)
+              .forEach((p) => newsGrid.appendChild(createCard(p)));
+          } catch (err) {
+            console.error('[게시글 로딩 실패]', err);
+            newsGrid.innerHTML =
+              '<p class="text-red-700">게시글을 불러오지 못했습니다.</p>';
+          }
+        }
+
+        loadPosts();
       });
     </script>
   </body>
