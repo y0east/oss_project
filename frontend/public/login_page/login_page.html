@@ -45,17 +45,16 @@
     </div>
 
     <!-- ▣ Main Navigation + Mega Menu -->
-    <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
-      <ul
-        class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold"
-      >
+    <nav id="mainNav" class="w-full bg-[#002d56] text-white relative z-20">
+      <ul class="max-w-5xl mx-auto flex flex-wrap items-center justify-center lg:translate-x-[0.5vw] sm:gap-4 md:gap-12 lg:gap-24 px-4 py-2
+           text-base sm:text-lg md:text-xl lg:text-1xl font-bold whitespace-normal">
         <li class="nav-item" data-col="about">
           <button class="hover:text-sky-300">학과소개</button>
         </li>
         <li class="nav-item" data-col="bursary">
           <button class="hover:text-sky-300">학사·장학</button>
         </li>
-        <li class="nav-item" data-col="curriculum">
+        <li class="nav-item translate-x-[-0.5vw]" data-col="curriculum">
           <button class="hover:text-sky-300">교과과정</button>
         </li>
         <li class="nav-item" data-col="grad">
@@ -64,15 +63,18 @@
         <li class="nav-item" data-col="facility">
           <button class="hover:text-sky-300">학회·시설</button>
         </li>
+        <li class="nav-item" data-col="community">
+          <button class="hover:text-sky-300">커뮤니티</button>
+        </li>
       </ul>
 
       <!-- 🔸 Mega Menu -->
       <div id="mega-menu" class="absolute top-full left-0 w-screen hidden">
         <div
-          class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-8 py-10 text-sm leading-relaxed"
+          class="max-w-5xl mx-auto grid grid-cols-6 gap-[0.74vw] px-[0.5vw] py-2 text-sm leading-relaxed"
         >
           <!-- 학과소개 -->
-          <div class="mega-col flex flex-col gap-2" data-col="about">
+          <div class="mega-col flex rounded-lg flex-col gap-2 items-center py-3" data-col="about">
             <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
             <a href="#" class="hover:text-sky-300">구성원</a>
             <a href="#" class="hover:text-sky-300">교육목표</a>
@@ -83,7 +85,7 @@
           </div>
 
           <!-- 학사·장학 -->
-          <div class="mega-col flex flex-col gap-2" data-col="bursary">
+          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="bursary">
             <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
             <a href="#" class="hover:text-sky-300">학사</a>
             <a href="#" class="hover:text-sky-300">장학</a>
@@ -91,7 +93,7 @@
           </div>
 
           <!-- 교과과정 -->
-          <div class="mega-col flex flex-col gap-2" data-col="curriculum">
+          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="curriculum">
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
             <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
             <a
@@ -106,7 +108,7 @@
           </div>
 
           <!-- 대학원 -->
-          <div class="mega-col flex flex-col gap-2" data-col="grad">
+          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="grad">
             <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
             <a href="#" class="hover:text-sky-300">대학원 학과소개</a>
             <a href="#" class="hover:text-sky-300">교수진 소개</a>
@@ -116,12 +118,19 @@
           </div>
 
           <!-- 학회·시설 -->
-          <div class="mega-col flex flex-col gap-2" data-col="facility">
+          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="facility">
             <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
             <a href="#" class="hover:text-sky-300">AdvICE</a>
-            <a href="#" class="hover:text-sky-300">자유게시판</a>
             <a href="#" class="hover:text-sky-300">FICS</a>
             <a href="#" class="hover:text-sky-300">시설안내</a>
+          </div>
+
+           <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="community">
+            <h4 class="text-sky-200 font-bold mb-2">커뮤니티</h4>
+            <a href="#" class="hover:text-sky-300">공지사항</a>
+            <a href="#" class="hover:text-sky-300">자료실</a>
+            <a href="#" class="hover:text-sky-300">졸업논문 게시판</a>
+            <a href="#" class="hover:text-sky-300">건의사항</a>
           </div>
         </div>
       </div>
@@ -241,6 +250,12 @@
             highlight(item.dataset.col);
           });
         });
+        cols.forEach((col) =>
+          col.addEventListener('mouseenter', () => {
+          show();
+          highlight(col.dataset.col);
+        })
+      );
 
         nav.addEventListener('mouseleave', hide);
         megaMenu.addEventListener('mouseleave', hide);
