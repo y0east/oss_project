@@ -15,6 +15,7 @@ public class PostController {
 
     private final PostService postService;
 
+
     //Todo 이거 지워야 됨
     @PostMapping("createPost")
     public Post createPost(@RequestBody PostCreateDto postCreateDto) {
@@ -30,7 +31,8 @@ public class PostController {
     }
 
     @GetMapping("/{id}")
-    public Post getPostById(@PathVariable Long id) {
+
+    public Post getPostById(@PathVariable("id") Long id) {
         Post post = postService.findById(id);
         return post;
     }
