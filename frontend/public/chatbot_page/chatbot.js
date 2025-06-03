@@ -86,3 +86,9 @@ document.getElementById('exit-btn').addEventListener('click',()=>{
   document.querySelector('.chat-wrapper').style.display='none';
   faqDropdown.classList.remove('show');
 });
+
+
+document.getElementById('exit-btn').addEventListener('click', function() {
+  // 예시: 홈페이지로 이동
+  window.location.href = 'http://localhost:3000/main_page/main_page.html';  // 원하는 이동할 URL로 변경
+});
