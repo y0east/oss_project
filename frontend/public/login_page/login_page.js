@@ -1,15 +1,38 @@
-// login_page.js
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form[action*="/api/login"]');
-  if (!form) return;
+  /* ===== Mega-menu 제어 ===== */
+  const megaMenu = document.getElementById('mega-menu');
+  const navItems = document.querySelectorAll('.nav-item');
+  const nav = document.getElementById('mainNav');
+  const cols = document.querySelectorAll('.mega-col');
 
+  const show = () => megaMenu.classList.remove('hidden');
+  const hide = () => megaMenu.classList.add('hidden');
+  const highlight = (col) =>
+    cols.forEach((c) => c.classList.toggle('highlight', c.dataset.col === col));
+
+  navItems.forEach((item) =>
+    item.addEventListener('mouseenter', () => {
+      show();
+      highlight(item.dataset.col);
+    })
+  );
+  cols.forEach((col) =>
+    col.addEventListener('mouseenter', () => {
+      show();
+      highlight(col.dataset.col);
+    })
+  );
+  nav.addEventListener('mouseleave', hide);
+  megaMenu.addEventListener('mouseleave', hide);
+
+  /* ===== 로그인 처리 ===== */
+  const form = document.getElementById('loginForm');
   const btn = form.querySelector('button[type="submit"]');
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // 🚫 기본 form 제출 방지
+    e.preventDefault();
     btn.disabled = true;
 
-    // 🔧 수동으로 form 데이터 추출
     const studentId = form.querySelector('[name="student_id"]').value.trim();
     const password = form.querySelector('[name="password"]').value.trim();
 
@@ -23,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const res = await fetch('http://localhost:8080/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ studentId, password }), // ✅ JSON 전송
+        body: JSON.stringify({ studentId, password }),
       });
 
       if (!res.ok) throw new Error(`HTTP 오류: ${res.status}`);

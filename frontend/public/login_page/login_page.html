@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HUFS · 정보통신공학과</title>
 
-    <!-- Fonts & Tailwind -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link href="login_style.css" rel="stylesheet" />
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 커스텀 CSS -->
+    <link rel="stylesheet" href="login_page.css" />
   </head>
 
   <body class="bg-gray-100">
@@ -29,7 +33,7 @@
           />
           <a
             href="http://localhost:3000/main_page/main_page.html"
-            style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
+            class="text-base font-semibold text-[#8b5e3c]"
             >정보통신공학과</a
           >
         </div>
@@ -76,7 +80,7 @@
         >
           <!-- 학과소개 -->
           <div
-            class="mega-col flex rounded-lg flex-col gap-2 items-center py-3"
+            class="mega-col flex flex-col items-center gap-2 py-3 rounded-lg"
             data-col="about"
           >
             <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
@@ -114,7 +118,7 @@
 
           <!-- 학사·장학 -->
           <div
-            class="mega-col flex flex-col gap-2 rounded-lg items-center"
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
             data-col="bursary"
           >
             <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
@@ -137,11 +141,10 @@
 
           <!-- 교과과정 -->
           <div
-            class="mega-col flex flex-col gap-2 rounded-lg items-center"
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
             data-col="curriculum"
           >
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
-            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
             <a
               href="http://localhost:3000/completion_system_page/com_sys_page.html"
               class="hover:text-sky-300"
@@ -171,7 +174,7 @@
 
           <!-- 대학원 -->
           <div
-            class="mega-col flex flex-col gap-2 rounded-lg items-center"
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
             data-col="grad"
           >
             <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
@@ -204,7 +207,7 @@
 
           <!-- 학회·시설 -->
           <div
-            class="mega-col flex flex-col gap-2 rounded-lg items-center"
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
             data-col="facility"
           >
             <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
@@ -224,8 +227,10 @@
               >시설안내</a
             >
           </div>
+
+          <!-- 커뮤니티 -->
           <div
-            class="mega-col flex flex-col gap-2 rounded-lg items-center"
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
             data-col="community"
           >
             <h4 class="text-sky-200 font-bold mb-2">커뮤니티</h4>
@@ -301,6 +306,7 @@
             </button>
           </div>
         </form>
+
         <div
           class="mt-6 bg-white border border-gray-200 p-6 leading-relaxed text-sm md:text-base"
         >
@@ -311,17 +317,16 @@
           </p>
           <ol class="list-decimal list-inside space-y-1">
             <li>
-              로그인한 상태에서 우측 상단의
-              <span class="text-red-600 font-semibold">사이트 가입</span>
-              아이콘을 클릭한 후,
+              로그인 상태에서 우측 상단의
+              <span class="text-red-600 font-semibold">사이트 가입</span> 아이콘
+              클릭
             </li>
             <li>
-              본인의 학번/이름으로 학과 구성원 권한 승인을 요청하는 이메일을
               학과 조교(<a
                 href="mailto:ice@hufs.ac.kr"
                 class="text-sky-700 underline underline-offset-4"
                 >ice@hufs.ac.kr</a
-              >)에게 보내길 바랍니다.
+              >) 에게 학번/이름으로 승인 요청 메일 전송
             </li>
           </ol>
         </div>
@@ -335,9 +340,9 @@
           Hankuk University of Foreign Studies
         </p>
         <p>
-          <span class="text-[#c9aa71] font-semibold">글로벌캠퍼스</span> 17035
-          경기도 용인시 처인구 모현읍 외대로 81<br />한국외국어대학교 공과대학
-          정보통신공학과
+          <span class="text-[#c9aa71] font-semibold">글로벌캠퍼스</span>
+          17035 경기도 용인시 처인구 모현읍 외대로 81<br />
+          한국외국어대학교 공과대학 정보통신공학과
         </p>
         <p><span class="text-[#c9aa71]">Tel.</span> 031-330-4255</p>
         <p><span class="text-[#c9aa71]">e-mail.</span> ice@hufs.ac.kr</p>
@@ -347,81 +352,7 @@
       </div>
     </footer>
 
-    <!-- ▣ Script: Mega-menu + 로그인 처리 -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const megaMenu = document.getElementById('mega-menu');
-        const navItems = document.querySelectorAll('.nav-item');
-        const nav = document.getElementById('mainNav');
-        const cols = document.querySelectorAll('.mega-col');
-
-        const show = () => megaMenu.classList.remove('hidden');
-        const hide = () => megaMenu.classList.add('hidden');
-        const highlight = (col) =>
-          cols.forEach((c) =>
-            c.classList.toggle('highlight', c.dataset.col === col)
-          );
-
-        navItems.forEach((item) => {
-          item.addEventListener('mouseenter', () => {
-            show();
-            highlight(item.dataset.col);
-          });
-        });
-        cols.forEach((col) =>
-          col.addEventListener('mouseenter', () => {
-            show();
-            highlight(col.dataset.col);
-          })
-        );
-
-        nav.addEventListener('mouseleave', hide);
-        megaMenu.addEventListener('mouseleave', hide);
-
-        // 로그인 처리
-        const form = document.getElementById('loginForm');
-        const btn = form.querySelector('button[type="submit"]');
-
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          btn.disabled = true;
-
-          const studentId = form
-            .querySelector('[name="student_id"]')
-            .value.trim();
-          const password = form.querySelector('[name="password"]').value.trim();
-
-          if (!studentId || !password) {
-            alert('학번과 비밀번호를 모두 입력하세요.');
-            btn.disabled = false;
-            return;
-          }
-
-          try {
-            const res = await fetch('http://localhost:8080/api/login', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ studentId, password }),
-            });
-
-            if (!res.ok) throw new Error(`HTTP 오류: ${res.status}`);
-            const data = await res.json();
-
-            if (data.sessionToken) {
-              alert(data.message || '로그인 성공');
-              localStorage.setItem('sessionToken', data.sessionToken);
-              window.location.href = '/main_page/main_page.html';
-            } else {
-              alert(data.message || '아이디 또는 비밀번호가 틀렸습니다.');
-            }
-          } catch (err) {
-            console.error('로그인 실패:', err);
-            alert('로그인 중 문제가 발생했습니다. 다시 시도해주세요.');
-          } finally {
-            btn.disabled = false;
-          }
-        });
-      });
-    </script>
+    <!-- 커스텀 JS -->
+    <script src="login_page.js"></script>
   </body>
 </html>

@@ -5,44 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HUFS · 정보통신공학과 · 게시글 작성</title>
 
-    <!-- Fonts & Tailwind -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      body {
-        font-family: 'Nanum Gothic', sans-serif;
-      }
-      /* 🔹 공통 그라데이션 텍스트 */
-      .gradient-text {
-        display: inline-block;
-        background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-      }
-      /* 🔸 메가 메뉴: 넉넉한 고정 높이(16rem) + 스크롤 허용 */
-      #mega-menu {
-        background: rgba(2, 49, 90, 0.85);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-        height: 16rem; /* 256px */
-        overflow-y: auto;
-      }
-      /* 🔸 하이라이트 열 */
-      .highlight {
-        background: rgba(6, 66, 118, 0.85) !important;
-      }
-      /* 🔸 네비게이션 글자 자간 살짝 넓힘 */
-      .nav-item button {
-        letter-spacing: 0.02em;
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="addnotice.css" />
   </head>
+
   <body class="bg-gray-100">
     <!-- ▣ Top Mini Bar -->
     <div class="w-full bg-white border-b border-gray-200 text-xs">
@@ -158,7 +134,6 @@
             data-col="curriculum"
           >
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
-            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
             <a
               href="http://localhost:3000/completion_system_page/com_sys_page.html"
               class="hover:text-sky-300"
@@ -241,6 +216,8 @@
               >시설안내</a
             >
           </div>
+
+          <!-- 커뮤니티 -->
           <div
             class="mega-col flex flex-col gap-2 rounded-lg items-center"
             data-col="community"
@@ -377,50 +354,12 @@
       </form>
     </section>
 
-    <!-- ▣ Footer (선택) -->
+    <!-- ▣ Footer -->
     <footer class="bg-[#002D56] text-gray-200 text-sm text-center py-6">
       © 2025 HUFS Department of Information Communication Engineering
     </footer>
 
-    <!-- ▣ 스크립트 : Mega-menu 제어 + 폼 예시 처리 -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Mega menu control
-        const megaMenu = document.getElementById('mega-menu');
-        const nav = document.getElementById('mainNav');
-        const navItems = document.querySelectorAll('.nav-item');
-        const cols = document.querySelectorAll('.mega-col');
-
-        function highlight(colName) {
-          cols.forEach((c) => {
-            c.classList.toggle('highlight', c.dataset.col === colName);
-          });
-        }
-        function showMega() {
-          megaMenu.classList.remove('hidden');
-        }
-        function hideMega() {
-          megaMenu.classList.add('hidden');
-          cols.forEach((c) => c.classList.remove('highlight'));
-        }
-        navItems.forEach((item) => {
-          item.addEventListener('mouseenter', () => {
-            showMega();
-            highlight(item.dataset.col);
-          });
-        });
-        nav.addEventListener('mouseleave', hideMega);
-        megaMenu.addEventListener('mouseenter', showMega);
-        megaMenu.addEventListener('mouseleave', hideMega);
-
-        // Post form demo submit
-        const form = document.getElementById('postForm');
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          alert('게시글이 임시로 저장되었습니다! 실제 저장 로직을 구현하세요.');
-          form.reset();
-        });
-      });
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="addnotice.js"></script>
   </body>
 </html>
