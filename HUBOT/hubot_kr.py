@@ -4,7 +4,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-class HubotChatbot:
+class HubotChatbotKR:
     def __init__(self, folder_path=None):
         # hubot.py 파일이 있는 폴더 기준으로 경로 설정
         base_dir = os.path.dirname(os.path.abspath(__file__))

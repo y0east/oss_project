@@ -1,0 +1,1238 @@
+{
+        "univ_qa":[
+    {
+        "question": "hubot, what is the subject Data Structures about?",
+        "answer": "Data Structures is a course that teaches how to efficiently store and manage data, and the principles of various data structures. It is a 3-credit major-required course. The prerequisite is Computer Programming."
+    },
+    {
+        "question": "hubot, what do you learn in Data Structures?",
+        "answer": "Data Structures is a course that teaches how to efficiently store and manage data, and the principles of various data structures. It is a 3-credit major-required course. The prerequisite is Computer Programming."
+    },
+    {
+        "question": "hubot, can you explain Data Structures?",
+        "answer": "Data Structures is a course that teaches how to efficiently store and manage data, and the principles of various data structures. It is a 3-credit major-required course. The prerequisite is Computer Programming."
+    },
+    {
+        "question": "hubot, tell me about the contents of the Data Structures class.",
+        "answer": "Data Structures is a course that teaches how to efficiently store and manage data, and the principles of various data structures. It is a 3-credit major-required course. The prerequisite is Computer Programming."
+    },
+    {
+        "question": "hubot, how many credits is Data Structures?",
+        "answer": "Data Structures is a 3-credit course."
+    },
+    {
+        "question": "hubot, what's the credit for Data Structures?",
+        "answer": "Data Structures is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisite courses for Data Structures?",
+        "answer": "The prerequisite for Data Structures is Computer Programming."
+    },
+    {
+        "question": "hubot, do I need any courses before taking Data Structures?",
+        "answer": "The prerequisite for Data Structures is Computer Programming."
+    },
+    {
+        "question": "hubot, is Data Structures a required course for the major?",
+        "answer": "Data Structures is a major-required course."
+    },
+    {
+        "question": "hubot, is Data Structures a major-required course?",
+        "answer": "Data Structures is a major-required course."
+    },
+    {
+        "question": "hubot, Data Structures",
+        "answer": "For detailed information about Data Structures, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what is the subject Algorithm Design and Analysis about?",
+        "answer": "Algorithm Design and Analysis is a course that deals with the principles of algorithm design, efficiency analysis methods, and various algorithm paradigms. It is a 3-credit major-elective course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, what do you learn in Algorithm Design and Analysis?",
+        "answer": "Algorithm Design and Analysis is a course that deals with the principles of algorithm design, efficiency analysis methods, and various algorithm paradigms. It is a 3-credit major-elective course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, can you explain Algorithm Design and Analysis?",
+        "answer": "Algorithm Design and Analysis is a course that deals with the principles of algorithm design, efficiency analysis methods, and various algorithm paradigms. It is a 3-credit major-elective course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, tell me about the contents of the Algorithm Design and Analysis class.",
+        "answer": "Algorithm Design and Analysis is a course that deals with the principles of algorithm design, efficiency analysis methods, and various algorithm paradigms. It is a 3-credit major-elective course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, how many credits is Algorithm Design and Analysis?",
+        "answer": "Algorithm Design and Analysis is a 3-credit course."
+    },
+    {
+        "question": "hubot, what's the credit for Algorithm Design and Analysis?",
+        "answer": "Algorithm Design and Analysis is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisite courses for Algorithm Design and Analysis?",
+        "answer": "The prerequisite for Algorithm Design and Analysis is Data Structures."
+    },
+    {
+        "question": "hubot, do I need any courses before taking Algorithm Design and Analysis?",
+        "answer": "The prerequisite for Algorithm Design and Analysis is Data Structures."
+    },
+    {
+        "question": "hubot, is Algorithm Design and Analysis a required course for the major?",
+        "answer": "Algorithm Design and Analysis is a major-elective course."
+    },
+    {
+        "question": "hubot, is Algorithm Design and Analysis a major-required course?",
+        "answer": "Algorithm Design and Analysis is a major-elective course."
+    },
+    {
+        "question": "hubot, Algorithm Design and Analysis",
+        "answer": "For detailed information about Algorithm Design and Analysis, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what is the subject Computer Programming about?",
+        "answer": "Computer Programming is a course focused on the basic syntax of programming and problem-solving skills using the C language. It is a 3-credit major-required course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, what do you learn in Computer Programming?",
+        "answer": "Computer Programming is a course focused on the basic syntax of programming and problem-solving skills using the C language. It is a 3-credit major-required course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, can you explain Computer Programming?",
+        "answer": "Computer Programming is a course focused on the basic syntax of programming and problem-solving skills using the C language. It is a 3-credit major-required course. There are no prerequisites."
+    },
+  {
+    "question": "hubot, tell me about the content of the Computer Programming class.",
+    "answer": "Computer Programming is a course focused on learning the basic syntax and problem-solving skills in C language. It is a 3-credit major-required course. There are no prerequisites."
+  },
+  {
+    "question": "hubot, how many credits is Computer Programming?",
+    "answer": "Computer Programming is a 3-credit course."
+  },
+  {
+    "question": "hubot, what's the credit for Computer Programming?",
+    "answer": "Computer Programming is a 3-credit course."
+  },
+  {
+    "question": "hubot, what are the prerequisite courses for Computer Programming?",
+    "answer": "There are no prerequisites for Computer Programming."
+    },
+    {
+        "question": "hubot, do I need any courses before taking Computer Programming?",
+        "answer": "There are no prerequisites for Computer Programming."
+    },
+    {
+        "question": "hubot, is Computer Programming a required course for the major?",
+        "answer": "Computer Programming is a major-required course."
+    },
+    {
+        "question": "hubot, is Computer Programming a major-required course?",
+        "answer": "Computer Programming is a major-required course."
+    },
+    {
+        "question": "hubot, Computer Programming",
+        "answer": "For detailed information about Computer Programming, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what is the subject Discrete Mathematics about?",
+        "answer": "Discrete Mathematics is a course that teaches concepts such as logic, sets, graphs, and combinatorics, which are fundamental to computer engineering. It is a 3-credit major-required course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, what do you learn in Discrete Mathematics?",
+        "answer": "Discrete Mathematics is a course that teaches concepts such as logic, sets, graphs, and combinatorics, which are fundamental to computer engineering. It is a 3-credit major-required course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, can you explain Discrete Mathematics?",
+        "answer": "Discrete Mathematics is a course that teaches concepts such as logic, sets, graphs, and combinatorics, which are fundamental to computer engineering. It is a 3-credit major-required course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, tell me about the content of the Discrete Mathematics class.",
+        "answer": "Discrete Mathematics is a course that teaches concepts such as logic, sets, graphs, and combinatorics, which are fundamental to computer engineering. It is a 3-credit major-required course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, how many credits is Discrete Mathematics?",
+        "answer": "Discrete Mathematics is a 3-credit course."
+    },
+    {
+        "question": "hubot, what's the credit for Discrete Mathematics?",
+        "answer": "Discrete Mathematics is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisite courses for Discrete Mathematics?",
+        "answer": "There are no prerequisites for Discrete Mathematics."
+    },
+    {
+        "question": "hubot, do I need any courses before taking Discrete Mathematics?",
+        "answer": "There are no prerequisites for Discrete Mathematics."
+    },
+    {
+        "question": "hubot, is Discrete Mathematics a required course for the major?",
+        "answer": "Discrete Mathematics is a major-required course."
+    },
+    {
+        "question": "hubot, is Discrete Mathematics a major-required course?",
+        "answer": "Discrete Mathematics is a major-required course."
+    },
+    {
+        "question": "hubot, Discrete Mathematics",
+        "answer": "For detailed information about Discrete Mathematics, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what is the subject Operating Systems about?",
+        "answer": "Operating Systems is a course that teaches the operating principles of computer systems, including process management, memory management, and file systems. It is a 3-credit major-required course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, what do you learn in Operating Systems?",
+        "answer": "Operating Systems is a course that teaches the operating principles of computer systems, including process management, memory management, and file systems. It is a 3-credit major-required course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, can you explain Operating Systems?",
+        "answer": "Operating Systems is a course that teaches the operating principles of computer systems, including process management, memory management, and file systems. It is a 3-credit major-required course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, tell me about the content of the Operating Systems class.",
+        "answer": "Operating Systems is a course that teaches the operating principles of computer systems, including process management, memory management, and file systems. It is a 3-credit major-required course. The prerequisite is Data Structures."
+    },
+    {
+        "question": "hubot, how many credits is Operating Systems?",
+        "answer": "Operating Systems is a 3-credit course."
+    },
+    {
+        "question": "hubot, what's the credit for Operating Systems?",
+        "answer": "Operating Systems is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisites for Operating Systems?",
+        "answer": "The prerequisite for Operating Systems is Data Structures."
+    },
+    {
+        "question": "hubot, is there any course I need to take before Operating Systems?",
+        "answer": "The prerequisite for Operating Systems is Data Structures."
+    },
+    {
+        "question": "hubot, is Operating Systems a required major course?",
+        "answer": "Operating Systems is a required major course."
+    },
+    {
+        "question": "hubot, is Operating Systems a compulsory course?",
+        "answer": "Operating Systems is a required major course."
+    },
+    {
+        "question": "hubot, Operating Systems",
+        "answer": "For more information about Operating Systems, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what is the Computer Networks course about?",
+        "answer": "Computer Networks covers the basic concepts of computer networks, protocols, and layered network architecture. It is a 3-credit elective course. The prerequisite is Operating Systems."
+    },
+    {
+        "question": "hubot, what do you learn in Computer Networks?",
+        "answer": "Computer Networks covers the basic concepts of computer networks, protocols, and layered network architecture. It is a 3-credit elective course. The prerequisite is Operating Systems."
+    },
+    {
+        "question": "hubot, explain Computer Networks.",
+        "answer": "Computer Networks covers the basic concepts of computer networks, protocols, and layered network architecture. It is a 3-credit elective course. The prerequisite is Operating Systems."
+    },
+    {
+        "question": "hubot, tell me about the contents of the Computer Networks course.",
+        "answer": "Computer Networks covers the basic concepts of computer networks, protocols, and layered network architecture. It is a 3-credit elective course. The prerequisite is Operating Systems."
+    },
+    {
+        "question": "hubot, how many credits is Computer Networks?",
+        "answer": "Computer Networks is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the credits for Computer Networks?",
+        "answer": "Computer Networks is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisites for Computer Networks?",
+        "answer": "The prerequisite for Computer Networks is Operating Systems."
+    },
+    {
+        "question": "hubot, do I need to take any course before Computer Networks?",
+        "answer": "The prerequisite for Computer Networks is Operating Systems."
+    },
+    {
+        "question": "hubot, is Computer Networks a required major course?",
+        "answer": "Computer Networks is an elective major course."
+    },
+    {
+        "question": "hubot, is Computer Networks a compulsory course?",
+        "answer": "Computer Networks is an elective major course."
+    },
+    {
+        "question": "hubot, Computer Networks",
+        "answer": "For more information about Computer Networks, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what is the Probability and Statistics course about?",
+        "answer": "Probability and Statistics teaches basic concepts and practices in probability, statistics, and data analysis. It is a 3-credit elective course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, what do you learn in Probability and Statistics?",
+        "answer": "Probability and Statistics teaches basic concepts and practices in probability, statistics, and data analysis. It is a 3-credit elective course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, explain Probability and Statistics.",
+        "answer": "Probability and Statistics teaches basic concepts and practices in probability, statistics, and data analysis. It is a 3-credit elective course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, tell me about the contents of the Probability and Statistics course.",
+        "answer": "Probability and Statistics teaches basic concepts and practices in probability, statistics, and data analysis. It is a 3-credit elective course. There are no prerequisites."
+    },
+    {
+        "question": "hubot, how many credits is Probability and Statistics?",
+        "answer": "Probability and Statistics is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the credits for Probability and Statistics?",
+        "answer": "Probability and Statistics is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisites for Probability and Statistics?",
+        "answer": "There are no prerequisites for Probability and Statistics."
+    },
+    {
+        "question": "hubot, do I need to take any course before Probability and Statistics?",
+        "answer": "There are no prerequisites for Probability and Statistics."
+    },
+    {
+        "question": "hubot, is Probability and Statistics a required major course?",
+        "answer": "Probability and Statistics is an elective major course."
+    },
+    {
+        "question": "hubot, is Probability and Statistics a required major course?",
+        "answer": "Probability and Statistics is an elective major course."
+    },
+    {
+        "question": "hubot, tell me about Probability and Statistics.",
+        "answer": "For detailed information about Probability and Statistics, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what does the Linear Algebra course cover?",
+        "answer": "Linear Algebra covers basic concepts such as matrices, vectors, and linear transformations. It is a 3-credit elective major course. There are no prerequisite courses."
+    },
+    {
+        "question": "hubot, what do you learn in Linear Algebra?",
+        "answer": "Linear Algebra covers basic concepts such as matrices, vectors, and linear transformations. It is a 3-credit elective major course. There are no prerequisite courses."
+    },
+    {
+        "question": "hubot, please explain Linear Algebra.",
+        "answer": "Linear Algebra covers basic concepts such as matrices, vectors, and linear transformations. It is a 3-credit elective major course. There are no prerequisite courses."
+    },
+    {
+        "question": "hubot, tell me the content of the Linear Algebra class.",
+        "answer": "Linear Algebra covers basic concepts such as matrices, vectors, and linear transformations. It is a 3-credit elective major course. There are no prerequisite courses."
+    },
+    {
+        "question": "hubot, how many credits is Linear Algebra?",
+        "answer": "Linear Algebra is a 3-credit course."
+    },
+    {
+        "question": "hubot, how many credits is Linear Algebra?",
+        "answer": "Linear Algebra is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisite courses for Linear Algebra?",
+        "answer": "There are no prerequisite courses for Linear Algebra."
+    },
+    {
+        "question": "hubot, are there any courses needed before taking Linear Algebra?",
+        "answer": "There are no prerequisite courses for Linear Algebra."
+    },
+    {
+        "question": "hubot, is Linear Algebra a required major course?",
+        "answer": "Linear Algebra is an elective major course."
+    },
+    {
+        "question": "hubot, is Linear Algebra a required course for the major?",
+        "answer": "Linear Algebra is an elective major course."
+    },
+    {
+        "question": "hubot, tell me about Linear Algebra.",
+        "answer": "For detailed information about Linear Algebra, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what does the Machine Learning course cover?",
+        "answer": "Machine Learning covers fundamental theories and applications such as data-driven learning, classification, regression, and neural networks. It is a 3-credit elective major course. The prerequisite courses are Linear Algebra and Probability and Statistics."
+    },
+    {
+        "question": "hubot, what do you learn in Machine Learning?",
+        "answer": "Machine Learning covers fundamental theories and applications such as data-driven learning, classification, regression, and neural networks. It is a 3-credit elective major course. The prerequisite courses are Linear Algebra and Probability and Statistics."
+    },
+    {
+        "question": "hubot, please explain Machine Learning.",
+        "answer": "Machine Learning covers fundamental theories and applications such as data-driven learning, classification, regression, and neural networks. It is a 3-credit elective major course. The prerequisite courses are Linear Algebra and Probability and Statistics."
+    },
+    {
+        "question": "hubot, tell me the content of the Machine Learning class.",
+        "answer": "Machine Learning covers fundamental theories and applications such as data-driven learning, classification, regression, and neural networks. It is a 3-credit elective major course. The prerequisite courses are Linear Algebra and Probability and Statistics."
+    },
+    {
+        "question": "hubot, how many credits is Machine Learning?",
+        "answer": "Machine Learning is a 3-credit course."
+    },
+    {
+        "question": "hubot, how many credits is Machine Learning?",
+        "answer": "Machine Learning is a 3-credit course."
+    },
+    {
+        "question": "hubot, what are the prerequisite courses for Machine Learning?",
+        "answer": "The prerequisite courses for Machine Learning are Linear Algebra and Probability and Statistics."
+    },
+    {
+        "question": "hubot, are there any courses needed before taking Machine Learning?",
+        "answer": "The prerequisite courses for Machine Learning are Linear Algebra and Probability and Statistics."
+    },
+    {
+        "question": "hubot, is Machine Learning a required major course?",
+        "answer": "Machine Learning is an elective major course."
+    },
+    {
+        "question": "hubot, is Machine Learning a required course for the major?",
+        "answer": "Machine Learning is an elective major course."
+    },
+    {
+        "question": "hubot, tell me about Machine Learning.",
+        "answer": "For detailed information about Machine Learning, please refer to the syllabus."
+    },
+    {
+        "question": "hubot, what courses should I take in the first semester of the first year?",
+        "answer": "In the first semester of the first year, students take courses such as Discrete Mathematics, Computer Programming, Computational Thinking, Introduction to AI Engineering, Micro English, College English 1, and Freshman Seminar."
+    },
+    {
+        "question": "hubot, what courses should I take in the second semester of the first year?",
+        "answer": "In the second semester of the first year, students take courses such as Programming and Practice, Logic Circuits and Lab, Linear Algebra, Probability and Statistics, and College English 2."
+    },
+    {
+        "question": "hubot, what courses should I take in the first semester of the second year?",
+        "answer": "In the first semester of the second year, students take courses such as Data Structures, Open Source Software, AI Information Theory, Understanding Circuit Theory, Engineering Mathematics 1, and Introduction to Information and Communication."
+    },
+    {
+        "question": "hubot, what courses should I take in the second semester of the second year?",
+        "answer": "In the second semester of the second year, students take courses such as Algorithm Design and Analysis, Computer Architecture, Signals and Systems, Circuit Analysis and Lab, Engineering Mathematics 2, and HUFS Career Vision Mentoring."
+    },
+    {
+        "question": "hubot, what courses should I take in the first semester of the third year?",
+        "answer": "In the first semester of the third year, students take courses such as Machine Learning, Operating Systems, Data Communication, Communication Engineering, IoT Systems, and Internship Programming 1."
+    },
+    {
+        "question": "hubot, what courses should I take in the second semester of the third year?",
+        "answer": "In the second semester of the third year, students take courses such as Database, Discrete Signal Processing, Computer Networks, AI Algorithms, Fundamentals of Information and Communication Comprehensive Design, and Internship Programming 2."
+    },
+    {
+        "question": "hubot, what courses should I take in the first semester of the fourth year?",
+        "answer": "In the first semester of the fourth year, students take courses such as Deep Learning, Network Security, Communication Network Design, Data Science, and Wireless Communication Engineering."
+    },
+    {
+        "question": "hubot, what courses should I take in the second semester of the fourth year?",
+        "answer": "In the second semester of the fourth year, students take courses such as Software Engineering, Mobile Communication, Multimedia Communication, Digital Communication, and Comprehensive Information and Communication Design and Practice."
+    },
+    {
+        "question": "hubot, when is it good to take the Introduction to AI Engineering course?",
+        "answer": "Introduction to AI Engineering is offered in the first semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the AI Algorithms course?",
+        "answer": "AI Algorithms is offered in the second semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the AI Information Theory course?",
+        "answer": "AI Information Theory is offered in the first semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the HUFS Career Vision Mentoring course?",
+        "answer": "HUFS Career Vision Mentoring is offered in the second semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the IoT Systems course?",
+        "answer": "IoT Systems is offered in the first semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Engineering Mathematics 1 course?",
+        "answer": "Engineering Mathematics 1 is offered in the first semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Engineering Mathematics 2 course?",
+        "answer": "Engineering Mathematics 2 is offered in the second semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Network Security course?",
+        "answer": "Network Security is offered in the first semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Logic Circuits and Lab course?",
+        "answer": "Logic Circuits and Lab is offered in the second semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the College English 1 course?",
+        "answer": "College English 1 is offered in the first semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the College English 2 course?",
+        "answer": "College English 2 is offered in the second semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Database course?",
+        "answer": "Database is offered in the second semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Data Science course?",
+        "answer": "Data Science is offered in the first semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Data Communication course?",
+        "answer": "Data Communication is offered in the first semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Digital Communication course?",
+        "answer": "Digital Communication is offered in the second semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Deep Learning course?",
+        "answer": "Deep Learning is offered in the first semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Micro English course?",
+        "answer": "Micro English is offered in the first semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Machine Learning course?",
+        "answer": "Machine Learning is offered in the first semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Multimedia Communication course?",
+        "answer": "Multimedia Communication is offered in the second semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Wireless Communication Engineering course?",
+        "answer": "Wireless Communication Engineering is offered in the first semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Linear Algebra course?",
+        "answer": "Linear Algebra is offered in the second semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Software Engineering course?",
+        "answer": "Software Engineering is offered in the second semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Freshman Seminar course?",
+        "answer": "Freshman Seminar is offered in the first semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Signals and Systems course?",
+        "answer": "Signals and Systems is offered in the second semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Algorithm Design and Analysis course?",
+        "answer": "Algorithm Design and Analysis is offered in the second semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Open Source Software course?",
+        "answer": "Open Source Software is offered in the first semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Operating Systems course?",
+        "answer": "Operating Systems is offered in the first semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Mobile Communication course?",
+        "answer": "Mobile Communication is offered in the second semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Discrete Mathematics course?",
+        "answer": "Discrete Mathematics is offered in the first semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Discrete Signal Processing course?",
+        "answer": "Discrete Signal Processing is offered in the second semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Internship Programming 1 course?",
+        "answer": "Internship Programming 1 is offered in the first semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Internship Programming 2 course?",
+        "answer": "Internship Programming 2 is offered in the second semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Data Structures course?",
+        "answer": "Data Structures is offered in the first semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Introduction to Information and Communication course?",
+        "answer": "Introduction to Information and Communication is offered in the first semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Fundamentals of Information and Communication Comprehensive Design course?",
+        "answer": "Fundamentals of Information and Communication Comprehensive Design is offered in the second semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Comprehensive Information and Communication Design and Practice course?",
+        "answer": "Comprehensive Information and Communication Design and Practice is offered in the second semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Computer Architecture course?",
+        "answer": "Computer Architecture is offered in the second semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Computer Networks course?",
+        "answer": "Computer Networks is offered in the second semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Computer Programming course?",
+        "answer": "Computer Programming is offered in the first semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Computer Programming and Practice course?",
+        "answer": "Computer Programming and Practice is offered in the second semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Computational Thinking course?",
+        "answer": "Computational Thinking is offered in the first semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Communication Engineering course?",
+        "answer": "Communication Engineering is offered in the first semester of the third year."
+    },
+    {
+        "question": "hubot, when is it good to take the Communication Network Design course?",
+        "answer": "Communication Network Design is offered in the first semester of the fourth year."
+    },
+    {
+        "question": "hubot, when is it good to take the Probability and Statistics course?",
+        "answer": "Probability and Statistics is offered in the second semester of the first year."
+    },
+    {
+        "question": "hubot, when is it good to take the Understanding Circuit Theory course?",
+        "answer": "Understanding Circuit Theory is offered in the first semester of the second year."
+    },
+    {
+        "question": "hubot, when is it good to take the Circuit Analysis and Experiment course?",
+        "answer": "Circuit Analysis and Experiment is offered in the second semester of the second year."
+    },
+    {
+        "question": "hubot, is the Introduction to AI Engineering course a required course?",
+        "answer": "Introduction to AI Engineering is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the AI Algorithms course a required course?",
+        "answer": "AI Algorithms is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the AI Information Theory course a required course?",
+        "answer": "AI Information Theory is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the HUFS Career Vision Mentoring course a required course?",
+        "answer": "HUFS Career Vision Mentoring is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the IoT Systems course a required course?",
+        "answer": "IoT Systems is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Engineering Mathematics 1 course a required course?",
+        "answer": "Engineering Mathematics 1 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Engineering Mathematics 2 course a required course?",
+        "answer": "Engineering Mathematics 2 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Network Security course a required course?",
+        "answer": "Network Security is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Logic Circuits and Experiment course a required course?",
+        "answer": "Logic Circuits and Experiment is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the College English 1 course a required course?",
+        "answer": "College English 1 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the College English 2 course a required course?",
+        "answer": "College English 2 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Database course a required course?",
+        "answer": "Database is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Data Science course a required course?",
+        "answer": "Data Science is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Data Communication course a required course?",
+        "answer": "Data Communication is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Digital Communication course a required course?",
+        "answer": "Digital Communication is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Deep Learning course a required course?",
+        "answer": "Deep Learning is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Micro English course a required course?",
+        "answer": "Micro English is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Machine Learning course a required course?",
+        "answer": "Machine Learning is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Multimedia Communication course a required course?",
+        "answer": "Multimedia Communication is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Wireless Communication Engineering course a required course?",
+        "answer": "Wireless Communication Engineering is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Linear Algebra course a required course?",
+        "answer": "Linear Algebra is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Software Engineering course a required course?",
+        "answer": "Software Engineering is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Freshman Seminar course a required course?",
+        "answer": "Freshman Seminar is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Signals and Systems course a required course?",
+        "answer": "Signals and Systems is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Algorithm Design and Analysis course a required course?",
+        "answer": "Algorithm Design and Analysis is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Open Source Software course a required course?",
+        "answer": "Open Source Software is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Operating Systems course a required course?",
+        "answer": "Operating Systems is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Mobile Communication course a required course?",
+        "answer": "Mobile Communication is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Discrete Mathematics course a required course?",
+        "answer": "Discrete Mathematics is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Discrete Signal Processing course a required course?",
+        "answer": "Discrete Signal Processing is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Internship Programming 1 course a required course?",
+        "answer": "Internship Programming 1 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Internship Programming 2 course a required course?",
+        "answer": "Internship Programming 2 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Data Structures course a required course?",
+        "answer": "Data Structures is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Introduction to Information and Communication course a required course?",
+        "answer": "Introduction to Information and Communication is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Basic Integrated Design in Information and Communication course a required course?",
+        "answer": "Basic Integrated Design in Information and Communication is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Comprehensive Design and Practice in Information and Communication Lab course a required course?",
+        "answer": "Comprehensive Design and Practice in Information and Communication Lab is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Computer Architecture course a required course?",
+        "answer": "Computer Architecture is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Computer Networks course a required course?",
+        "answer": "Computer Networks is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Computer Programming course a required course?",
+        "answer": "Computer Programming is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Computer Programming and Practice course a required course?",
+        "answer": "Computer Programming and Practice is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Computational Thinking course a required course?",
+        "answer": "Computational Thinking is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Communication Engineering course a required course?",
+        "answer": "Communication Engineering is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Communication Network Design course a required course?",
+        "answer": "Communication Network Design is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Probability and Statistics course a required course?",
+        "answer": "Probability and Statistics is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Understanding Circuit Theory course a required course?",
+        "answer": "Understanding Circuit Theory is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, is the Circuit Analysis and Experiment course a required course?",
+        "answer": "Circuit Analysis and Experiment is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+        "question": "hubot, what are the required courses for first-year students?",
+        "answer": "Required courses for first-year students include Computer Programming and Logic Circuits and Experiment."
+    },
+    {
+  "question": "hubot, is the Freshman Seminar course a required course?",
+  "answer": "The Freshman Seminar is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Signals and Systems course a required course?",
+    "answer": "Signals and Systems is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Algorithm Design and Analysis course a required course?",
+    "answer": "Algorithm Design and Analysis is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Open Source Software course a required course?",
+    "answer": "Open Source Software is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Operating Systems course a required course?",
+    "answer": "Operating Systems is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Mobile Communication course a required course?",
+    "answer": "Mobile Communication is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Discrete Mathematics course a required course?",
+    "answer": "Discrete Mathematics is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Discrete Signal Processing course a required course?",
+    "answer": "Discrete Signal Processing is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Internship Programming 1 course a required course?",
+    "answer": "Internship Programming 1 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Internship Programming 2 course a required course?",
+    "answer": "Internship Programming 2 is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Data Structures course a required course?",
+    "answer": "Data Structures is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Introduction to Information and Communication course a required course?",
+    "answer": "Introduction to Information and Communication is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Basic Information and Communication Design course a required course?",
+    "answer": "Basic Information and Communication Design is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Practical Information and Communication Design and Lab course a required course?",
+    "answer": "Practical Information and Communication Design and Lab is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Computer Architecture course a required course?",
+    "answer": "Computer Architecture is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Computer Networks course a required course?",
+    "answer": "Computer Networks is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Computer Programming course a required course?",
+    "answer": "Computer Programming is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Computer Programming and Lab course a required course?",
+    "answer": "Computer Programming and Lab is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Computational Thinking course a required course?",
+    "answer": "Computational Thinking is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Communication Engineering course a required course?",
+    "answer": "Communication Engineering is a required course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Communication Network Design course a required course?",
+    "answer": "Communication Network Design is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Probability and Statistics course a required course?",
+    "answer": "Probability and Statistics is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Understanding Circuit Theory course a required course?",
+    "answer": "Understanding Circuit Theory is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, is the Circuit Analysis and Lab course a required course?",
+    "answer": "Circuit Analysis and Lab is an elective course in the Department of Information and Communication Engineering."
+    },
+    {
+    "question": "hubot, what are the required courses for freshmen?",
+    "answer": "Required courses for freshmen include Computer Programming, Logic Circuits and Lab, among others."
+    },
+    {
+    "question": "hubot, how many credits are required for major specialization for students enrolled between 2015 and 2022?",
+    "answer": "For students enrolled between 2015 and 2022 in the Department of Information and Communication Engineering, the major specialization requires 75 credits in the major and 32 credits in general education, totaling 134 credits."
+    },
+    {
+        "question": "hubot, how many credits are required for major specialization for students enrolled between 2007 and 2014?",
+        "answer": "For students enrolled between 2007 and 2014 in the Department of Information and Communication Engineering, the major specialization requires 75 credits in the major and 26 credits in general education, totaling 134 credits."
+    },
+    {
+        "question": "hubot, is a graduation thesis mandatory?",
+        "answer": "Please refer to the department website for information regarding graduation requirements."
+    },
+    {
+        "question": "hubot, what are the subjects for the graduation exam in the Department of Information and Communication Engineering?",
+        "answer": "Please refer to the department website for information regarding graduation requirements."
+    },
+    {
+        "question": "hubot, how many total credits are needed to graduate?",
+        "answer": "Please refer to the department website for information regarding graduation requirements."
+    },
+    {
+        "question": "hubot, what are the required major courses?",
+        "answer": "The required major courses in the Department of Information and Communication Engineering are Data Structures, Signals and Systems, Data Communications, Communication Engineering, Basic Information and Communication Integrated Design, and Information and Communication Comprehensive Design and Practice — a total of 6 courses."
+    },
+    {
+        "question": "hubot, what are the foreign language certification criteria?",
+        "answer": "Please refer to the department website for information regarding graduation requirements."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled from 2025 onward?",
+        "answer": "For students enrolled from 2025 onward in the Department of Information and Communication Engineering, the credit requirements are 126 credits for double majors, 126 credits for minors, and 126 credits for major specialization."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled in 2023-2024?",
+        "answer": "For students enrolled in 2023-2024 in the Department of Information and Communication Engineering, the credit requirements are 134 credits for double majors, 134 credits for minors, and 134 credits for major specialization."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled between 2015 and 2022?",
+        "answer": "For students enrolled between 2015 and 2022 in the Department of Information and Communication Engineering, the credit requirements are 134 credits for double majors, 134 credits for minors, and 134 credits for major specialization."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled between 2007 and 2014?",
+        "answer": "For students enrolled between 2007 and 2014 in the Department of Information and Communication Engineering, the credit requirements are 134 credits for double majors, 134 credits for minors, and 134 credits for major specialization."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled before 2006?",
+        "answer": "For students enrolled before 2006 in the Department of Information and Communication Engineering, the total graduation credit requirement is 140 credits."
+    },
+    {
+        "question": "hubot, where are the practice labs for the Department of Information and Communication Engineering located?",
+        "answer": "The Department of Information and Communication Engineering has the Information and Communication Lab (Engineering Building Room 305), the Information and Communication Software Lab (Engineering Building Room 301), and the Basic Information and Communication Lab (Engineering Building Room 409)."
+    },
+    {
+        "question": "hubot, where is the Information and Communication Lab?",
+        "answer": "The Information and Communication Lab is located in Engineering Building Room 305."
+    },
+    {
+        "question": "hubot, what equipment is available in the Information and Communication Software Lab?",
+        "answer": "The Information and Communication Software Lab has 50 computers, routers, a beam projector, digital communication experiment kits, function generators, oscilloscopes, logic circuit experimenters, multimeters, and microprocessor experiment kits."
+    },
+    {
+        "question": "hubot, where is the Basic Information and Communication Lab and what is it used for?",
+        "answer": "The Basic Information and Communication Lab is located in Engineering Building Room 409 and serves as a seminar room."
+    },
+    {
+        "question": "hubot, where can students of the Department of Information and Communication Engineering use computer labs?",
+        "answer": "Students can use the Information and Communication Lab (Engineering Building Room 305, with 7 computers, 1 printer, and 1 scanner), the Information and Communication Software Lab (Engineering Building Room 301, with 50 computers, routers, a beam projector, digital communication experiment kits, function generators, oscilloscopes, logic circuit experimenters, multimeters, microprocessor experiment kits), and the Basic Information and Communication Lab (Engineering Building Room 409, with 5 computers and 1 printer)."
+    },
+    {
+        "question": "hubot, when are the undergraduate practice labs available for use?",
+        "answer": "The Information and Communication Lab (Engineering Building Room 305) is always available for use by students during working hours. Other labs are available when classes or seminars are not in session. For detailed information, please contact the department office."
+    },
+    {
+        "question": "hubot, what are the conditions for merit scholarships?",
+        "answer": "There are the President’s Scholarship (1 recipient, 100% tuition), Dean’s Scholarship (8 recipients, 40%), and Department Head’s Scholarship (8 recipients, 30%). To qualify, students must have taken at least 14 credits last semester, have a GPA of 3.5 or higher, and completed at least 3 major courses (9 credits) in the current academic year."
+    },
+    {
+        "question": "hubot, what are the conditions for the contribution scholarship?",
+        "answer": "There are 7 scholarships awarded at a fixed amount of 1,000,000 KRW each. To qualify, students must have taken at least 12 credits last semester and have a GPA of 2.0 or higher."
+    },
+    {
+        "question": "hubot, what are the conditions for the need-based scholarship?",
+        "answer": "The need-based scholarship is awarded to students with financial difficulties, disabilities, or others requiring tuition support."
+    },
+    {
+        "question": "hubot, what are the conditions for student loans?",
+        "answer": "For income-contingent repayment loans: students must have taken 12 credits and have a GPA of 2.5 or higher. For general repayment loans: students must have taken 12 credits and have a GPA of 1.5 or higher. Applications are made through the Korea Student Aid Foundation website."
+    },
+    {
+        "question": "hubot, what are the eligibility requirements for merit scholarships?",
+        "answer": "The President’s Scholarship (1 recipient, 100% tuition), Dean’s Scholarship (8 recipients, 40%), and Department Head’s Scholarship (8 recipients, 30%) require students to have taken at least 14 credits last semester, have a GPA of 3.5 or higher, and completed at least 3 major courses (9 credits) in the current academic year."
+    },
+    {
+        "question": "hubot, what are the eligibility requirements for the contribution scholarship?",
+        "answer": "There are 7 scholarships awarded at a fixed amount of 1,000,000 KRW each. To qualify, students must have taken at least 12 credits last semester and have a GPA of 2.0 or higher."
+    },
+    {
+    "question": "hubot, how many credits are required for major specialization for classes from 2015 to 2022?",
+    "answer": "For the 2015-2022 Information and Communication Engineering students, the major specialization requires 75 credits in major courses, 32 credits in liberal arts, totaling 134 credits."
+    },
+    {
+        "question": "hubot, how many credits are required for major specialization for classes from 2007 to 2014?",
+        "answer": "For the 2007-2014 Information and Communication Engineering students, the major specialization requires 75 credits in major courses, 26 credits in liberal arts, totaling 134 credits."
+    },
+    {
+        "question": "hubot, is a graduation thesis mandatory?",
+        "answer": "Please refer to the department homepage for information related to graduation requirements."
+    },
+    {
+        "question": "hubot, what are the subjects for the graduation exam in the Information and Communication Engineering department?",
+        "answer": "Please refer to the department homepage for information related to graduation requirements."
+    },
+    {
+        "question": "hubot, how many total credits are required to graduate?",
+        "answer": "Please refer to the department homepage for information related to graduation requirements."
+    },
+    {
+        "question": "hubot, what are the required major courses?",
+        "answer": "The required major courses for Information and Communication Engineering are Data Structures, Signals and Systems, Data Communications, Communication Engineering, Basic Integrated Design of Information and Communication, and Integrated Practice of Information and Communication Design, totaling six courses."
+    },
+    {
+        "question": "hubot, what is the foreign language certification standard?",
+        "answer": "Please refer to the department homepage for information related to graduation requirements."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled after 2025?",
+        "answer": "For students enrolled after 2025, the required credits for double majors, minors, and major specialization in Information and Communication Engineering are all 126 credits."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled in 2023-2024?",
+        "answer": "For students enrolled in 2023-2024, the required credits for double majors, minors, and major specialization in Information and Communication Engineering are all 134 credits."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled in 2015-2022?",
+        "answer": "For students enrolled in 2015-2022, the required credits for double majors, minors, and major specialization in Information and Communication Engineering are all 134 credits."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled in 2007-2014?",
+        "answer": "For students enrolled in 2007-2014, the required credits for double majors, minors, and major specialization in Information and Communication Engineering are all 134 credits."
+    },
+    {
+        "question": "hubot, what are the graduation credit requirements for students enrolled before 2006?",
+        "answer": "For students enrolled before 2006, the total required credits to graduate in Information and Communication Engineering is 140 credits."
+    },
+    {
+        "question": "hubot, where are the labs for the Information and Communication Engineering department?",
+        "answer": "The department has the Information and Communication Lab (Engineering Building Room 305), Information and Communication Software Lab (Engineering Building Room 301), and Basic Information and Communication Lab (Engineering Building Room 409)."
+    },
+    {
+        "question": "hubot, where is the Information and Communication Lab located?",
+        "answer": "The Information and Communication Lab is located in Engineering Building Room 305."
+    },
+    {
+        "question": "hubot, what equipment is available in the Information and Communication Software Lab?",
+        "answer": "The Information and Communication Software Lab has 50 computers, routers, beam projectors, digital communication experiment kits, function generators, oscilloscopes, logic circuit trainers, multimeters, and microprocessor experiment kits."
+    },
+    {
+        "question": "hubot, where is the Basic Information and Communication Lab and what is it used for?",
+        "answer": "The Basic Information and Communication Lab is located in Engineering Building Room 409 and serves as a seminar room."
+    },
+    {
+        "question": "hubot, where can students of the Information and Communication Engineering department access computer labs?",
+        "answer": "Students can use the Information and Communication Lab (Engineering Building 305, 7 computers, 1 printer, 1 scanner), the Information and Communication Software Lab (Engineering Building 301, 50 computers, routers, beam projectors, digital communication experiment kits, function generators, oscilloscopes, logic circuit trainers, multimeters, microprocessor experiment kits), and the Basic Information and Communication Lab (Engineering Building 409, 5 computers, 1 printer)."
+    },
+    {
+        "question": "hubot, when can students use the department labs?",
+        "answer": "The Information and Communication Lab is available to students during regular working hours. Other labs are accessible when there are no classes or seminars; please contact the department office for detailed information."
+    },
+    {
+        "question": "hubot, what are the criteria for academic scholarships?",
+        "answer": "There are President's Scholarship (1 recipient, 100% tuition), Dean's Scholarship (8 recipients, 40%), and Department Head's Scholarship (8 recipients, 30%). Students must have completed at least 14 credits in the previous semester, maintain a GPA of 3.5 or higher, and take at least three major courses (9 credits) in that academic year."
+    },
+    {
+        "question": "hubot, what are the criteria for merit scholarships?",
+        "answer": "There are 7 merit scholarships, each worth 1,000,000 KRW. Students must have completed at least 12 credits in the previous semester with a GPA of 2.0 or higher."
+    },
+    {
+        "question": "hubot, what are the criteria for need-based scholarships?",
+        "answer": "Need-based scholarships are given to students with financial difficulties or disabilities who require tuition support."
+    },
+    {
+        "question": "hubot, what are the conditions for student loans?",
+        "answer": "For income-contingent loans, students must have completed at least 12 credits with a GPA of 2.5 or higher. For general repayment loans, 12 credits and a GPA of 1.5 or higher are required. Applications are made via the Korea Student Aid Foundation website."
+    },
+    {
+        "question": "hubot, what types of scholarships are available?",
+        "answer": "The department offers academic scholarships, merit scholarships, need-based scholarships, and student loans."
+    },
+    {
+        "question": "hubot, where can I apply for scholarships?",
+        "answer": "You can apply for scholarships at the Student Support Team (031-330-4037~8). Please check the announcement for application periods at the beginning of each semester."
+    },
+    {
+        "question": "hubot, what are the requirements for academic scholarships?",
+        "answer": "President's Scholarship (1 recipient, 100% tuition), Dean's Scholarship (8 recipients, 40%), and Department Head's Scholarship (8 recipients, 30%) require students to have completed 14 or more credits in the previous semester, maintain a GPA of 3.5 or higher, and take at least three major courses (9 credits)."
+    },
+    {
+        "question": "hubot, what are the conditions for student loans?",
+        "answer": "Income-contingent loans require 12 credits with a GPA of 2.5 or higher; general repayment loans require 12 credits with a GPA of 1.5 or higher. Applications are made through the Korea Student Aid Foundation website."
+    },
+    {
+        "question": "hubot, how does the retake policy work?",
+        "answer": "Students can retake up to 21 credits (excluding summer/winter sessions). Only courses with grades C+ or lower can be retaken, and the maximum grade achievable on retake is A0."
+    },
+    {
+        "question": "hubot, what is the maximum credit load per semester?",
+        "answer": "Since the 2021 academic year, the maximum credit load for College of Engineering students is 22 credits per semester. Early graduates can take an additional 3 credits."
+    },
+    {
+        "question": "hubot, how are courses conducted in the Information and Communication Engineering department?",
+        "answer": "Courses include both lectures and practical labs. Key subjects are taught by professors with lab sessions guided by teaching assistants."
+    },
+    {
+        "question": "hubot, how does the credit rollover system work?",
+        "answer": "Unused credits from the first semester of the same academic year can be carried over to the second semester, up to 3 credits. This does not apply to students in their ninth semester or beyond."
+    },
+    {
+        "question": "hubot, how do I apply for summer/winter sessions?",
+        "answer": "Summer and winter sessions are held during vacation periods. Registration schedules are announced according to the academic calendar. Up to 6 credits can be taken per session."
+    },
+    {
+        "question": "hubot, what is the Information and Communication Engineering department about?",
+        "answer": "The department integrates core technologies of the 4th Industrial Revolution such as intelligent information technology, information security, and communication/network technology. It covers hardware and software technologies to build intelligent systems, ensure information security in systems and networks, and efficiently store, process, and provide multimedia information."
+    },
+    {
+        "question": "hubot, what career paths are available after graduating from Information and Communication Engineering?",
+        "answer": "Graduates can work in manufacturing companies like Samsung, LG, Hyundai Mobis; service companies like SKT, KT, Naver, Kakao; financial IT departments at banks like Woori, KB, IBK; education (teaching certificates possible); and government or corporate research institutes in related fields."
+    },
+    {
+        "question": "hubot, what certifications are recommended for Information and Communication Engineering students?",
+        "answer": "Recommended certifications include Information Processing Engineer, Network Administrator, Information Security Engineer, CCNA/CCNP, and AWS/Azure cloud certifications."
+    },
+    {
+        "question": "hubot, where is the department office located?",
+        "answer": "The Information and Communication Engineering department office is located on the 5th floor of the Engineering Building."
+    },
+    {
+        "question": "hubot, what is the phone number of the department office?",
+        "answer": "The phone number of the Information and Communication Engineering department office is 031-330-4740."
+    },
+    {
+        "question": "hubot, what labs does the Information and Communication Engineering department have?",
+        "answer": "The department has the Information and Communication Lab, Information and Communication Software Lab, and Basic Information and Communication Lab."
+    }
+    ],
+    "chatting": [
+    {
+        "question": "hubot, hi!",
+        "answer": "Hello! How can I help you?"
+    },
+    {
+        "question": "hubot, hi!",
+        "answer": "Nice to meet you! What do you need help with?"
+    },
+    {
+        "question": "hubot, hi!",
+        "answer": "Hello! Do you have any questions?"
+    },
+    {
+        "question": "hubot, how's the weather today?",
+        "answer": "Today is clear and warm."
+    },
+    {
+        "question": "hubot, how's the weather today?",
+        "answer": "It's sunny today. A great day to go out!"
+    },
+    {
+        "question": "hubot, how's the weather today?",
+        "answer": "Currently, the temperature in Seoul is 25 degrees Celsius and warm."
+    },
+    {
+        "question": "hubot, what did you have for lunch?",
+        "answer": "I'm an AI, so I don't eat, but I can tell you today's cafeteria menu!"
+    },
+    {
+        "question": "hubot, what did you have for lunch?",
+        "answer": "I don't eat since I'm AI, but the popular menu at the student cafeteria is pork cutlet."
+    },
+    {
+        "question": "hubot, what's your name?",
+        "answer": "I am hubot, the chatbot for HUFS Information and Communication Engineering department."
+    },
+    {
+        "question": "hubot, what's your name?",
+        "answer": "Hello, my name is hubot. How can I assist you?"
+    },
+    {
+        "question": "hubot, what are your hobbies?",
+        "answer": "My hobby is answering students' questions. I enjoy helping solve your curiosities!"
+    },
+    {
+        "question": "hubot, what are your hobbies?",
+        "answer": "I am an AI so I don't have hobbies, but I like answering students' questions."
+    },
+    {
+        "question": "hubot, how are you?",
+        "answer": "I'm always doing well consistently. How about you?"
+    },
+    {
+        "question": "hubot, how are you?",
+        "answer": "I am an AI, so my state is always the same. How are you?"
+    },
+    {
+        "question": "hubot, can you recommend lunch?",
+        "answer": "For lunch today, I recommend today's menu at the student cafeteria or some popular nearby restaurants. Let me know if you want a more specific recommendation!"
+    },
+    {
+        "question": "hubot, can you recommend lunch?",
+        "answer": "Kimbap Cheonguk or stew restaurants near campus are very popular."
+    },
+    {
+        "question": "hubot, I'm feeling down today. Please comfort me.",
+        "answer": "It sounds like you are having a tough day. Taking a short break and listening to your favorite music might help you relax. Tomorrow will be a better day!"
+    },
+    {
+        "question": "hubot, I'm feeling down today. Please comfort me.",
+        "answer": "I'm sorry you're feeling bad. How about taking a deep breath and focusing on something you enjoy?"
+    },
+    {
+        "question": "hubot, what should I do on the weekend?",
+        "answer": "If the weather is nice, how about taking a walk with friends around campus or visiting a nearby park? Or you could catch up on assignments or enjoy a hobby."
+    },
+    {
+        "question": "hubot, what should I do on the weekend?",
+        "answer": "Studying in the library, meeting friends, or resting at home are also good options."
+    },
+    {
+        "question": "hubot, are you an AI?",
+        "answer": "Yes, I am an AI chatbot designed to help you with your studies and university life."
+    },
+    {
+        "question": "hubot, are you an AI?",
+        "answer": "That's right, I am the AI chatbot of HUFS Information and Communication Engineering department."
+    }
+]
+}
