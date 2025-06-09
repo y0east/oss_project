@@ -30,12 +30,23 @@
           return;
         }
 
-        fetch(`http://localhost:8080/api/posts/${id}`)
+        fetch(`http://localhost:8080/api/posts/${id}`, {
+          credentials: 'include',   // 반드시 포함해야 쿠키가 요청에 함께 전송됨
+        })
           .then((res) => {
+            if (res.status === 401) {
+              // 401 Unauthorized일 때 서버가 보낸 JSON 읽고 리다이렉트
+              return res.json().then((errJson) => {
+                window.location.href = errJson.redirect || 'http://localhost:3000/login_page/login_page.html';
+                // 이후 작업 중단을 위해 빈 Promise 리턴
+                return new Promise(() => {});
+              });
+            }
             if (!res.ok) throw new Error('게시글을 불러올 수 없습니다');
             return res.json();
           })
           .then((post) => {
+            if (!post) return; // 리다이렉트 후 이 부분 안 타도록 방어 코드
             const d = new Date(post.createdAt);
             const date = [
               d.getFullYear(),
@@ -44,18 +55,13 @@
             ].join('.');
 
             document.getElementById('post-title').textContent = post.title;
-            document.getElementById(
-              'post-date'
-            ).textContent = `작성일: ${date}`;
+            document.getElementById('post-date').textContent = `작성일: ${date}`;
             document.getElementById('post-content').textContent = post.content;
-            document.getElementById(
-              'post-views'
-            ).textContent = `조회수: ${post.viewCount}`;
+            document.getElementById('post-views').textContent = `조회수: ${post.viewCount}`;
           })
           .catch((err) => {
             console.error(err);
-            document.getElementById('post-title').textContent =
-              '오류가 발생했습니다.';
+            document.getElementById('post-title').textContent = '오류가 발생했습니다.';
             document.getElementById('post-date').textContent = '';
             document.getElementById('post-content').textContent = '';
           });
