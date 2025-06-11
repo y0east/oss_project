@@ -3,53 +3,55 @@ package kr.ac.hufs.ice.ice.filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import kr.ac.hufs.ice.ice.entity.member.Role;
 import kr.ac.hufs.ice.ice.utils.JwtUtil;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.List;
 
 @Component
-public class JwtAuthenticationFilter extends HttpFilter {
+@RequiredArgsConstructor
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;
 
-    public JwtAuthenticationFilter(JwtUtil jwtUtil) {
-        this.jwtUtil = jwtUtil;
-    }
-
     @Override
-    protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
-            throws IOException, ServletException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
+                                    FilterChain filterChain) throws ServletException, IOException {
 
-        String path = request.getRequestURI();
-        if (path.startsWith("/api/posts/")) {
-            String token = null;
-            if (request.getCookies() != null) {
-                for (Cookie cookie : request.getCookies()) {
-                    if ("token".equals(cookie.getName())) {
-                        token = cookie.getValue();
-                        System.out.println("JwtAuthenticationFilter - token: " + token);
-                        break;
-                    }
+        String token = null;
+
+        if (request.getCookies() != null) {
+            for (Cookie cookie : request.getCookies()) {
+                if ("token".equals(cookie.getName())) {
+                    token = cookie.getValue();
+                    break;
                 }
             }
-
-            if (token == null || !jwtUtil.validateToken(token)) {
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                response.setContentType("application/json");
-                response.setCharacterEncoding("UTF-8");
-                response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-                response.setHeader("Access-Control-Allow-Credentials", "true");
-                response.getWriter().write("{\"redirect\": \"http://localhost:3000/login_page/login_page.html\"}");
-                response.getWriter().flush();
-                return;
-            }
-
         }
 
-        chain.doFilter(request, response);
+        if (token != null && jwtUtil.validateToken(token)) {
+            String studentId = jwtUtil.getStudentIdFromToken(token);
+            Role role = jwtUtil.getRoleFromToken(token);
+
+            // Spring Security 권한 설정: ROLE_ADMIN, ROLE_USER 형식
+            List<SimpleGrantedAuthority> authorities =
+                    List.of(new SimpleGrantedAuthority(role.name()));
+
+            UsernamePasswordAuthenticationToken authenticationToken =
+                    new UsernamePasswordAuthenticationToken(studentId, null, authorities);
+
+            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+        }
+
+        filterChain.doFilter(request, response);
     }
 }

@@ -1,6 +1,6 @@
 package kr.ac.hufs.ice.ice.repository;
 
-import kr.ac.hufs.ice.ice.entity.Member;
+import kr.ac.hufs.ice.ice.entity.member.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

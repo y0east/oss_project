@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ studentId, password }),
+        credentials: "include"
       });
 
       if (!res.ok) throw new Error(`HTTP 오류: ${res.status}`);
