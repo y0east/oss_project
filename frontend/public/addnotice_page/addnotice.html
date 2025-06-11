@@ -27,23 +27,27 @@
       >
         <div class="flex items-center gap-3">
           <img src="../icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
-          <span class="text-base md:text-lg font-semibold text-[#8B5E3C]"
-            >정보통신공학과</span
+          <a
+            href="http://localhost:3000/main_page/main_page.html"
+            style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
+            >정보통신공학과</a
           >
         </div>
         <div class="flex items-center gap-6 text-sm md:text-base">
-          <a href="#" class="hover:underline">이메일</a>
-          <a href="#" class="hover:opacity-80">
+          <a
+            href="http://localhost:3000/login_page/login_page.html"
+            class="hover:opacity-80"
+          >
             <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
           </a>
         </div>
       </div>
     </div>
 
-    <!-- ▣ Main Nav + Mega Menu -->
-    <nav id="mainNav" class="w-full bg-[#002D56] text-white relative z-20">
+    <!-- ▣ Main Navigation -->
+    <nav id="mainNav" class="w-full bg-[#002d56] text-white relative z-20">
       <ul
-        class="max-w-7xl mx-auto flex items-center justify-center gap-20 py-3 text-base md:text-lg font-bold"
+        class="max-w-5xl mx-auto flex flex-wrap items-center justify-center lg:translate-x-[0.5vw] sm:gap-4 md:gap-12 lg:gap-24 px-4 py-2 text-base sm:text-lg md:text-xl lg:text-1xl font-bold whitespace-normal"
       >
         <li class="nav-item" data-col="about">
           <button class="hover:text-sky-300">학과소개</button>
@@ -51,7 +55,7 @@
         <li class="nav-item" data-col="bursary">
           <button class="hover:text-sky-300">학사·장학</button>
         </li>
-        <li class="nav-item" data-col="curriculum">
+        <li class="nav-item translate-x-[-0.5vw]" data-col="curriculum">
           <button class="hover:text-sky-300">교과과정</button>
         </li>
         <li class="nav-item" data-col="grad">
@@ -59,6 +63,9 @@
         </li>
         <li class="nav-item" data-col="facility">
           <button class="hover:text-sky-300">학회·시설</button>
+        </li>
+        <li class="nav-item" data-col="community">
+          <button class="hover:text-sky-300">커뮤니티</button>
         </li>
       </ul>
 
@@ -134,6 +141,7 @@
             data-col="curriculum"
           >
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
+            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
             <a
               href="http://localhost:3000/completion_system_page/com_sys_page.html"
               class="hover:text-sky-300"
@@ -216,8 +224,6 @@
               >시설안내</a
             >
           </div>
-
-          <!-- 커뮤니티 -->
           <div
             class="mega-col flex flex-col gap-2 rounded-lg items-center"
             data-col="community"
@@ -248,17 +254,17 @@
       </div>
     </nav>
 
-    <!-- ▣ Quick Access Bar -->
-    <div class="w-full bg-gray-200">
-      <div
-        class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide"
-      >
-        <a href="#" class="hover:text-sky-600">e-Class</a>
-        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
-        <a href="#" class="hover:text-sky-600">도서관</a>
-        <a href="#" class="hover:text-sky-600">입학안내</a>
-      </div>
-    </div>
+    <!-- ▣ Hero Banner (LOGIN) -->
+    <section
+      class="relative w-full h-48 flex items-center justify-center text-center overflow-hidden bg-[#003366]"
+    >
+      <img
+        src="../img/subpage_pic.gif"
+        alt="subpage banner"
+        class="absolute inset-0 w-full h-full object-cover opacity-70"
+      />
+      <h2 class="relative text-white text-2xl md:text-4xl font-bold">게시글</h2>
+    </section>
 
     <!-- ▣ 게시글 작성 폼 -->
     <section class="max-w-4xl mx-auto px-4 py-16">
@@ -278,37 +284,6 @@
           />
         </div>
 
-        <!-- 카테고리 -->
-        <div>
-          <label for="category" class="block text-sm font-semibold mb-1"
-            >카테고리</label
-          >
-          <select
-            id="category"
-            name="category"
-            class="w-full border border-gray-300 rounded-md p-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#002D56]"
-          >
-            <option value="news">학과 소식</option>
-            <option value="award">홍보 / 수상</option>
-            <option value="patent">특허 실적</option>
-            <option value="event">학술 행사</option>
-            <option value="etc">기타</option>
-          </select>
-        </div>
-
-        <!-- 요약 -->
-        <div>
-          <label for="summary" class="block text-sm font-semibold mb-1"
-            >요약 (선택)</label
-          >
-          <textarea
-            id="summary"
-            name="summary"
-            rows="3"
-            class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#002D56]"
-          ></textarea>
-        </div>
-
         <!-- 본문 -->
         <div>
           <label for="content" class="block text-sm font-semibold mb-1"
@@ -323,24 +298,10 @@
           ></textarea>
         </div>
 
-        <!-- 첨부 이미지 -->
-        <div>
-          <label for="image" class="block text-sm font-semibold mb-1"
-            >대표 이미지 (선택)</label
-          >
-          <input
-            type="file"
-            id="image"
-            name="image"
-            accept="image/*"
-            class="w-full"
-          />
-        </div>
-
         <!-- 버튼 -->
         <div class="flex justify-end gap-4">
           <a
-            href="page2.html"
+            href="http://localhost:3000/main_page/main_page.html"
             class="px-6 py-2 border border-gray-400 rounded-md text-gray-700 hover:bg-gray-100"
             >취소</a
           >

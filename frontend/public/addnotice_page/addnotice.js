@@ -28,11 +28,39 @@ document.addEventListener('DOMContentLoaded', () => {
   megaMenu.addEventListener('mouseenter', showMega);
   megaMenu.addEventListener('mouseleave', hideMega);
 
-  /* ===== 게시글 작성 폼: 데모용 처리 ===== */
+  /* ===== 게시글 작성 폼 처리 ===== */
   const form = document.getElementById('postForm');
-  form.addEventListener('submit', (e) => {
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    alert('게시글이 임시로 저장되었습니다! 실제 저장 로직을 구현하세요.');
-    form.reset();
+
+    // 1) 입력값 읽기
+    const title = form.querySelector('[name="title"]').value.trim();
+    const content = form.querySelector('[name="content"]').value.trim();
+
+    if (!title || !content) {
+      alert('제목과 내용을 모두 입력하세요.');
+      return;
+    }
+
+    try {
+      // 2) JSON 형식으로 백엔드에 전송
+      const res = await fetch('http://localhost:8080/api/posts/createPost', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, content }),
+      });
+
+      // 3) 응답 확인
+      if (!res.ok) {
+        throw new Error(`HTTP 오류: ${res.status}`);
+      }
+
+      alert('게시글이 성공적으로 등록되었습니다!');
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert('게시글 등록 중 오류가 발생했습니다.');
+    }
   });
 });
