@@ -1,6 +1,6 @@
 package kr.ac.hufs.ice.ice.service.impl;
 
-import kr.ac.hufs.ice.ice.entity.Member;
+import kr.ac.hufs.ice.ice.entity.member.Member;
 import kr.ac.hufs.ice.ice.repository.MemberRepository;
 import kr.ac.hufs.ice.ice.service.RegisterService;
 import lombok.RequiredArgsConstructor;

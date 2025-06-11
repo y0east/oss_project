@@ -2,6 +2,7 @@ package kr.ac.hufs.ice.ice.utils;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
+import kr.ac.hufs.ice.ice.entity.member.Role;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
@@ -15,15 +16,18 @@ public class JwtUtil {
 
     private final Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
 
-    // 토큰 생성
-    public String generateToken(String studentId) {
+    public String generateToken(String studentId, Role role) {
+        Claims claims = Jwts.claims().setSubject(studentId);
+        claims.put("role", role.name());
+
         return Jwts.builder()
-                .setSubject(studentId)
+                .setClaims(claims)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(key, SignatureAlgorithm.HS256)
+                .signWith(key, SignatureAlgorithm.HS256)  // key 객체와 알고리즘을 함께 넣어야 함
                 .compact();
     }
+
 
     public boolean validateToken(String token) {
         try {
@@ -42,5 +46,16 @@ public class JwtUtil {
                 .getBody()
                 .getSubject();
     }
+
+    public Role getRoleFromToken(String token) {
+        String roleName = Jwts.parserBuilder()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(token)
+                .getBody()
+                .get("role", String.class);
+        return Role.valueOf(roleName);
+    }
+
 }
 

@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, content }),
+        credentials: 'include',
+        mode: 'cors'
       });
 
       // 3) 응답 확인
@@ -57,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       alert('게시글이 성공적으로 등록되었습니다!');
+      window.location.href = 'http://localhost:3000/notice_page/notice_page.html';
       form.reset();
     } catch (err) {
       console.error(err);
