@@ -10,7 +10,7 @@ body {
   z-index: 30;
 }
 .highlight {
-  background: rgba(6, 66, 118, 0.85) !important;
+  background: rgba(6, 66, 118, 0.65) !important;
 }
 .nav-item button {
   letter-spacing: 0.02em;

@@ -7,18 +7,14 @@
 
     <!-- Fonts & Tailwind -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
       body {
-        font-family: 'Nanum Gothic', sans-serif;
+        font-family: "Nanum Gothic", sans-serif;
       }
 
-      /* 🔹 공통 그라데이션 텍스트 */
       .gradient-text {
         display: inline-block;
         background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
@@ -28,7 +24,6 @@
         color: transparent;
       }
 
-      /* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용 */
       #mega-menu {
         background: rgba(2, 49, 90, 0.85);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
@@ -36,18 +31,15 @@
         overflow-y: auto;
       }
 
-      /* 🔸 하이라이트 열 */
       .highlight {
-        background: rgba(6, 66, 118, 0.65) !important;
+        background: rgba(6, 66, 118, 0.85) !important;
       }
 
-      /* 🔸 네비게이션 글자 자간 */
       .nav-item button {
         letter-spacing: 0.02em;
       }
     </style>
   </head>
-
   <body class="bg-gray-100">
     <!-- ▣ Top Mini Bar -->
     <div class="w-full bg-white border-b border-gray-200 text-xs">
@@ -55,7 +47,7 @@
         class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
       >
         <div class="flex items-center gap-3">
-          <img src="../icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
+          <img src="./icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
           <a
             href="http://localhost:3000/main_page/main_page.html"
             style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
@@ -67,7 +59,7 @@
             href="http://localhost:3000/login_page/login_page.html"
             class="hover:opacity-80"
           >
-            <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
+            <img src="./icon/lock.png" alt="로그인" class="w-5 h-5" />
           </a>
         </div>
       </div>
@@ -124,7 +116,6 @@
           <!-- 교과과정 -->
           <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="curriculum">
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
-            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
             <a
               href="http://localhost:3000/completion_system_page/com_sys_page.html"
               class="hover:text-sky-300"
@@ -154,7 +145,8 @@
             <a href="#" class="hover:text-sky-300">시설안내</a>
           </div>
 
-           <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="community">
+          <!-- 커뮤니티 -->
+          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="community">
             <h4 class="text-sky-200 font-bold mb-2">커뮤니티</h4>
             <a href="#" class="hover:text-sky-300">공지사항</a>
             <a href="#" class="hover:text-sky-300">자료실</a>
@@ -165,144 +157,96 @@
       </div>
     </nav>
 
-    <!-- ▣ Hero Banner (LOGIN) -->
-    <section
-      class="relative w-full h-48 flex items-center justify-center text-center overflow-hidden bg-[#003366]"
-    >
-      <img
-        src="../img/subpage_pic.gif"
-        alt="subpage banner"
-        class="absolute inset-0 w-full h-full object-cover opacity-70"
-      />
-      <h2 class="relative text-white text-2xl md:text-4xl font-bold">
-        sub page
-      </h2>
-    </section>
-
-    <!-- ▣ About & Goal Section -->
-    <section class="max-w-5xl mx-auto px-4 py-16 text-center">
-      <!-- 학과소개 배지 -->
-      <span
-        class="inline-block bg-gray-400 text-white text-lg md:text-xl font-bold py-2 px-8 rounded-lg shadow"
-        >학과소개</span
-      >
-
-      <!-- 교육목표 제목 -->
-      <h3 class="mt-12 text-2xl md:text-3xl font-bold text-gray-800">
-        교육목표
-      </h3>
-
-      <!-- 파란 라인 -->
-      <div class="mt-3 w-24 h-0.5 bg-[#002D56] mx-auto"></div>
-
-      <!-- 본문 (📌 가독성 & 디자인 개선) -->
-      <div class="mt-10 text-left space-y-6">
-        <!-- 카드 1 -->
-        <div
-          class="bg-gray-50/80 border-l-4 border-[#002D56] p-6 rounded-md shadow-sm leading-relaxed text-gray-700 text-base md:text-lg"
-        >
-          <p>
-            <span class="font-semibold text-[#002D56]">정보통신공학</span>은 4차
-            산업혁명의 핵심 기술인 지능정보·정보보안·통신·네트워크 기술이 융합된
-            종합 학문입니다. 본 학과의 커리큘럼은 하드웨어와 소프트웨어 전
-            영역을 아우르며
-            <strong
-              >지능형 시스템 구축 · 정보보안 확보 · 멀티미디어 정보 처리</strong
-            >
-            역량을 체계적으로 길러 줍니다.
-          </p>
-        </div>
-
-        <!-- 카드 2 -->
-        <div
-          class="bg-gray-50/80 border-l-4 border-[#002D56] p-6 rounded-md shadow-sm leading-relaxed text-gray-700 text-base md:text-lg"
-        >
-          <p>
-            <span class="font-semibold text-[#002D56]">ICT+외국어</span> 국제화
-            모델을 기반으로, 콘텐츠·플랫폼·네트워크·디바이스 네 영역의 지식을
-            <em>융합</em>하여 국제 경쟁력을 갖춘 창의적 글로벌 ICT 전문가를
-            양성합니다.
-          </p>
-        </div>
-
-        <!-- 카드 3 -->
-        <div
-          class="bg-gray-50/80 border-l-4 border-[#002D56] p-6 rounded-md shadow-sm leading-relaxed text-gray-700 text-base md:text-lg"
-        >
-          <p>
-            초고속 인터넷 강국 대한민국의 위상을 바탕으로, 본 학과는
-            <strong>실무 역량 · 윤리 의식 · 글로벌 협업 능력</strong>을 갖춘
-            엔지니어를 배출합니다. 부전공·이중전공 선택 및 해외 프로젝트 참여를
-            통해 다학제적 시야와 실전 경험을 동시에 확보할 수 있습니다.
-          </p>
-        </div>
+    <!-- ▣ Quick Access Bar -->
+    <div class="w-full bg-gray-200">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide">
+        <a href="#" class="hover:text-sky-600">e-Class</a>
+        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
+        <a href="#" class="hover:text-sky-600">도서관</a>
+        <a href="#" class="hover:text-sky-600">입학안내</a>
       </div>
-    </section>
+    </div>
 
-    <!-- ▣ Footer -->
-    <footer class="bg-[#2f2f2f] py-10 text-center text-gray-300">
-      <div class="max-w-4xl mx-auto space-y-2 text-sm leading-relaxed">
-        <!-- HUFS 영문 로고 -->
-        <p class="text-gray-400 text-base font-semibold">
-          Hankuk University of Foreign Studies
-        </p>
-
-        <!-- 주소 -->
-        <p>
-          <span class="text-[#c9aa71] font-semibold">글로벌캠퍼스</span>
-          17035 경기도 용인시 처인구 모현읍 외대로 81<br />
-          한국외국어대학교 공과대학 정보통신공학과
-        </p>
-
-        <!-- 연락처 -->
-        <p><span class="text-[#c9aa71]">Tel.</span> 031-330-4255</p>
-        <p><span class="text-[#c9aa71]">e-mail.</span> ice@hufs.ac.kr</p>
-
-        <!-- 저작권 -->
-        <p class="pt-2 text-xs text-gray-500">
-          Copyright © Hankuk University of Foreign Studies. All Rights Reserved.
-        </p>
+    <!-- ▣ Notice Detail Page (디자인 개선) -->
+    <main class="max-w-7xl mx-auto px-4 py-24">
+      <!-- Title / BreadCrumb -->
+      <div class="mb-12 space-y-2">
+        <p class="text-sm text-gray-500">홈 » 공지사항</p>
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 border-b border-gray-200 pb-4">
+          공지사항
+        </h1>
       </div>
-    </footer>
 
-    <!-- ▣ 메가메뉴 스크립트 -->
+      <article class="bg-white/70 backdrop-blur-sm ring-1 ring-gray-200 shadow-xl rounded-3xl p-12 space-y-12">
+        <!-- Header -->
+        <header class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+            <span class="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-[#002D56]/10 text-[#002D56] tracking-wider uppercase">
+              학사 안내
+            </span>
+            <time class="text-sm text-gray-500">2025. 05. 21</time>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold leading-snug">
+            정보통신공학과 학과 명 변경 안내
+          </h2>
+        </header>
+
+        <section class="prose max-w-none text-gray-800 prose-h3:text-lg prose-h3:font-semibold prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-[#002D56]">
+          <p>안녕하세요. 외대 총장입니다.</p>
+          <p>
+            2025년 5월 30일부로 정보통신공학과의 학과명이 서울캠퍼스 이전에 따라
+            <strong>AI&CT</strong>로 변경되었습니다.
+          </p>
+          <p>주요 변경사항은 아래와 같으며, 변경 내용은 아래의 링크에서 확인할 수 있습니다.</p>
+          <p>아니 근데 진짜 이거 ㅈㄴ 힘드네 이럴 줄 알았으면 문과로 도망갈걸....</p>
+        </section>
+
+        <footer class="pt-8 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm text-gray-500">
+          <p>문의: ice@hufs.ac.kr</p>
+          <button class="inline-flex items-center gap-1 px-4 py-2 rounded-md bg-[#002D56] text-white hover:bg-[#00386b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#002D56]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12l-15 0m0 0l6 6m-6-6l6-6" />
+            </svg>
+            목록으로
+          </button>
+        </footer>
+      </article>
+    </main>
+
+    <!-- ▣ Script for Mega Menu -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const megaMenu = document.getElementById('mega-menu');
-        const nav = document.getElementById('mainNav');
-        const navItems = document.querySelectorAll('.nav-item');
-        const cols = document.querySelectorAll('.mega-col');
+      document.addEventListener("DOMContentLoaded", () => {
+        const megaMenu = document.getElementById("mega-menu");
+        const nav = document.getElementById("mainNav");
+        const navItems = document.querySelectorAll(".nav-item");
+        const cols = document.querySelectorAll(".mega-col");
 
         function highlight(colName) {
-          cols.forEach((c) =>
-            c.classList.toggle('highlight', c.dataset.col === colName)
-          );
+          cols.forEach((c) => {
+            c.classList.toggle("highlight", c.dataset.col === colName);
+          });
         }
+
         function showMega() {
-          megaMenu.classList.remove('hidden');
+          megaMenu.classList.remove("hidden");
         }
+
         function hideMega() {
-          megaMenu.classList.add('hidden');
-          cols.forEach((c) => c.classList.remove('highlight'));
+          megaMenu.classList.add("hidden");
+          cols.forEach((c) => c.classList.remove("highlight"));
         }
 
         navItems.forEach((item) => {
-          item.addEventListener('mouseenter', () => {
+          item.addEventListener("mouseenter", () => {
             showMega();
             highlight(item.dataset.col);
           });
         });
-        cols.forEach((col) =>
-          col.addEventListener('mouseenter', () => {
-          showMega();
-          highlight(col.dataset.col);
-        })
-      );
-        nav.addEventListener('mouseleave', hideMega);
-        megaMenu.addEventListener('mouseenter', showMega);
-        megaMenu.addEventListener('mouseleave', hideMega);
+
+        nav.addEventListener("mouseleave", hideMega);
+        megaMenu.addEventListener("mouseenter", showMega);
+        megaMenu.addEventListener("mouseleave", hideMega);
       });
-      
     </script>
   </body>
 </html>

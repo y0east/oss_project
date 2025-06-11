@@ -17,7 +17,10 @@ function appendMessage(content, sender){
   body.appendChild(msg);
   body.scrollTop = body.scrollHeight;
 }
-
+function isKorean(text) {
+  // 한글 유니코드 범위 체크
+  return /[ㄱ-ㅎㅏ-ㅣ가-힣]/.test(text);
+}
 /* ─── 로딩 후 Flask 서버에 POST 요청 & 답변 출력 ─── */
 function botReply(text){
   document.body.classList.add('surf');        // 파도 모드 ON
@@ -45,19 +48,28 @@ function botReply(text){
       if (data.answer) {
         bubble.textContent = data.answer;
       } else {
-        bubble.textContent = '죄송합니다. 답변을 가져오지 못했습니다.';
+        // 입력 언어에 따라 안내 메시지 다르게
+        if (isKorean(text)) {
+          bubble.textContent = '죄송합니다. 답변을 가져오지 못했습니다.';
+        } else {
+          bubble.textContent = "Sorry, I couldn't get the answer.";
+        }
       }
       document.body.classList.remove('surf');
     }, 800); // 약간의 딜레이로 자연스럽게
   })
   .catch(err => {
     setTimeout(()=>{
-      bubble.textContent = '서버와 통신에 실패했습니다.';
+      // 입력 언어에 따라 안내 메시지 다르게
+      if (isKorean(text)) {
+        bubble.textContent = '서버와 통신에 실패했습니다.';
+      } else {
+        bubble.textContent = 'Failed to communicate with the server.';
+      }
       document.body.classList.remove('surf');
     }, 800);
   });
 }
-
 /* ─── 입력 이벤트 ─── */
 form.addEventListener('submit',e=>{
   e.preventDefault();
@@ -85,4 +97,9 @@ faqDropdown.querySelectorAll('div').forEach(item=>{
 document.getElementById('exit-btn').addEventListener('click',()=>{
   document.querySelector('.chat-wrapper').style.display='none';
   faqDropdown.classList.remove('show');
+});
+
+
+document.getElementById('exit-btn').addEventListener('click', function() {
+  window.location.href = 'http://localhost:3000/main_page/main_page.html';
 });
