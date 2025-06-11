@@ -63,7 +63,6 @@ IntelliJ IDEA Ultimate Edition: Integrated Development Environment (IDE) for bac
   {
     "id": 1,
     "title": "First Post",
-    "author": "user1",
     "content": "content",
     "viewCount" : "3",
     "createdAt": "2025-05-20T12:00:00"
@@ -71,7 +70,6 @@ IntelliJ IDEA Ultimate Edition: Integrated Development Environment (IDE) for bac
   {
     "id": 2,
     "title": "Second Post",
-    "author": "user2",
     "content": "content",
     "viewCount" : "3",
     "createdAt": "2025-05-20T13:00:00"
@@ -94,15 +92,7 @@ IntelliJ IDEA Ultimate Edition: Integrated Development Environment (IDE) for bac
   "id": 1,
   "title": "First Post",
   "content": "This is the first post.",
-  "author": "user1",
   "createdAt": "2025-05-20T12:00:00",
-  "comments": [
-    {
-      "user": "user2",
-      "content": "Nice post!",
-      "createdAt": "2025-05-20T13:00:00"
-    }
-  ]
   "viewCount" : "3",
   "createdAt": "2025-05-20T12:00:00",
 }

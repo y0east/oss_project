@@ -1,20 +1,19 @@
 package kr.ac.hufs.ice.ice.controller;
 
 
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletResponse;
 import kr.ac.hufs.ice.ice.dto.MemberDto;
 import kr.ac.hufs.ice.ice.service.LoginService;
+import kr.ac.hufs.ice.ice.utils.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-
-//Todo 무조건 refactoring
-// 일단 토큰 기반으로 바꾸기 (지금은 이름만 token, 기능은 sessionid임)
-
 
 @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RestController
@@ -23,23 +22,31 @@ import java.util.Map;
 public class LoginController {
 
     private final LoginService loginService;
+    private final JwtUtil jwtUtil;
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, String>> login(@RequestBody MemberDto loginRequestDto, HttpSession session) {
+    public ResponseEntity<Map<String, String>> login(@RequestBody MemberDto loginRequestDto, HttpServletResponse response) {
         boolean success = loginService.login(loginRequestDto.getStudentId(), loginRequestDto.getPassword());
 
         if (success) {
-            session.setAttribute("studentId", loginRequestDto.getStudentId());
+            String jwtToken = jwtUtil.generateToken(loginRequestDto.getStudentId());
 
-            Map<String, String> response = new HashMap<>();
-            response.put("message", "로그인 성공");
-            response.put("sessionToken", session.getId());  // 세션 ID 포함
+            ResponseCookie cookie = ResponseCookie.from("token", jwtToken)
+                    .httpOnly(true)
+                    .secure(true)
+                    .path("/")
+                    .maxAge(Duration.ofHours(1))
+                    .sameSite("Lax")
+                    .build();
+            response.setHeader("Set-Cookie", cookie.toString());
 
-            return ResponseEntity.ok(response);
+            Map<String, String> body = new HashMap<>();
+            body.put("message", "로그인 성공");
+            return ResponseEntity.ok(body);
         } else {
-            Map<String, String> response = new HashMap<>();
-            response.put("message", "로그인 실패: 학번 또는 비밀번호가 잘못되었습니다.");
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+            Map<String, String> body = new HashMap<>();
+            body.put("message", "로그인 실패: 학번 또는 비밀번호가 잘못되었습니다.");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(body);
         }
     }
 }
