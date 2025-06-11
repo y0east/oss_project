@@ -1,3 +1,4 @@
+/* 기본 폰트 */
 body {
   font-family: 'Nanum Gothic', sans-serif;
 }
@@ -12,21 +13,20 @@ body {
   color: transparent;
 }
 
-/* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용
-    ⬇ 아래쪽 여유 공간 5px 증가  */
+/* 🔸 메가 메뉴 (고정 높이 + 스크롤 허용) */
 #mega-menu {
   background: rgba(2, 49, 90, 0.85);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  height: calc(16rem + 5px); /* 16rem(256px) + 5px */
+  height: calc(16rem + 5px);
   overflow-y: auto;
 }
 
-/* 🔸 하이라이트 열 */
+/* 하이라이트된 열 */
 .highlight {
-  background: rgba(6, 66, 118, 0.85) !important;
+  background: rgba(3, 40, 73, 0.65) !important;
 }
 
-/* 🔸 네비게이션 글자 자간 살짝 넓힘 */
+/* 네비 버튼 글자 간격 */
 .nav-item button {
   letter-spacing: 0.02em;
 }

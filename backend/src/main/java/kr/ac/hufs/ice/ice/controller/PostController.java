@@ -4,11 +4,13 @@ import kr.ac.hufs.ice.ice.dto.PostCreateDto;
 import kr.ac.hufs.ice.ice.entity.Post;
 import kr.ac.hufs.ice.ice.service.PostService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RequestMapping("/api/posts")
 @RequiredArgsConstructor
 public class PostController {
@@ -16,8 +18,8 @@ public class PostController {
     private final PostService postService;
 
 
-    //Todo 이거 지워야 됨
-    @PostMapping("createPost")
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/createPost")
     public Post createPost(@RequestBody PostCreateDto postCreateDto) {
         Post post = new Post();
         post.setTitle(postCreateDto.getTitle());
@@ -36,4 +38,3 @@ public class PostController {
         return post;
     }
 }
-

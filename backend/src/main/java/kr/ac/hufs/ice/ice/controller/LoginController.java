@@ -3,6 +3,7 @@ package kr.ac.hufs.ice.ice.controller;
 
 import jakarta.servlet.http.HttpServletResponse;
 import kr.ac.hufs.ice.ice.dto.MemberDto;
+import kr.ac.hufs.ice.ice.entity.member.Member;
 import kr.ac.hufs.ice.ice.service.LoginService;
 import kr.ac.hufs.ice.ice.utils.JwtUtil;
 import lombok.RequiredArgsConstructor;
@@ -26,14 +27,13 @@ public class LoginController {
 
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody MemberDto loginRequestDto, HttpServletResponse response) {
-        boolean success = loginService.login(loginRequestDto.getStudentId(), loginRequestDto.getPassword());
+        Member member = loginService.login(loginRequestDto.getStudentId(), loginRequestDto.getPassword());
 
-        if (success) {
-            String jwtToken = jwtUtil.generateToken(loginRequestDto.getStudentId());
-
+        if (member != null) {
+            String jwtToken = jwtUtil.generateToken(member.getStudentId(), member.getRole());
             ResponseCookie cookie = ResponseCookie.from("token", jwtToken)
                     .httpOnly(true)
-                    .secure(true)
+                    .secure(false)
                     .path("/")
                     .maxAge(Duration.ofHours(1))
                     .sameSite("Lax")
@@ -42,6 +42,7 @@ public class LoginController {
 
             Map<String, String> body = new HashMap<>();
             body.put("message", "로그인 성공");
+            body.put("sessionToken", jwtToken);
             return ResponseEntity.ok(body);
         } else {
             Map<String, String> body = new HashMap<>();

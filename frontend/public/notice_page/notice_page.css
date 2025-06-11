@@ -1,3 +1,4 @@
+/* 기본 폰트 */
 body {
   font-family: 'Nanum Gothic', sans-serif;
 }
@@ -12,11 +13,11 @@ body {
   color: transparent;
 }
 
-/* ─────────── Mega‑menu */
+/* ───────── Mega-menu */
 #mega-menu {
   background: rgba(2, 49, 90, 0.85);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  height: calc(17.25rem + 5px); /* 16rem + 1.25rem(20px) + 5px */
+  height: calc(17.25rem + 5px);
   overflow-y: auto;
   z-index: 30;
 }
@@ -27,7 +28,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* ─────────── Curriculum Styles (원본 유지) */
+/* ───────── Curriculum (원본 유지) */
 .curriculum-grid {
   width: 95%;
   max-width: 1200px;
@@ -119,6 +120,7 @@ body {
   color: #999;
   font-size: 20px;
 }
+
 .curriculum-section {
   border: 2px solid #d1d5db;
   background: #fff;

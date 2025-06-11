@@ -1,4 +1,4 @@
-package kr.ac.hufs.ice.ice.entity;
+package kr.ac.hufs.ice.ice.entity.member;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -19,5 +19,9 @@ public class Member {
 
     @Column(nullable = false)
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = true)
+    private Role role;
 }
 
