@@ -1,0 +1,32 @@
+/* 기본 폰트 */
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* ───────── Mega-menu ───────────────────────────────────────── */
+#mega-menu {
+  background: rgba(2, 49, 90, 0.85);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  height: 16rem;
+  overflow-y: auto;
+}
+.highlight {
+  background: rgba(6, 66, 118, 0.65) !important;
+}
+.nav-item button {
+  letter-spacing: 0.02em;
+}
+
+/* ▼▼▼ 여기에  Mega-menu 내부 항목(6 개 열) HTML을 그대로 넣어두면
+   유지보수가 편합니다. (원본 코드 그대로 복붙) ▼▼▼ */
+/* mega-menu items here */
+
+/* ───────── 공통 그라데이션 텍스트 ──────────────────────────── */
+.gradient-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

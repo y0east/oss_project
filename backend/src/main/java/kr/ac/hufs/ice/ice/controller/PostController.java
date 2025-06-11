@@ -36,4 +36,3 @@ public class PostController {
         return post;
     }
 }
-

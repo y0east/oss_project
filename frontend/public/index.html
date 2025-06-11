@@ -2,62 +2,18 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>링크 이동 버튼 예제</title>
+    <!-- 0초 뒤 /main_page/main_page.html 로 이동 -->
+    <meta http-equiv="refresh" content="0; url=/main_page/main_page.html" />
+
+    <!-- ▲ 한 줄이면 충분하지만, JS 방식이 더 확실하게 주소창을 바꿔 줍니다
     <script>
-      function goTo(url) {
-        window.location.href = url;
-      }
+      window.location.replace('/main_page/main_page.html');
     </script>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-      }
+    -->
 
-      button {
-        display: block;
-        margin: 10px 0;
-        padding: 12px 20px;
-        font-size: 16px;
-        border: none;
-        background-color: #3498db;
-        color: white;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      button:hover {
-        background-color: #2980b9;
-      }
-    </style>
+    <title>Redirecting…</title>
   </head>
   <body>
-    <h1>페이지 이동 버튼</h1>
-
-    <button onclick="goTo('http://localhost:3000/main_page/main_page.html')">
-      http://localhost:3000/main_page/main_page.html
-    </button>
-
-    <button onclick="goTo('http://localhost:3000/login_page/login_page.html')">
-      http://localhost:3000/login_page/login_page.html
-    </button>
-
-    <button
-      onclick="goTo('http://localhost:3000/notice_page/notice_page.html')"
-    >
-      http://localhost:3000/notice_page/notice_page.html
-    </button>
-
-    <button
-      onclick="goTo('http://localhost:3000/completion_system_page/com_sys_page.html')"
-    >
-      http://localhost:3000/completion_system_page/com_sys_page.html
-    </button>
-
-    <button onclick="goTo('http://localhost:3000/sub_page/sub_page.html')">
-      http://localhost:3000/sub_page/sub_page.html
-    </button>
+    <p>Redirecting…</p>
   </body>
 </html>

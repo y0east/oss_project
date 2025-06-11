@@ -1,3 +1,4 @@
+/* 기본 폰트 */
 body {
   font-family: 'Nanum Gothic', sans-serif;
 }
@@ -16,11 +17,11 @@ body {
 #mega-menu {
   background: rgba(2, 49, 90, 0.85);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  height: calc(16rem + 5px);
+  height: calc(16rem + 5px); /* 기존보다 5px 증가 */
   overflow-y: auto;
 }
 .highlight {
-  background: rgba(6, 66, 118, 0.85) !important;
+  background: rgba(6, 66, 118, 0.65) !important;
 }
 .nav-item button {
   letter-spacing: 0.02em;
@@ -34,15 +35,13 @@ body {
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 10px 20px;
-  align-items: center; /* 🎯 학기 블럭과 과목 블럭 세로 가운데 정렬 */
+  align-items: center; /* 학기·과목 세로 중앙 */
 }
 .curriculum-grid .semester {
   font-weight: bold;
   background: #f4f4f4;
   border-radius: 6px;
   padding: 15px 10px;
-
-  /* 🎯 학기 텍스트 정확히 가운데 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +57,8 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+
+/* 과목 타입별 색상 */
 .major {
   background: rgb(0, 45, 86);
   color: #fff;
@@ -113,9 +114,9 @@ body {
 .flow-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-  gap: 60px; /* 한 줄에 최대 두 묶음 */
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
 }
 .flow-step {
   display: flex;
@@ -129,7 +130,7 @@ body {
   font-size: 20px;
 }
 
-/* 과목표+순서도 큰 구역 */
+/* 과목표 + 순서도 큰 구역 */
 .curriculum-section {
   border: 2px solid #d1d5db;
   background: #ffffff;

@@ -5,47 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HUFS · 정보통신공학과</title>
 
-    <!-- Fonts & Tailwind -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      body {
-        font-family: 'Nanum Gothic', sans-serif;
-      }
-
-      /* 🔹 공통 그라데이션 텍스트 */
-      .gradient-text {
-        display: inline-block;
-        background: linear-gradient(90deg, #9ae6b4, #90cdf4, #fbb6ce);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-      }
-
-      /* 🔸 메가 메뉴: 고정 높이 + 스크롤 허용 (⬇ 아래쪽 여유 공간 5px 증가) */
-      #mega-menu {
-        background: rgba(2, 49, 90, 0.85);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-        height: calc(16rem + 5px); /* 16rem(256px) + 5px */
-        overflow-y: auto;
-      }
-
-      /* 🔸 하이라이트 열 */
-      .highlight {
-        background:rgba(3, 40, 73, 0.65) !important;
-      }
-
-      /* 🔸 네비게이션 글자 자간 살짝 넓힘 */
-      .nav-item button {
-        letter-spacing: 0.02em;
-      }
-    </style>
+    <!-- 커스텀 CSS -->
+    <link rel="stylesheet" href="main_page.css" />
   </head>
 
   <body class="bg-gray-100">
@@ -55,11 +26,10 @@
         class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
       >
         <div class="flex items-center gap-3">
-          <!-- ⬇ 경로 수정 -->
           <img src="../icon/hufs_logo.gif" alt="logo" class="w-28 h-auto" />
           <a
             href="http://localhost:3000/main_page/main_page.html"
-            style="font-size: 1rem; font-weight: 600; color: #8b5e3c"
+            class="text-base font-semibold text-[#8b5e3c]"
             >정보통신공학과</a
           >
         </div>
@@ -68,7 +38,6 @@
             href="http://localhost:3000/login_page/login_page.html"
             class="hover:opacity-80"
           >
-            <!-- ⬇ 경로 수정 -->
             <img src="../icon/lock.png" alt="로그인" class="w-5 h-5" />
           </a>
         </div>
@@ -77,8 +46,9 @@
 
     <!-- ▣ Main Nav + Mega Menu -->
     <nav id="mainNav" class="w-full bg-[#002d56] text-white relative z-20">
-      <ul class="max-w-5xl mx-auto flex flex-wrap items-center justify-center lg:translate-x-[0.5vw] sm:gap-4 md:gap-12 lg:gap-24 px-4 py-2
-           text-base sm:text-lg md:text-xl lg:text-1xl font-bold whitespace-normal">
+      <ul
+        class="max-w-5xl mx-auto flex flex-wrap items-center justify-center lg:translate-x-[0.5vw] sm:gap-4 md:gap-12 lg:gap-24 px-4 py-2 text-base sm:text-lg md:text-xl lg:text-1xl font-bold whitespace-normal"
+      >
         <li class="nav-item" data-col="about">
           <button class="hover:text-sky-300">학과소개</button>
         </li>
@@ -105,64 +75,182 @@
           class="max-w-5xl mx-auto grid grid-cols-6 gap-[0.74vw] px-[0.5vw] py-2 text-sm leading-relaxed"
         >
           <!-- 학과소개 -->
-          <div class="mega-col flex rounded-lg flex-col gap-2 items-center py-3" data-col="about">
+          <div
+            class="mega-col flex flex-col items-center gap-2 py-3 rounded-lg"
+            data-col="about"
+          >
             <h4 class="text-sky-200 font-bold mb-2">학과소개</h4>
-            <a href="#" class="hover:text-sky-300">구성원</a>
-            <a href="#" class="hover:text-sky-300">교육목표</a>
-            <a href="#" class="hover:text-sky-300">개관 및 연혁</a>
-            <a href="#" class="hover:text-sky-300">졸업후 취업동향</a>
-            <a href="#" class="hover:text-sky-300">학과행사</a>
-            <a href="#" class="hover:text-sky-300">오시는 길</a>
+            <a
+              href="https://ice.hufs.ac.kr/ice/11456/subview.do"
+              class="hover:text-sky-300"
+              >구성원</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/981/subview.do"
+              class="hover:text-sky-300"
+              >교육목표</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/982/subview.do"
+              class="hover:text-sky-300"
+              >개관 및 연혁</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/983/subview.do"
+              class="hover:text-sky-300"
+              >졸업후 취업동향</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1022/subview.do"
+              class="hover:text-sky-300"
+              >학과행사</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/984/subview.do"
+              class="hover:text-sky-300"
+              >오시는 길</a
+            >
           </div>
 
           <!-- 학사·장학 -->
-          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="bursary">
+          <div
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
+            data-col="bursary"
+          >
             <h4 class="text-sky-200 font-bold mb-2">학사·장학</h4>
-            <a href="#" class="hover:text-sky-300">학사</a>
-            <a href="#" class="hover:text-sky-300">장학</a>
-            <a href="#" class="hover:text-sky-300">전공로드맵</a>
+            <a
+              href="https://ice.hufs.ac.kr/ice/3696/subview.do"
+              class="hover:text-sky-300"
+              >학사</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1023/subview.do"
+              class="hover:text-sky-300"
+              >장학</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/sites/ice/download/ice_roadmap.pdf"
+              class="hover:text-sky-300"
+              >전공로드맵</a
+            >
           </div>
 
           <!-- 교과과정 -->
-          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="curriculum">
+          <div
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
+            data-col="curriculum"
+          >
             <h4 class="text-sky-200 font-bold mb-2">교과과정</h4>
-            <!-- ✅ a 태그에 href만 지정하면 JS 필요 없음 -->
             <a
               href="http://localhost:3000/completion_system_page/com_sys_page.html"
               class="hover:text-sky-300"
               >이수체계</a
             >
-            <a href="#" class="hover:text-sky-300">개설과목</a>
-            <a href="#" class="hover:text-sky-300">대학원 교과과정</a>
-            <a href="#" class="hover:text-sky-300">신입생세미나</a>
-            <a href="#" class="hover:text-sky-300">정보통신종합설계 및 실습</a>
+            <a
+              href="https://ice.hufs.ac.kr/ice/998/subview.do"
+              class="hover:text-sky-300"
+              >개설과목</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/999/subview.do"
+              class="hover:text-sky-300"
+              >대학원 교과과정</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1148/subview.do"
+              class="hover:text-sky-300"
+              >신입생세미나</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1001/subview.do"
+              class="hover:text-sky-300"
+              >정보통신종합설계 및 실습</a
+            >
           </div>
 
           <!-- 대학원 -->
-          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="grad">
+          <div
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
+            data-col="grad"
+          >
             <h4 class="text-sky-200 font-bold mb-2">대학원</h4>
-            <a href="#" class="hover:text-sky-300">대학원 학과소개</a>
-            <a href="#" class="hover:text-sky-300">교수진 소개</a>
-            <a href="#" class="hover:text-sky-300">전공별 교과과정</a>
-            <a href="#" class="hover:text-sky-300">종합시험과목</a>
-            <a href="#" class="hover:text-sky-300">대학원 게시판</a>
+            <a
+              href="https://ice.hufs.ac.kr/ice/1003/subview.do"
+              class="hover:text-sky-300"
+              >대학원 학과소개</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1004/subview.do"
+              class="hover:text-sky-300"
+              >교수진 소개</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1005/subview.do"
+              class="hover:text-sky-300"
+              >전공별 교과과정</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1006/subview.do"
+              class="hover:text-sky-300"
+              >종합시험과목</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1007/subview.do"
+              class="hover:text-sky-300"
+              >대학원 게시판</a
+            >
           </div>
 
           <!-- 학회·시설 -->
-          <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="facility">
+          <div
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
+            data-col="facility"
+          >
             <h4 class="text-sky-200 font-bold mb-2">학회·시설</h4>
-            <a href="#" class="hover:text-sky-300">AdvICE</a>
-            <a href="#" class="hover:text-sky-300">FICS</a>
-            <a href="#" class="hover:text-sky-300">시설안내</a>
-          </div>
-           <div class="mega-col flex flex-col gap-2 rounded-lg items-center" data-col="community">
-            <h4 class="text-sky-200 font-bold mb-2">커뮤니티</h4>
-            <a href="#" class="hover:text-sky-300">공지사항</a>
-            <a href="#" class="hover:text-sky-300">자료실</a>
-            <a href="#" class="hover:text-sky-300">졸업논문 게시판</a>
-            <a href="#" class="hover:text-sky-300">건의사항</a>
+            <a
+              href="https://ice.hufs.ac.kr/ice/1021/subview.do"
+              class="hover:text-sky-300"
+              >AdvICE</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1037/subview.do"
+              class="hover:text-sky-300"
+              >FICS</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1028/subview.do"
+              class="hover:text-sky-300"
+              >시설안내</a
+            >
           </div>
 
+          <!-- 커뮤니티 -->
+          <div
+            class="mega-col flex flex-col items-center gap-2 rounded-lg"
+            data-col="community"
+          >
+            <h4 class="text-sky-200 font-bold mb-2">커뮤니티</h4>
+            <a
+              href="http://localhost:3000/notice_page/notice_page.html"
+              class="hover:text-sky-300"
+              >공지사항</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1010/subview.do"
+              class="hover:text-sky-300"
+              >자료실</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1012/subview.do#"
+              class="hover:text-sky-300"
+              >졸업논문 게시판</a
+            >
+            <a
+              href="https://ice.hufs.ac.kr/ice/1011/subview.do"
+              class="hover:text-sky-300"
+              >건의사항</a
+            >
+          </div>
         </div>
       </div>
     </nav>
@@ -172,10 +260,22 @@
       <div
         class="max-w-7xl mx-auto flex justify-center items-center gap-6 py-2 text-sm font-semibold text-gray-700 tracking-wide"
       >
-        <a href="#" class="hover:text-sky-600">e-Class</a>
-        <a href="#" class="hover:text-sky-600">종합정보시스템</a>
-        <a href="#" class="hover:text-sky-600">도서관</a>
-        <a href="#" class="hover:text-sky-600">입학안내</a>
+        <a
+          href="https://eclass.hufs.ac.kr/ilos/main/main_form.acl"
+          class="hover:text-sky-600"
+          >e-Class</a
+        >
+        <a
+          href="https://wis.hufs.ac.kr/src08/jsp/index.jsp"
+          class="hover:text-sky-600"
+          >종합정보시스템</a
+        >
+        <a href="https://lib.hufs.ac.kr/#/" class="hover:text-sky-600"
+          >도서관</a
+        >
+        <a href="https://adms.hufs.ac.kr/index.do" class="hover:text-sky-600"
+          >입학안내</a
+        >
       </div>
     </div>
 
@@ -193,23 +293,27 @@
       </p>
     </section>
 
-    <!-- ▣ News Section (동적 로딩) -->
+    <!-- ▣ News Section -->
     <section class="max-w-7xl mx-auto px-4 py-16">
       <div class="flex flex-col md:flex-row gap-10">
+        <!-- 왼쪽 -->
         <div class="md:w-1/4">
           <h3 class="text-2xl font-bold leading-snug mb-4">
             한국외대<br />정보통신공학과<br />소식
           </h3>
-          <a href="http://localhost:3000/notice_page/notice_page.html" class="text-sm underline hover:text-blue-600"
+          <a
+            href="http://localhost:3000/notice_page/notice_page.html"
+            class="block text-sm underline hover:text-blue-600"
             >소식 더보기 &gt;</a
           >
         </div>
 
-        <!-- 🔸 서버에서 받아온 게시글이 들어갈 영역 -->
+        <!-- 카드 그리드 -->
         <div
           id="newsGrid"
           class="w-full max-w-7xl mx-auto flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6"
         ></div>
+      </div>
     </section>
 
     <!-- ▣ HUBOT 홍보 섹션 -->
@@ -217,7 +321,6 @@
       <div
         class="max-w-7xl mx-auto relative flex flex-col items-center text-center"
       >
-        <!-- ✅ img를 a 태그로 감싸기 -->
         <a href="http://localhost:3000/chatbot_page/chatbot.html">
           <img
             src="../icon/ai_chatbot_icon.png"
@@ -227,7 +330,7 @@
         </a>
         <h3 class="mt-6 text-2xl md:text-3xl font-bold">HUBOT에게 물어보기</h3>
 
-        <!-- 고정 문구 -->
+        <!-- 배경 텍스트 -->
         <span
           class="absolute left-6 md:left-16 top-6 md:top-12 text-lg md:text-xl font-semibold gradient-text"
           >졸업학점?</span
@@ -245,7 +348,6 @@
           >궁금한게 많다면?</span
         >
 
-        <!-- 새 질문들 -->
         <div
           class="mt-24 md:mt-32 flex flex-wrap justify-center gap-x-10 gap-y-4 max-w-4xl"
         >
@@ -271,132 +373,23 @@
     <!-- ▣ Footer -->
     <footer class="bg-[#2f2f2f] py-10 text-center text-gray-300">
       <div class="max-w-4xl mx-auto space-y-2 text-sm leading-relaxed">
-        <!-- HUFS 영문 로고 (원한다면 이미지로 교체) -->
         <p class="text-gray-400 text-base font-semibold">
           Hankuk University of Foreign Studies
         </p>
-
-        <!-- 주소 -->
         <p>
           <span class="text-[#c9aa71] font-semibold">글로벌캠퍼스</span>
           17035 경기도 용인시 처인구 모현읍 외대로 81<br />
           한국외국어대학교 공과대학 정보통신공학과
         </p>
-
-        <!-- 연락처 -->
         <p><span class="text-[#c9aa71]">Tel.</span> 031-330-4255</p>
         <p><span class="text-[#c9aa71]">e-mail.</span> ice@hufs.ac.kr</p>
-
-        <!-- 저작권 -->
         <p class="pt-2 text-xs text-gray-500">
           Copyright © Hankuk University of Foreign Studies. All Rights Reserved.
         </p>
       </div>
     </footer>
 
-    <!-- ▣ 스크립트 -->
- <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        /* ───────── Mega-menu 제어 ───────── */
-        const megaMenu = document.getElementById('mega-menu');
-        const nav = document.getElementById('mainNav');
-        const navItems = document.querySelectorAll('.nav-item');
-        const cols = document.querySelectorAll('.mega-col');
-        function highlight(colName) {
-          cols.forEach((c) =>
-            c.classList.toggle('highlight', c.dataset.col === colName)
-          );
-        }
-        function showMega() {
-          megaMenu.classList.remove('hidden');
-        }
-        function hideMega() {
-          megaMenu.classList.add('hidden');
-          cols.forEach((c) => c.classList.remove('highlight'));
-        }
-        navItems.forEach((item) =>
-          item.addEventListener('mouseenter', () => {
-            showMega();
-            highlight(item.dataset.col);
-          })
-        );
-        cols.forEach((col) =>
-          col.addEventListener('mouseenter', () => {
-          showMega();
-          highlight(col.dataset.col);
-        })
-      );
-
-        nav.addEventListener('mouseleave', hideMega);
-        megaMenu.addEventListener('mouseenter', showMega);
-        megaMenu.addEventListener('mouseleave', hideMega);
-
-        /* ───────── 게시글 동적 로딩 ───────── */
-        const newsGrid = document.getElementById('newsGrid');
-
-        function formatDate(isoStr) {
-          const d = new Date(isoStr);
-          return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(
-            2,
-            '0'
-          )}.${String(d.getDate()).padStart(2, '0')}`;
-        }
-
-        function createCard(post) {
-          // 1) 전체 카드를 감싸는 링크 생성
-          const link = document.createElement('a');
-          // 클릭 시 post_page.html로 id 파라미터와 함께 이동
-          link.href = `http://localhost:3000/post_page/post_page.html?id=${post.id}`;
-          link.className = 'block';
-
-          // 2) 카드(article) 요소 생성
-          const art = document.createElement('article');
-          art.className =
-            'bg-[#6b5b4b] text-gray-100 p-4 rounded-md shadow hover:-translate-y-1 transition';
-
-          // 제목
-          const h4 = document.createElement('h4');
-          h4.className = 'text-xs font-semibold mb-1';
-          h4.textContent = post.title;
-
-          // 내용
-          const p = document.createElement('p');
-          p.className = 'text-sm line-clamp-2';
-          p.textContent = post.content;
-
-          // 날짜
-          const time = document.createElement('time');
-          time.className = 'block mt-3 text-xs opacity-80';
-          time.textContent = formatDate(post.createdAt);
-
-          art.append(h4, p, time);
-          link.appendChild(art);
-          return link;
-        }
-
-        async function loadPosts() {
-          try {
-            const res = await fetch('http://localhost:8080/api/posts', {
-              method: 'GET',
-              credentials: 'include',
-              headers: { Accept: 'application/json' },
-            });
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            const posts = await res.json();
-            newsGrid.innerHTML = '';
-            posts
-              .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-              .slice(0, 4)
-              .forEach((p) => newsGrid.appendChild(createCard(p)));
-          } catch (err) {
-            console.error('[게시글 로딩 실패]', err);
-            newsGrid.innerHTML =
-              '<p class="text-red-700">게시글을 불러오지 못했습니다.</p>';
-          }
-        }
-
-        loadPosts();
-      });
-    </script>
+    <!-- 커스텀 JS -->
+    <script src="main_page.js"></script>
   </body>
 </html>
