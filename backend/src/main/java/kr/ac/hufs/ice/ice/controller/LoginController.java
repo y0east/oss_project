@@ -3,7 +3,9 @@ package kr.ac.hufs.ice.ice.controller;
 
 import jakarta.servlet.http.HttpServletResponse;
 import kr.ac.hufs.ice.ice.dto.MemberDto;
+import kr.ac.hufs.ice.ice.entity.member.Member;
 import kr.ac.hufs.ice.ice.service.LoginService;
+import kr.ac.hufs.ice.ice.service.TokenService;
 import kr.ac.hufs.ice.ice.utils.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,18 +24,21 @@ import java.util.Map;
 public class LoginController {
 
     private final LoginService loginService;
+    private final TokenService tokenService;
     private final JwtUtil jwtUtil;
 
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody MemberDto loginRequestDto, HttpServletResponse response) {
-        boolean success = loginService.login(loginRequestDto.getStudentId(), loginRequestDto.getPassword());
+        Member member = loginService.login(loginRequestDto.getStudentId(), loginRequestDto.getPassword());
 
-        if (success) {
-            String jwtToken = jwtUtil.generateToken(loginRequestDto.getStudentId());
+        if (member != null) {
+            String accessToken = jwtUtil.generateAccessToken(member.getStudentId(), member.getRole());
+            String refreshToken = jwtUtil.generateRefreshToken(member.getStudentId());
 
-            ResponseCookie cookie = ResponseCookie.from("token", jwtToken)
+            tokenService.saveRefreshToken(member.getStudentId(), refreshToken, JwtUtil.REFRESH_TOKEN_EXP);
+
+            ResponseCookie cookie = ResponseCookie.from("accessToken", accessToken)
                     .httpOnly(true)
-                    .secure(true)
                     .path("/")
                     .maxAge(Duration.ofHours(1))
                     .sameSite("Lax")
@@ -42,6 +47,8 @@ public class LoginController {
 
             Map<String, String> body = new HashMap<>();
             body.put("message", "로그인 성공");
+            body.put("accessToken", accessToken);
+            body.put("refreshToken", refreshToken);
             return ResponseEntity.ok(body);
         } else {
             Map<String, String> body = new HashMap<>();
@@ -49,5 +56,4 @@ public class LoginController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(body);
         }
     }
-
 }

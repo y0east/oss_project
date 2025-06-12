@@ -47,14 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ studentId, password }),
+        credentials: "include"
       });
 
       if (!res.ok) throw new Error(`HTTP 오류: ${res.status}`);
       const data = await res.json();
 
-      if (data.sessionToken) {
+      if (data.accessToken) {
         alert(data.message || '로그인 성공');
-        localStorage.setItem('sessionToken', data.sessionToken);
+        localStorage.setItem('accessToken', data.accessToken);
+        console.log("data.accessToken" + data.accessToken);
+        console.log("data.refreshToken" + data.refreshToken);
+        localStorage.setItem('refreshToken', data.refreshToken);
         window.location.href = '/main_page/main_page.html';
       } else {
         alert(data.message || '아이디 또는 비밀번호가 틀렸습니다.');

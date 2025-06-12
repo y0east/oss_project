@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  fetch(`http://localhost:8080/api/posts/${id}`)
+  fetch(`http://localhost:8080/api/posts/${id}`, {
+      method: 'GET',
+      credentials: 'include', // <- 쿠키 포함시키는 핵심 옵션!
+    })
     .then((res) => {
       if (!res.ok) throw new Error('게시글을 불러올 수 없습니다');
       return res.json();
