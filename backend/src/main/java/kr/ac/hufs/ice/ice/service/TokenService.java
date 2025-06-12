@@ -8,14 +8,22 @@ import java.util.concurrent.TimeUnit;
 
 @Service
 @RequiredArgsConstructor
-public class JwtBlacklistService {
+public class TokenService {
 
     private final RedisTemplate<String, String> redisTemplate;
     private static final String BLACKLIST_PREFIX = "blacklist:";
+    private static final String REFRESH_PREFIX = "refresh:";
 
-    // 여기서 expireationMillis는 AccessToken 만료 기간이랑 같게 설정
-    public void blacklistToken(String token, long expirationMillis) {
+    public void blacklistAccessToken(String token, long expirationMillis) {
         redisTemplate.opsForValue().set(BLACKLIST_PREFIX + token, "logout", expirationMillis, TimeUnit.MILLISECONDS);
+    }
+
+    public void deleteRefreshToken(String studentId) {
+        redisTemplate.delete(REFRESH_PREFIX + studentId);
+    }
+
+    public void saveRefreshToken(String studentId, String refreshToken, long expirationMillis) {
+        redisTemplate.opsForValue().set(REFRESH_PREFIX + studentId, refreshToken, expirationMillis, TimeUnit.MILLISECONDS);
     }
 
     public boolean isBlacklisted(String token) {
