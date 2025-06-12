@@ -34,10 +34,12 @@ public class SecurityConfig {
         http
                 .cors(Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable())
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // JWT는 무상태
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/posts/createPost").hasRole("ADMIN")  // admin 권한만 허용
-                        .anyRequest().permitAll()  // 그 외 요청은 모두 허용
+                        .requestMatchers("/api/posts/createPost").hasRole("ADMIN")
+                        .requestMatchers("/api/posts").permitAll()
+                        .requestMatchers("/api/posts/**").authenticated()
+                        .anyRequest().permitAll()
                 )
                 .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 

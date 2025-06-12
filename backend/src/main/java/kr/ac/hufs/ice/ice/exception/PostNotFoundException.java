@@ -6,4 +6,3 @@ public class PostNotFoundException extends RuntimeException {
         super("게시글이 존재하지 않습니다. ");
     }
 }
-

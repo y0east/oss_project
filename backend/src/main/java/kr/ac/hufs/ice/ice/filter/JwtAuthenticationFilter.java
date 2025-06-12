@@ -31,7 +31,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         if (request.getCookies() != null) {
             for (Cookie cookie : request.getCookies()) {
-                if ("token".equals(cookie.getName())) {
+                if ("accessToken".equals(cookie.getName())) {
                     token = cookie.getValue();
                     break;
                 }
@@ -42,7 +42,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             String studentId = jwtUtil.getStudentIdFromToken(token);
             Role role = jwtUtil.getRoleFromToken(token);
 
-            // Spring Security 권한 설정: ROLE_ADMIN, ROLE_USER 형식
             List<SimpleGrantedAuthority> authorities =
                     List.of(new SimpleGrantedAuthority(role.name()));
 
