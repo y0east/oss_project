@@ -26,6 +26,10 @@ public class TokenService {
         redisTemplate.opsForValue().set(REFRESH_PREFIX + studentId, refreshToken, expirationMillis, TimeUnit.MILLISECONDS);
     }
 
+    public String getRefreshToken(String studentId) {
+        return redisTemplate.opsForValue().get(REFRESH_PREFIX + studentId);
+    }
+
     public boolean isBlacklisted(String token) {
         return redisTemplate.hasKey(BLACKLIST_PREFIX + token);
     }
