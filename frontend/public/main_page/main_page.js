@@ -93,4 +93,36 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   loadPosts();
+/* ───────── 로그인/로그아웃 버튼 제어 ───────── */
+  const lockIcon = document.getElementById('lockIcon');
+      if (lockIcon) {
+      lockIcon.addEventListener('click', async () => {
+      // 쿠키 대신 localStorage에서 accessToken 확인
+      if (!localStorage.getItem('accessToken')) {
+        // 로그인 안 되어 있으면 로그인 페이지로 이동
+        window.location.href = '/login_page/login_page.html';
+        return;
+      }
+
+      // 로그인 상태면 로그아웃 요청
+      try {
+        const res = await fetch('http://localhost:8080/api/logout', {
+          method: 'POST',
+          credentials: 'include', // 쿠키 포함해서 보냄
+        });
+
+        if (!res.ok) throw new Error('로그아웃 실패');
+
+        // localStorage 토큰 삭제
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+
+        // 로그아웃 후 메인 페이지 이동
+        window.location.href = '/main_page/main_page.html';
+      } catch (err) {
+        console.error('로그아웃 중 오류 발생:', err);
+        alert('로그아웃에 실패했습니다.');
+      }
+    });
+  }
 });
